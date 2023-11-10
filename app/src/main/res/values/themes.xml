@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ColibriView" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#2F2E2E</item>
+        <item name="colorButtonNormal">#7858F2</item>
+        <item name="colorOnSecondary">#808085</item>
+        <item name="colorPrimaryDark">#09184D</item>
+        <item name="colorOnBackground">#EDF2FA</item>
+
+    </style>
+
+    <style name="Theme.ColibriView" parent="Base.Theme.ColibriView" />
+</resources>

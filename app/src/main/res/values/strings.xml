@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">COLIBRIVIEW</string>
+    <string name="texto1">Selecciona el numero que veas en la pantalla!</string>
+    <string name="texto2">Presiona para continuar</string>
+    <string name="titLogin">Iniciar Sesión</string>
+    <string name="form_username">e-mail</string>
+    <string name="card_required">Requerido</string>
+    <string name="form_passw">Contraseña</string>
+    <string name="olvida">¿Olvidaste tu contraseña?</string>
+    <string name="o">O inicia sesión con</string>
+    <string name="titRest">Restablecer contraseña</string>
+    <string name="restablece">"Se enviara un código para poder restablecer la contraseña de la cuenta "</string>
+    <string name="completado">Test Completo!!</string>
+    <string name="continuar">CONTINUAR</string>
+    <string name="resultados">RESULTADOS</string>
+    <string name="pablo">PABLO</string>
+    <string name="nomtest">Test de Isihara</string>
+    <string name="nomtest_PD">Test de Protan y Deutan</string>
+    <string name="nomtest_Tr">Test de Tritan</string>
+    <string name="nomtest_Tl">Test de Lantern</string>
+    <string name="correctas">15/24 Respuestas correctas</string>
+    <string name="diagnostico">Daltónico con una ceguera leve al color de verde (deuteranomalía).</string>
+    <string name="des_ishihara">El daltonismo es una alteración genética que afecta la capacidad de percibir colores.</string>
+    <string name="des_PD">Las personas con este problema pueden tener distintos grados de dificultad en su detección.</string>
+    <string name="des_TR">El daltonismo es una alteración genética que afecta la capacidad de percibir colores.</string>
+    <string name="des_Tl">Las personas con este problema pueden tener distintos grados de dificultad en su detección.</string>
+    <string name="quees">¿Què es?</string>
+    <string name="descripcion">"El daltonismo es una alteración genética que afecta la capacidad de percibir colores.\n\nTambién llamado ceguera al color, el daltonismo supone que el ojo no es capaz de captar la longitud de onda correspondiente a un color determinado, bien porque no se poseen los pigmentos para ello o bien porque han dejado de funcionar correctamente.\n\nEsto provoca que, ante estímulos. El daltonismo es una alteración genética que afecta la capacidad de percibir colores.\n\nTambién llamado ceguera al color, el daltonismo supone que el ojo no es capaz de captar la longitud de onda correspondiente a un color determinado, bien porque no se poseen los pigmentos para ello o bien porque han dejado de funcionar correctamente.\n\nEsto provoca que, ante estímulos."</string>
+
+</resources>
