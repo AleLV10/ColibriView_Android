@@ -48,7 +48,6 @@
         <activity
             android:name=".Splash"
             android:exported="false" />
-
         <activity
             android:name=".Ussuarios"
             android:exported="false" />
