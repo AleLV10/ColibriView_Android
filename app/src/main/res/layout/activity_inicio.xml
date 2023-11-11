@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Inicio">
 
+    <!--HOLA COMO ESTAN-->
+    <!--PRUEBA2-->
+
     <include layout="@layout/activity_base" android:id="@+id/mnu_barra"/>
     <ScrollView
         android:layout_width="match_parent"
