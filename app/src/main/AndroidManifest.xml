@@ -49,9 +49,6 @@
             android:name=".Splash"
             android:exported="false" />
         <activity
-            android:name=".Coca_point"
-            android:exported="false" />
-        <activity
             android:name=".Ussuarios"
             android:exported="false" />
         <activity
