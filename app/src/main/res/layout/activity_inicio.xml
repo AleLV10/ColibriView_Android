@@ -8,6 +8,7 @@
 
     <!--HOLA COMO ESTAN-->
     <!--PRUEBA2-->
+    <!--PRUEBA2-->
 
     <include layout="@layout/activity_base" android:id="@+id/mnu_barra"/>
     <ScrollView
