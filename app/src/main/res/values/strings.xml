@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">COLIBRIVIEW</string>
+    <string name="app_name">ColibriView</string>
     <string name="texto1">Selecciona el numero que veas en la pantalla!</string>
     <string name="texto2">Presiona para continuar</string>
     <string name="titLogin">Iniciar Sesión</string>
@@ -79,4 +79,5 @@
         La anomalía se encuentra en este caso en el pigmento verde, que no puede percibirse por completo.\n\n\n\n
 
     </string>
+    <string name="numero">12</string>
 </resources>

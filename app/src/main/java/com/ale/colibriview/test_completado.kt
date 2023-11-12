@@ -1,15 +1,22 @@
 package com.ale.colibriview
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import com.ale.colibriview.databinding.ActivityTestCompletadoBinding
 
 class test_completado : AppCompatActivity() {
 
+
+
     private lateinit var binding: ActivityTestCompletadoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_test_completado)
+
         binding = ActivityTestCompletadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -45,5 +52,7 @@ class test_completado : AppCompatActivity() {
             startActivity(intent)
             finish()
         }*/
+
+
     }
 }
