@@ -52,6 +52,9 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".RegistrarNuevoActivity"
+            android:exported="false" />
+        <activity
             android:name=".Splash"
             android:exported="false" />
         <activity
