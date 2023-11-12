@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">COLIBRIVIEW</string>
+    <string name="app_name">ColibriView</string>
     <string name="texto1">Selecciona el numero que veas en la pantalla!</string>
     <string name="texto2">Presiona para continuar</string>
     <string name="titLogin">Iniciar Sesión</string>
@@ -42,7 +42,7 @@
         El daltonismo suele afectar ambos ojos por igual y se mantiene estable a lo largo de toda la vida.\n\n
         Por lo general se nace con daltonismo, pero en algunos casos puede adquirirse más tarde en la vida.
         Un cambio en la manera de ver los colores puede indicar la presencia de un problema más serio. Toda persona que note un cambio
-        en la manera en que percibe los colores debe consultar a un oftalmólogo.
+        en la manera en que percibe los colores debe consultar a un oftalmólogo.\n\n\n\n
     </string>
     <string name="tipos_daltonismo">Tipos</string>
     <string name="descripcion_Tipos">El daltonismo puede presentarse en diferentes modalidades, en función del tipo de pigmentos de los que no se dispongan o que se encuentren alterados.
@@ -76,7 +76,8 @@
         3.2. Tritanomalía\n\n
         El azul no es captado correctamente, siendo fácil que se confunda con otros en función de la frecuencia de onda que se capte. El rojo y el verde son captados normalmente.\n\n
         3.3. Deuteranomalía\n\n
-        La anomalía se encuentra en este caso en el pigmento verde, que no puede percibirse por completo.
+        La anomalía se encuentra en este caso en el pigmento verde, que no puede percibirse por completo.\n\n\n\n
 
     </string>
+    <string name="numero">12</string>
 </resources>
