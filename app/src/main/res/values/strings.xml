@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">COLIBRIVIEW</string>
+    <string name="app_name">ColibriView</string>
     <string name="texto1">Selecciona el numero que veas en la pantalla!</string>
     <string name="texto2">Presiona para continuar</string>
     <string name="titLogin">Iniciar Sesión</string>
