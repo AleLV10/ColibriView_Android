@@ -7,7 +7,7 @@
     <string name="card_required">Requerido</string>
     <string name="form_passw">Contraseña</string>
     <string name="olvida">¿Olvidaste tu contraseña?</string>
-    <string name="o">O inicia sesión con</string>
+    <string name="o">Iniciar sesión con</string>
     <string name="titRest">Restablecer contraseña</string>
     <string name="restablece">"Se enviara un código para poder restablecer la contraseña de la cuenta "</string>
     <string name="completado">Test Completo!!</string>
