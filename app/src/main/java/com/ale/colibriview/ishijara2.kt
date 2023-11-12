@@ -1,8 +1,10 @@
 package com.ale.colibriview
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.ale.colibriview.databinding.ActivityIshijara2Binding
 
 class ishijara2 : AppCompatActivity() {
@@ -14,9 +16,13 @@ class ishijara2 : AppCompatActivity() {
 
         binding.boton11.setOnClickListener {
             // Do something in response to button click
+            val preferences = getPreferences(Context.MODE_PRIVATE)
+            Log.i("resultado","${getString(R.string.numero)}")
+
             val intent = Intent(this, test_completado::class.java)
             startActivity(intent)
             finish()
+
         }
 
         binding.boton21.setOnClickListener {
