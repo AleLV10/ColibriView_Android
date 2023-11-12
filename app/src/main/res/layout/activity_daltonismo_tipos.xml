@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DefinicionActivity"
+    tools:context=".daltonismo_tipos"
     android:background="#EDF2FA">
     <ScrollView
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:id="@+id/queesss"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/quees"
+                android:text="@string/tipos_daltonismo"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="@color/color"
@@ -54,8 +54,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/queesss">
 
@@ -67,7 +68,7 @@
                     android:layout_marginTop="@dimen/tamaño_letra_sub_subtitulo"
                     android:layout_marginRight="@dimen/margin3"
                     android:padding="8dp"
-                    android:src="@drawable/que_es"
+                    android:src="@drawable/tiposdaltonismo"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -81,13 +82,13 @@
                     android:layout_margin="@dimen/margin3"
                     android:layout_marginLeft="20dp"
                     android:padding="8dp"
-                    android:text="@string/descripcion"
+                    android:text="@string/descripcion_Tipos"
                     android:textAlignment="textStart"
                     android:textColor="@color/color"
                     android:textSize="@dimen/tamaño_letra_sub_subtitulo"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.997"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@id/dalto"
                     app:layout_constraintTop_toBottomOf="@id/dalto" />
             </androidx.constraintlayout.widget.ConstraintLayout>
