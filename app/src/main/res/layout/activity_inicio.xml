@@ -98,7 +98,7 @@
                         android:id="@+id/imgCard2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/seis"
+                        android:src="@drawable/img_que_es"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
