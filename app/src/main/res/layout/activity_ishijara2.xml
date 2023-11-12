@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ishijara2">
 
-    <!--HOLA HOLA-->
-
     <include
         android:id="@+id/mnu_barra_ishihara2"
         layout="@layout/activity_base"/>
@@ -40,7 +38,7 @@
                 android:layout_width="100dp"
                 android:layout_height="90dp"
                 android:layout_marginLeft="@dimen/margin3"
-                android:text="12"
+                android:text="@string/numero"
                 android:textSize="@dimen/tamaño_letra_titulo"
                 android:backgroundTint="@color/moradoo"
                 app:layout_constraintStart_toStartOf="parent"
