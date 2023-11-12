@@ -44,4 +44,39 @@
         Un cambio en la manera de ver los colores puede indicar la presencia de un problema más serio. Toda persona que note un cambio
         en la manera en que percibe los colores debe consultar a un oftalmólogo.
     </string>
+    <string name="tipos_daltonismo">Tipos</string>
+    <string name="descripcion_Tipos">El daltonismo puede presentarse en diferentes modalidades, en función del tipo de pigmentos de los que no se dispongan o que se encuentren alterados.
+        Concretamente existen tres tipos principales de daltonismo, que se exponen a continuación.\n\n
+        1. Acromatismo\n\n
+        Se trata de una condición muy poco habitual. El acromatismo o monocromatismo aparece cuando el sujeto no posee ningún pigmento o los conos en cuestión no son en ningún caso funcionales.
+        La visión en este caso se basa en la información extraída de las células que captan la luminosidad, los bastones, ciendo sólo en escala de grises, blanco y negro.\n\n
+        2. Dicromatismo\n\n
+        Generalmente, cuando pensamos en alguien con daltonismo tendemos a identificarlo con alguien que padece dicromatismo.
+        Se entiende como tal el tipo de daltonismo causado por la ausencia de uno de los tipos de pigmentos,
+        con lo que no es posible percibir ni el color en cuestión ni los colores asociados a él
+        (por ejemplo, si alguien no puede ver el color rojo también tendrá alterada la percepción del naranja).
+        En este caso la frecuencia de onda que permite la percepción del color no puede ser captada, de manera que el pigmento que capte la frecuencia de onda más cercana realizará su función,
+        haciendo que se confundan los colores.\n\n
+        Dentro del dicromatismo podemos identificar tres tipologías básicas.\n\n
+        2.1. Protanopia\n\n
+        El sujeto no puede captar las frecuencias de onda que permiten ver el color rojo, que posee una frecuencia de onda larga. El color rojo tiende a verse a percibirse como beis o gris,
+        a veces con tonos verdosos. Si la frecuencia de honda es muy elevada se percibe amarillo.\n\n
+        2.2. Tritanopia\n\n
+        El menos común de los tipos de dicromatismo, afectando a la percepción de frecuencias de onda corta. La persona que padece tritanopia no dispone del pigmento correspondiente al color azul,
+        el cual suele confundirse con el verde. Asimismo los amarillos tienden a verse como rojo, violeta o blanco.\n\n
+        2.3. Deuteranopia\n\n
+        Se trata del tipo de daltonismo más habitual junto con la protanopia. En este caso el carece del pigmento verde, no pudiendo captar frecuencias de onda propias de ese color (que serían frecuencias de onda medias).
+        El verde no se capta, viéndose generalmente de un color beis. La percepción del rojo también tiende a verse afectada, teniendo tonos amarronados.\n\n
+        3. Tricromatismo anómalo\n\n
+        El tricromatismo anómalo se da cuando la persona en cuestión posee los mismos tres tipos de pigmentos que la mayor parte de la población, pero sin embargo al menos uno está alterado y no es funcional.
+        Aunque es posible que si tengan una leve percepción del color no funcional, necesitan que la estimulación sea muy intensa para poder captarlo, siendo más probable que su visión sea similar a la de un dicromático.\n\n
+        Dentro de este tipo de daltonismo podemos encontrar tres subtipos en función de cual de los pigmentos no es funcional.\n\n
+        3.1. Protanomalía\n\n
+        En este caso, el sujeto es capaz de percibir los colores verde y azul con normalidad, pero el rojo no es asimilado y captado con normalidad.\n\n
+        3.2. Tritanomalía\n\n
+        El azul no es captado correctamente, siendo fácil que se confunda con otros en función de la frecuencia de onda que se capte. El rojo y el verde son captados normalmente.\n\n
+        3.3. Deuteranomalía\n\n
+        La anomalía se encuentra en este caso en el pigmento verde, que no puede percibirse por completo.
+
+    </string>
 </resources>
