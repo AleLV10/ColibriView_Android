@@ -25,6 +25,23 @@
     <string name="des_TR">El daltonismo es una alteración genética que afecta la capacidad de percibir colores.</string>
     <string name="des_Tl">Las personas con este problema pueden tener distintos grados de dificultad en su detección.</string>
     <string name="quees">¿Què es?</string>
-    <string name="descripcion">"El daltonismo es una alteración genética que afecta la capacidad de percibir colores.\n\nTambién llamado ceguera al color, el daltonismo supone que el ojo no es capaz de captar la longitud de onda correspondiente a un color determinado, bien porque no se poseen los pigmentos para ello o bien porque han dejado de funcionar correctamente.\n\nEsto provoca que, ante estímulos. El daltonismo es una alteración genética que afecta la capacidad de percibir colores.\n\nTambién llamado ceguera al color, el daltonismo supone que el ojo no es capaz de captar la longitud de onda correspondiente a un color determinado, bien porque no se poseen los pigmentos para ello o bien porque han dejado de funcionar correctamente.\n\nEsto provoca que, ante estímulos."</string>
-
+    <string name="descripcion">El daltonismo es una afección en la cual no se pueden ver los colores de manera normal.
+        También se conoce como deficiencia de color. En el daltonismo generalmente la persona no puede distinguir entre ciertos colores.
+        Con frecuencia no distinguen los verdes de los rojos y, a veces, los azules.\n\n
+        En la retina hay dos tipos de células que detectan la luz. Esas células se llaman bastoncillos y conos.
+        Los bastoncillos solo detectan la luz y la oscuridad y son muy sensibles a los niveles bajos de luz.
+        Los conos detectan los colores y están concentrados cerca del centro de la visión.
+        Hay tres tipos de conos: unos detectan el rojo, otros el verde y otros el azul.
+        El cerebro usa la información que envían los conos para determinar el color que percibimos.\n\n
+        El daltonismo puede ocurrir cuando un tipo o más de conos están ausentes, no funcionan o detectan un color diferente de lo normal.
+        El daltonismo grave ocurre cuando los tres tipos de conos están ausentes. El daltonismo leve ocurre cuando los tres tipos de conos
+        están presentes, pero uno de ellos no funciona bien. Detecta un color diferente de lo normal.\n\n
+        Hay distintos grados de daltonismo. Algunas personas con deficiencias leves para ver los colores detectan los colores normalmente
+        cuando hay buena luz pero tienen dificultad en la luz tenue. Otras no pueden distinguir ciertos colores en ningún tipo de luz.
+        La forma más grave de daltonismo, en la cual todo se ve en distintos tonos de gris, es poco común.
+        El daltonismo suele afectar ambos ojos por igual y se mantiene estable a lo largo de toda la vida.\n\n
+        Por lo general se nace con daltonismo, pero en algunos casos puede adquirirse más tarde en la vida.
+        Un cambio en la manera de ver los colores puede indicar la presencia de un problema más serio. Toda persona que note un cambio
+        en la manera en que percibe los colores debe consultar a un oftalmólogo.
+    </string>
 </resources>

@@ -67,7 +67,7 @@
                     android:layout_marginTop="@dimen/tamaño_letra_sub_subtitulo"
                     android:layout_marginRight="@dimen/margin3"
                     android:padding="8dp"
-                    android:src="@drawable/seis"
+                    android:src="@drawable/que_es"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
