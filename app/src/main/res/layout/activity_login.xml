@@ -39,7 +39,7 @@
         android:layout_margin="20dp"
         app:helperText="@string/card_required"
         app:endIconMode="clear_text"
-        android:enabled="false"
+        android:enabled="true"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -99,7 +99,7 @@
         android:id="@+id/ingresar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Ingresar"
+        android:text="Iniciar sesión"
         android:textStyle="bold"
         android:textSize="30dp"
         app:layout_constraintTop_toBottomOf="@id/checkbox"
@@ -108,16 +108,32 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="#7858F2"
         />
+
+    <Button
+        android:id="@+id/registrarte"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Crear cuenta nueva"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@id/ingresar"
+        app:layout_constraintStart_toStartOf="@id/ingresar"
+        app:layout_constraintEnd_toEndOf="@id/ingresar"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        android:textColor="#7858F2"
+        />
     <TextView
         android:id="@+id/o"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/o"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/ingresar"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/registrarte"
         app:layout_constraintEnd_toEndOf="@id/password"
         app:layout_constraintStart_toStartOf="@id/password"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/play"
         />
     <ImageView
         android:id="@+id/play"
@@ -127,7 +143,9 @@
         app:layout_constraintTop_toBottomOf="@id/o"
         app:layout_constraintEnd_toEndOf="@id/password"
         app:layout_constraintStart_toStartOf="@id/password"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:contentDescription="Play"
         android:scaleType="centerCrop"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
