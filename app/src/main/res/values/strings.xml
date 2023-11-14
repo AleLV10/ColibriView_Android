@@ -84,12 +84,30 @@
     <string name="causas_daltonismo">La mayoría de las personas que tienen daltonismo nacen con la afección. (Esto es lo que se llama una afección congénita). Los defectos congénitos de la visión de color suelen pasar de la madre al hijo varón.\n
         Estos defectos se deben a una ausencia parcial o total de los conos en la retina. Los conos ayudan a distinguir los colores rojo, verde y azul.\n
         La mayoría de los problemas de la visión de color que aparecen más adelante en la vida son resultado de:\n\n
-        Una enfermedad\n\n
-        Un traumatismo\n\n
-        Los efectos tóxicos de algunos medicamentos\n\n
-        Una enfermedad metabólica o una enfermedad vascular\n\n
+        *Una enfermedad\n\n
+        *Un traumatismo\n\n
+        *Los efectos tóxicos de algunos medicamentos\n\n
+        *Una enfermedad metabólica o una enfermedad vascular\n\n
         Los defectos de la visión de color causados por una enfermedad no se entienden tan bien como los defectos congénitos. El daltonismo debido a una enfermedad específica a menudo afecta cada ojo de manera diferente,
         y suele empeorar con el tiempo. La pérdida de la visión de color adquirida puede ser el resultado de daño a la retina o al nervio óptico.\n\n\n
 
     </string>
+    <string name="riesgo_daltonismo">Los hombres tienen un riesgo mucho mayor de nacer con daltonismo que las mujeres, quienes rara vez tienen este problema. Se calcula que uno de cada diez hombres tiene alguna forma de deficiencia de color.
+        El daltonismo es más común entre los hombres que tienen ascendencia del norte de Europa.\n\n
+        Ciertas enfermedades pueden aumentar el riesgo de tener deficiencia de color adquirida, entre ellas:\n\n
+        El glaucoma\n
+        La diabetes\n
+        La degeneración macular\n
+        La enfermedad de Alzheimer\n
+        La enfermedad de Parkinson\n
+        El alcoholismo crónico\n
+        Leucemia\n
+        La anemia falciforme\n
+        Ciertos medicamentos también pueden aumentar su riesgo de contraer daltonismo. La hidroxicloroquina (Plaquenil) puede causar daltonismo.
+        Se usa para tratar la artritis reumatoide, entre otras afecciones.
+
+    </string>
+    <string name="causas">Causas</string>
+    <string name="personas_riesgo">¿Quienes estan\n
+        en riesgo?</string>
 </resources>

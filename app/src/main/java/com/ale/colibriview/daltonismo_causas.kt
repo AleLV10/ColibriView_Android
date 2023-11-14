@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ale.colibriview.databinding.ActivityDefinicionBinding
 
-class daltonismo_tipos : AppCompatActivity() {
+class daltonismo_causas : AppCompatActivity() {
     private lateinit var binding: ActivityDefinicionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
