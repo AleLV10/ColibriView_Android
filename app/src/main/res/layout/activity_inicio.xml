@@ -48,11 +48,12 @@
                     android:backgroundTint="#7858F2"
                     android:text="Test daltonismo"
                     android:textStyle="bold"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginBottom="45dp"
+                    android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
 
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
