@@ -93,7 +93,7 @@
                         android:id="@+id/imgCard2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/img_que_es"
+                        android:src="@drawable/tipos_img2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -235,6 +235,64 @@
                         android:textSize="15sp"
                         app:layout_constraintStart_toStartOf="@id/title_tx3"
                         app:layout_constraintTop_toBottomOf="@id/title_tx3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginBottom="10dp"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/carrd4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carrd3"
+                android:clickable="true"
+                android:focusable="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/common_padding_default"
+                    android:paddingTop="@dimen/common_padding_default"
+                    android:paddingEnd="@dimen/common_padding_default"
+                    android:paddingBottom="@dimen/common_padding_default"
+                    android:background="#EDF2FA"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgCard4"
+                        android:layout_width="103dp"
+                        android:layout_height="106dp"
+                        android:src="@drawable/tipos_img2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/title_tx4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="@dimen/common_padding_default"
+                        android:text="¿Quienes estan en riesgo?"
+                        android:textSize="@dimen/tamaño_letra_sub_subtitulo"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/imgCard4"
+                        app:layout_constraintTop_toTopOf="@id/imgCard4" />
+
+                    <TextView
+                        android:id="@+id/descripcion4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_padding_default"
+                        android:text="@string/riesgo_daltonismo"
+                        android:maxLines="2"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="@id/title_tx4"
+                        app:layout_constraintTop_toBottomOf="@id/title_tx4"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="10dp"
 
