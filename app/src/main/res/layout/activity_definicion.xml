@@ -85,7 +85,6 @@
                     android:textAlignment="textStart"
                     android:textColor="@color/color"
                     android:textSize="@dimen/tamaño_letra_sub_subtitulo"
-                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.997"
                     app:layout_constraintStart_toEndOf="@id/dalto"
