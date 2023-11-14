@@ -3,13 +3,15 @@ package com.ale.colibriview
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ale.colibriview.databinding.ActivityDaltonismoCausasBinding
+import com.ale.colibriview.databinding.ActivityDaltonismoEnRiesgoBinding
 import com.ale.colibriview.databinding.ActivityDefinicionBinding
 
 class daltonismo_en_riesgo : AppCompatActivity() {
-    private lateinit var binding: ActivityDefinicionBinding
+    private lateinit var binding: ActivityDaltonismoEnRiesgoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDefinicionBinding.inflate(layoutInflater)
+        binding = ActivityDaltonismoEnRiesgoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.regresar.setOnClickListener {

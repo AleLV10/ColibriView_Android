@@ -71,7 +71,7 @@
                 />
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/carrd"
+                android:id="@+id/carrdque"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
@@ -129,12 +129,12 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/carrd2"
+                android:id="@+id/carrdtipos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/carrd"
+                app:layout_constraintTop_toBottomOf="@id/carrdque"
                 android:clickable="true"
                 android:focusable="true">
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -191,7 +191,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/carrd2"
+                app:layout_constraintTop_toBottomOf="@id/carrdtipos"
                 android:clickable="true"
                 android:focusable="true">
 
