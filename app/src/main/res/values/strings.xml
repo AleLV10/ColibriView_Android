@@ -110,4 +110,10 @@
     <string name="causas">Causas</string>
     <string name="personas_riesgo">¿Quienes estan\n
         en riesgo?</string>
+    <string name="User_Profile">William Afton</string>
+    <string name="User_Profile_app">SpringTrap</string>
+    <string name="User_Email_app">Springtrap1@gmail.com</string>
+    <string name="User_Password_app">************</string>
+
+
 </resources>
