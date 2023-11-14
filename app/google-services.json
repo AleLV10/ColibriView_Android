@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1064856684464",
+    "project_id": "colibriview-1f82d",
+    "storage_bucket": "colibriview-1f82d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064856684464:android:585cc45753e881c7527875",
+        "android_client_info": {
+          "package_name": "com.ale.colibriview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPO1nia5HXuX4qqfzLzqNKlnWqHFHoQmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
