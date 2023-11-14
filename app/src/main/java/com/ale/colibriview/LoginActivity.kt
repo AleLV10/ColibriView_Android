@@ -32,5 +32,9 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        binding.anonimo.setOnClickListener{
+
+        }
     }
 }
