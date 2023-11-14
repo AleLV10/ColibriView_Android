@@ -28,6 +28,27 @@ class Inicio : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        val cardq1 : MaterialCardView = findViewById(R.id.carrd2)
+        cardq1.setOnClickListener {
+            // Do something in response to button click
+            val intent2 = Intent(this, daltonismo_tipos::class.java)
+            startActivity(intent2)
+            finish()
+        }
+        val cardq2 : MaterialCardView = findViewById(R.id.carrd3)
+        cardq2.setOnClickListener {
+            // Do something in response to button click
+            val intent3 = Intent(this, daltonismo_causas::class.java)
+            startActivity(intent3)
+            finish()
+        }
+        val cardq3 : MaterialCardView = findViewById(R.id.carrd4)
+        cardq3.setOnClickListener {
+            // Do something in response to button click
+            val intent4 = Intent(this, daltonismo_en_riesgo::class.java)
+            startActivity(intent4)
+            finish()
+        }
 
 
         binding.mnuBarra.home.setOnClickListener {

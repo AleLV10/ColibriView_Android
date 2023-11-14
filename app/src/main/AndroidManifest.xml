@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ColibriView"
         tools:targetApi="31">
         <activity
+            android:name=".daltonismo_en_riesgo"
+            android:exported="false" />
+        <activity
+            android:name=".daltonismo_causas"
+            android:exported="false" />
+        <activity
             android:name=".daltonismo_tipos"
             android:exported="false" />
         <activity
