@@ -35,7 +35,6 @@
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
 
         >
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -99,6 +98,7 @@
                 android:textColor="#7858F2"
                 android:textStyle="bold"
                 android:buttonTint="#7858F2"
+                android:checked="false"
                 />
             <TextView
                 android:id="@+id/olvida"
@@ -123,7 +123,9 @@
                 app:layout_constraintEnd_toEndOf="@id/password"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#7858F2"
-               />
+                android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+
+                />
 
             <Button
                 android:id="@+id/registrarte"
@@ -137,6 +139,8 @@
                 app:layout_constraintEnd_toEndOf="@id/ingresar"
                 android:layout_marginTop="10dp"
                 android:textColor="#7858F2"
+                android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+
                 />
             <TextView
                 android:id="@+id/o"
@@ -148,21 +152,34 @@
                 app:layout_constraintTop_toBottomOf="@id/registrarte"
                 app:layout_constraintEnd_toEndOf="@id/password"
                 app:layout_constraintStart_toStartOf="@id/password"
-                app:layout_constraintBottom_toBottomOf="@id/play"
+                app:layout_constraintBottom_toBottomOf="@id/anonimo"
                 />
             <ImageView
-                android:id="@+id/play"
+                android:id="@+id/anonimo"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:src="@drawable/google"
+                android:src="@drawable/anonimo"
                 app:layout_constraintTop_toBottomOf="@id/o"
-                app:layout_constraintEnd_toEndOf="@id/password"
-                app:layout_constraintStart_toStartOf="@id/password"
+                app:layout_constraintEnd_toStartOf="@id/google"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:contentDescription="Play"
+                android:contentDescription="Anonimo"
                 android:scaleType="centerCrop"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"/>
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/google"
+                app:layout_constraintTop_toTopOf="@id/anonimo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/anonimo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:contentDescription="Google"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
