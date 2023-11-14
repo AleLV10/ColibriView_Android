@@ -76,6 +76,8 @@
         app:layout_constraintEnd_toEndOf="@id/email"
         android:layout_marginTop="40dp"
         android:backgroundTint="#7858F2"
+        android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+
         />
     <TextView
         android:id="@+id/o"

@@ -48,11 +48,12 @@
                     android:backgroundTint="#7858F2"
                     android:text="Test daltonismo"
                     android:textStyle="bold"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginBottom="45dp"
+                    android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
 
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -128,6 +129,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/carrd2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
@@ -149,7 +151,7 @@
                         android:id="@+id/imgCard"
                         android:layout_width="103dp"
                         android:layout_height="106dp"
-                        android:src="@drawable/seis"
+                        android:src="@drawable/tipos_img2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -170,10 +172,69 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/common_padding_default"
-                        android:text="Es una alteracion genetica que afecta la capacidad de percibir colores"
+                        android:text="@string/descripcion_Tipos"
+                        android:maxLines="2"
                         android:textSize="15sp"
                         app:layout_constraintStart_toStartOf="@id/title_tx1"
                         app:layout_constraintTop_toBottomOf="@id/title_tx1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginBottom="10dp"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/carrd3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carrd2"
+                android:clickable="true"
+                android:focusable="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/common_padding_default"
+                    android:paddingTop="@dimen/common_padding_default"
+                    android:paddingEnd="@dimen/common_padding_default"
+                    android:paddingBottom="@dimen/common_padding_default"
+                    android:background="#EDF2FA"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgCard3"
+                        android:layout_width="103dp"
+                        android:layout_height="106dp"
+                        android:src="@drawable/tipos_img2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/title_tx3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="@dimen/common_padding_default"
+                        android:text="Causas"
+                        android:textSize="@dimen/tamaño_letra_sub_subtitulo"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/imgCard3"
+                        app:layout_constraintTop_toTopOf="@id/imgCard3" />
+
+                    <TextView
+                        android:id="@+id/descripcion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_padding_default"
+                        android:text="@string/causas_daltonismo"
+                        android:maxLines="2"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="@id/title_tx3"
+                        app:layout_constraintTop_toBottomOf="@id/title_tx3"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="10dp"
 
