@@ -81,4 +81,15 @@
     </string>
     <string name="numero">12</string>
     <string name="registrar">Registrar nuevo usuario</string>
+    <string name="causas_daltonismo">La mayoría de las personas que tienen daltonismo nacen con la afección. (Esto es lo que se llama una afección congénita). Los defectos congénitos de la visión de color suelen pasar de la madre al hijo varón.\n
+        Estos defectos se deben a una ausencia parcial o total de los conos en la retina. Los conos ayudan a distinguir los colores rojo, verde y azul.\n
+        La mayoría de los problemas de la visión de color que aparecen más adelante en la vida son resultado de:\n\n
+        Una enfermedad\n\n
+        Un traumatismo\n\n
+        Los efectos tóxicos de algunos medicamentos\n\n
+        Una enfermedad metabólica o una enfermedad vascular\n\n
+        Los defectos de la visión de color causados por una enfermedad no se entienden tan bien como los defectos congénitos. El daltonismo debido a una enfermedad específica a menudo afecta cada ojo de manera diferente,
+        y suele empeorar con el tiempo. La pérdida de la visión de color adquirida puede ser el resultado de daño a la retina o al nervio óptico.\n\n\n
+
+    </string>
 </resources>
