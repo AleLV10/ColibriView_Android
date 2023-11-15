@@ -17,14 +17,31 @@ class ishijara2 : AppCompatActivity() {
         setContentView(binding.root)
         val preferences = getSharedPreferences("Respuestas", Activity.MODE_PRIVATE)
 
-
         binding.boton1.setOnClickListener {
             with(preferences.edit()){
                 putInt("IR1", 12).apply()
             }
             Toast.makeText(this,"${preferences.getInt("IR1",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,test_completado::class.java ))
+            startActivity(Intent(this,ishijara3::class.java ))
+        }
+
+        binding.boton2.setOnClickListener {
+            with(preferences.edit()){
+                putInt("IR1", 8).apply()
+            }
+            Toast.makeText(this,"${preferences.getInt("IR1",0)}",
+                Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,ishijara3::class.java ))
+        }
+
+        binding.boton3.setOnClickListener {
+            with(preferences.edit()){
+                putInt("IR1", 0).apply()
+            }
+            Toast.makeText(this,"${preferences.getInt("IR1",0)}",
+                Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,ishijara3::class.java ))
         }
 
 
