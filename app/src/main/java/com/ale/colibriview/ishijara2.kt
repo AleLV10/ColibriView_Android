@@ -1,10 +1,12 @@
 package com.ale.colibriview
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.ale.colibriview.databinding.ActivityIshijara2Binding
 
 class ishijara2 : AppCompatActivity() {
@@ -13,18 +15,39 @@ class ishijara2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityIshijara2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        val preferences = getSharedPreferences("Respuestas", Activity.MODE_PRIVATE)
 
-        binding.boton11.setOnClickListener {
-            // Do something in response to button click
-            val preferences = getPreferences(Context.MODE_PRIVATE)
-            Log.i("resultado","${getString(R.string.numero)}")
-
-            val intent = Intent(this, test_completado::class.java)
-            startActivity(intent)
-            finish()
-
+        binding.boton1.setOnClickListener {
+            with(preferences.edit()){
+                putInt("IR1", 12).apply()
+            }
+            Toast.makeText(this,"${preferences.getInt("IR1",0)}",
+                Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,ishijara3::class.java ))
         }
 
+        binding.boton2.setOnClickListener {
+            with(preferences.edit()){
+                putInt("IR1", 8).apply()
+            }
+            Toast.makeText(this,"${preferences.getInt("IR1",0)}",
+                Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,ishijara3::class.java ))
+        }
+
+        binding.boton3.setOnClickListener {
+            with(preferences.edit()){
+                putInt("IR1", 0).apply()
+            }
+            Toast.makeText(this,"${preferences.getInt("IR1",0)}",
+                Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,ishijara3::class.java ))
+        }
+
+
+
+
+/*
         binding.boton21.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, test_completado::class.java)
@@ -38,6 +61,8 @@ class ishijara2 : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+ */
         binding.mnuBarraIshihara2.home.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Inicio::class.java)
