@@ -3,13 +3,13 @@ package com.ale.colibriview
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ale.colibriview.databinding.ActivityDefinicionBinding
+import com.ale.colibriview.databinding.ActivityDaltonismoTiposBinding
 
 class daltonismo_tipos : AppCompatActivity() {
-    private lateinit var binding: ActivityDefinicionBinding
+    private lateinit var binding: ActivityDaltonismoTiposBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDefinicionBinding.inflate(layoutInflater)
+        binding = ActivityDaltonismoTiposBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.regresar.setOnClickListener {

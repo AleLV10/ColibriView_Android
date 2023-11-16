@@ -14,7 +14,7 @@
         android:id="@+id/ti2"
         android:layout_width="400dp"
         android:layout_height="350dp"
-        android:src="@drawable/seis"
+        android:src="@drawable/is1"
         android:layout_marginTop="@dimen/margin_top"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,11 +34,11 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/boton11"
+                android:id="@+id/boton1"
                 android:layout_width="100dp"
                 android:layout_height="90dp"
                 android:layout_marginLeft="@dimen/margin3"
-                android:text="@string/numero"
+                android:text="12"
                 android:textSize="@dimen/tamaño_letra_titulo"
                 android:backgroundTint="@color/moradoo"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,28 +46,28 @@
                 />
 
             <Button
-                android:id="@+id/boton21"
+                android:id="@+id/boton2"
                 android:layout_width="100dp"
                 android:layout_height="90dp"
                 android:layout_marginLeft="@dimen/margin3"
                 android:text="6"
                 android:textSize="@dimen/tamaño_letra_titulo"
                 android:backgroundTint="@color/moradoo"
-                app:layout_constraintStart_toEndOf="@+id/boton11"
-                app:layout_constraintTop_toTopOf="@id/boton11"
+                app:layout_constraintStart_toEndOf="@+id/boton1"
+                app:layout_constraintTop_toTopOf="@id/boton1"
                 />
 
 
             <Button
-                android:id="@+id/boton31"
+                android:id="@+id/boton3"
                 android:layout_width="110dp"
                 android:layout_height="90dp"
                 android:layout_marginLeft="@dimen/margin3"
                 android:text="NADA"
                 android:textSize="@dimen/tamaño_letra_sub_subtitulo"
                 android:backgroundTint="@color/moradoo"
-                app:layout_constraintStart_toEndOf="@+id/boton21"
-                app:layout_constraintTop_toTopOf="@id/boton21"
+                app:layout_constraintStart_toEndOf="@+id/boton2"
+                app:layout_constraintTop_toTopOf="@id/boton2"
                 />
 
 

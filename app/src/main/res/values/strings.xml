@@ -81,6 +81,8 @@
     </string>
     <string name="numero">12</string>
     <string name="registrar">Registrar usuario</string>
+    <string name="numero">8</string>
+    <string name="registrar">Registrar nuevo usuario</string>
     <string name="causas_daltonismo">La mayoría de las personas que tienen daltonismo nacen con la afección. (Esto es lo que se llama una afección congénita). Los defectos congénitos de la visión de color suelen pasar de la madre al hijo varón.\n
         Estos defectos se deben a una ausencia parcial o total de los conos en la retina. Los conos ayudan a distinguir los colores rojo, verde y azul.\n
         La mayoría de los problemas de la visión de color que aparecen más adelante en la vida son resultado de:\n\n
@@ -104,11 +106,15 @@
         Leucemia\n
         La anemia falciforme\n
         Ciertos medicamentos también pueden aumentar su riesgo de contraer daltonismo. La hidroxicloroquina (Plaquenil) puede causar daltonismo.
-        Se usa para tratar la artritis reumatoide, entre otras afecciones.
+        Se usa para tratar la artritis reumatoide, entre otras afecciones.\n\n\n
 
     </string>
     <string name="causas">Causas</string>
     <string name="personas_riesgo">¿Quienes estan\n
         en riesgo?</string>
+    <string name="User_Profile">William Afton</string>
+    <string name="User_Profile_app">SpringTrap</string>
+    <string name="User_Email_app">Springtrap1@gmail.com</string>
+    <string name="User_Password_app">************</string>
     <string name="form_name">name</string>
 </resources>
