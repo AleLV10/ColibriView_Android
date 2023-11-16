@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".perfil_usuario">
+
+    <ImageView
+        android:id="@+id/img_Ojo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100sp"
+        android:src="@drawable/user_new"
+        />
+
+    <TextView
+        android:id="@+id/txt_name_User"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="William Afton"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_Ojo"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_User"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_Ojo"
+        android:layout_margin="20sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Name_User"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/User_Profile"
+        app:layout_constraintTop_toBottomOf="@id/txt_name_User"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20sp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txt_User_app"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre de Usuario:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Name_User"
+        android:layout_margin="20sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Name_User_app"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/User_Profile_app"
+        app:layout_constraintTop_toTopOf="@id/txt_User_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20sp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txt_Email_app"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Correo Electronico:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Name_User_app"
+        android:layout_margin="20sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Email_User_app"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/User_Email_app"
+        app:layout_constraintTop_toTopOf="@id/txt_Email_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20sp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txt_Password_app"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Contraseña:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Email_User_app"
+        android:layout_margin="20sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password_User_app"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/User_Password_app"
+        app:layout_constraintTop_toTopOf="@id/txt_Password_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20sp"
+        app:helperText="@string/card_required"
+        app:endIconMode="clear_text"
+        android:enabled="false"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <include layout="@layout/activity_base"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

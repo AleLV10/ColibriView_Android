@@ -83,6 +83,7 @@
                     android:layout_marginLeft="20dp"
                     android:padding="8dp"
                     android:text="@string/descripcion_Tipos"
+                    android:textAppearance="?attr/textAppearanceBody2"
                     android:textAlignment="textStart"
                     android:textColor="@color/color"
                     android:textSize="@dimen/tamaño_letra_sub_subtitulo"
