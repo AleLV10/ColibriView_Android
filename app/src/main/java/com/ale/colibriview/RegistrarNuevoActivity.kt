@@ -3,8 +3,10 @@ package com.ale.colibriview
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import com.ale.colibriview.databinding.ActivityRegistrarNuevoBinding
+import kotlin.math.log
 
 class RegistrarNuevoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrarNuevoBinding
@@ -30,6 +32,7 @@ class RegistrarNuevoActivity : AppCompatActivity() {
         binding.crear.setOnClickListener {
             // Do something in response to button click
             name=binding.name.toString()
+            Log.i("US","${name}")
         }
     }
 }
