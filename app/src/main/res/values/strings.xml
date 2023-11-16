@@ -106,11 +106,15 @@
         Leucemia\n
         La anemia falciforme\n
         Ciertos medicamentos también pueden aumentar su riesgo de contraer daltonismo. La hidroxicloroquina (Plaquenil) puede causar daltonismo.
-        Se usa para tratar la artritis reumatoide, entre otras afecciones.
+        Se usa para tratar la artritis reumatoide, entre otras afecciones.\n\n\n
 
     </string>
     <string name="causas">Causas</string>
     <string name="personas_riesgo">¿Quienes estan\n
         en riesgo?</string>
+    <string name="User_Profile">William Afton</string>
+    <string name="User_Profile_app">SpringTrap</string>
+    <string name="User_Email_app">Springtrap1@gmail.com</string>
+    <string name="User_Password_app">************</string>
     <string name="form_name">name</string>
 </resources>
