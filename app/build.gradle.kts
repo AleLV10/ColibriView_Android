@@ -30,6 +30,9 @@ android {
     viewBinding{
         enable=true
     }
+    buildFeatures{
+        viewBinding=true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -49,6 +52,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth-ktx:22.2.0")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.firebase:firebase-functions-ktx:20.4.0")
 
 
     testImplementation("junit:junit:4.13.2")
