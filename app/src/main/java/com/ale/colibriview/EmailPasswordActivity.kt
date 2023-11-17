@@ -9,7 +9,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class EmailPasswordActivity : Activity() {
+open class EmailPasswordActivity : Activity() {
 
     // [START declare_auth]
     private lateinit var auth: FirebaseAuth

@@ -42,7 +42,7 @@
             android:layout_height="match_parent"
             >
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email"
+                android:id="@+id/emailLogin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/form_username"
@@ -57,6 +57,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/correo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -69,9 +70,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/form_passw"
-                app:layout_constraintTop_toBottomOf="@id/email"
-                app:layout_constraintStart_toStartOf="@id/email"
-                app:layout_constraintEnd_toEndOf="@id/email"
+                app:layout_constraintTop_toBottomOf="@id/emailLogin"
+                app:layout_constraintStart_toStartOf="@id/emailLogin"
+                app:layout_constraintEnd_toEndOf="@id/emailLogin"
                 android:layout_marginTop="30dp"
                 app:helperText="@string/card_required"
                 app:endIconMode="password_toggle"
@@ -79,7 +80,8 @@
                 app:helperTextTextColor="#E91E63"
                 >
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/contras"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -87,26 +89,13 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recordar contraseña"
-                app:layout_constraintStart_toStartOf="@id/password"
-                app:layout_constraintTop_toBottomOf="@id/password"
-                android:layout_marginTop="10dp"
-                android:textColor="#7858F2"
-                android:textStyle="bold"
-                android:buttonTint="#7858F2"
-                android:checked="false"
-                />
             <TextView
                 android:id="@+id/olvida"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/olvida"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="@id/checkbox"
+                app:layout_constraintTop_toBottomOf="@id/password"
                 app:layout_constraintEnd_toEndOf="@id/password"
                 android:layout_marginTop="10dp"
                 android:textColor="#7858F2"
@@ -118,7 +107,7 @@
                 android:text="Iniciar sesión"
                 android:textStyle="bold"
                 android:textSize="30dp"
-                app:layout_constraintTop_toBottomOf="@id/checkbox"
+                app:layout_constraintTop_toBottomOf="@id/olvida"
                 app:layout_constraintStart_toStartOf="@id/password"
                 app:layout_constraintEnd_toEndOf="@id/password"
                 android:layout_marginTop="10dp"
@@ -152,33 +141,22 @@
                 app:layout_constraintTop_toBottomOf="@id/registrarte"
                 app:layout_constraintEnd_toEndOf="@id/password"
                 app:layout_constraintStart_toStartOf="@id/password"
-                app:layout_constraintBottom_toBottomOf="@id/anonimo"
+                app:layout_constraintBottom_toBottomOf="@id/google"
                 />
-            <ImageView
-                android:id="@+id/anonimo"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/anonimo"
-                app:layout_constraintTop_toBottomOf="@id/o"
-                app:layout_constraintEnd_toStartOf="@id/google"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:contentDescription="Anonimo"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
+
             <ImageView
                 android:id="@+id/google"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:src="@drawable/google"
-                app:layout_constraintTop_toTopOf="@id/anonimo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/anonimo"
+                app:layout_constraintTop_toBottomOf="@id/o"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/ingresar"
                 android:contentDescription="Google"
                 android:scaleType="centerCrop"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
