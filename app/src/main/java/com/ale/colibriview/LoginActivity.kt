@@ -39,9 +39,6 @@ class LoginActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT,
                 ).show()
             // Do something in response to button click
-            val intent = Intent(this, Inicio::class.java)
-            startActivity(intent)
-            finish()
         }
 
         binding.olvida.setOnClickListener {
