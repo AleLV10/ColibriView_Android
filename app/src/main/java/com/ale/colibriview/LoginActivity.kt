@@ -57,9 +57,6 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
 
-        binding.anonimo.setOnClickListener{
-
-        }
 
     }
     // [START on_start_check_user]
