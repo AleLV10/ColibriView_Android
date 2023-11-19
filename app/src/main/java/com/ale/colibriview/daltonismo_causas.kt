@@ -1,10 +1,9 @@
 package com.ale.colibriview
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityDaltonismoCausasBinding
-import com.ale.colibriview.databinding.ActivityDefinicionBinding
 
 class daltonismo_causas : AppCompatActivity() {
     private lateinit var binding: ActivityDaltonismoCausasBinding
@@ -34,6 +33,12 @@ class daltonismo_causas : AppCompatActivity() {
         binding.mnuBarraDefinicion.menuResultados.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Ussuarios::class.java)
+            startActivity(intent)
+            finish()
+        }
+        binding.mnuBarraDefinicion.usuario.setOnClickListener {
+            // Do something in response to button click
+            val intent = Intent(this,perfil_usuario::class.java)
             startActivity(intent)
             finish()
         }
