@@ -1,8 +1,8 @@
 package com.ale.colibriview
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityTiposBinding
 
 
@@ -41,6 +41,12 @@ class tipos : AppCompatActivity() {
         binding.mnBarraTest.menuResultados.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Ussuarios::class.java)
+            startActivity(intent)
+            finish()
+        }
+        binding.mnBarraTest.usuario.setOnClickListener {
+            // Do something in response to button click
+            val intent = Intent(this,perfil_usuario::class.java)
             startActivity(intent)
             finish()
         }

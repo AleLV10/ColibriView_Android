@@ -81,9 +81,6 @@ class LoginActivity : AppCompatActivity() {
                     Log.d(TAG2, "signInWithCredential:success")
                     val user = auth.currentUser
                     updateUI(user)
-                    val intent = Intent(this, Inicio::class.java)
-                    startActivity(intent)
-                    finish()
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG2, "signInWithCredential:failure", task.exception)
@@ -117,10 +114,11 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
-        updateUI(currentUser)
         if (currentUser != null) {
             reload()
+            updateUI(currentUser)
         }
+
     }
     // [END on_start_check_user]
 

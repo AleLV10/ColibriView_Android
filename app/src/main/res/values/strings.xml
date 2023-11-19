@@ -9,7 +9,7 @@
     <string name="olvida">¿Olvidaste tu contraseña?</string>
     <string name="o">Iniciar sesión con</string>
     <string name="titRest">Restablecer contraseña</string>
-    <string name="restablece">"Se enviara un código para poder restablecer la contraseña de la cuenta "</string>
+    <string name="restablece">"Se enviara un correo electrónico para poder restablecer la contraseña."</string>
     <string name="completado">Test Completo!!</string>
     <string name="continuar">CONTINUAR</string>
     <string name="resultados">RESULTADOS</string>
@@ -110,9 +110,8 @@
     <string name="causas">Causas</string>
     <string name="personas_riesgo">¿Quienes estan\n
         en riesgo?</string>
-    <string name="User_Profile">William Afton</string>
-    <string name="User_Profile_app">SpringTrap</string>
-    <string name="User_Email_app">Springtrap1@gmail.com</string>
-    <string name="User_Password_app">************</string>
+    <string name="User_Profile">Nombre</string>
+    <string name="User_Email_app">Correo Electronico:</string>
+    <string name="User_Password_app">Contraseña</string>
     <string name="form_name">name</string>
 </resources>
