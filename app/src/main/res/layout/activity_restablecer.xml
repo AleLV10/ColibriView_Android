@@ -41,7 +41,7 @@
         android:layout_margin="20dp"
         app:helperText="@string/card_required"
         app:endIconMode="clear_text"
-        android:enabled="false"
+        android:enabled="true"
         >
 
         <com.google.android.material.textfield.TextInputEditText

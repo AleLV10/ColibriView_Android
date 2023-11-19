@@ -307,5 +307,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-    <include layout="@layout/activity_base" android:id="@+id/mnu_barra"/>
+    <include layout="@layout/activity_base"
+        android:id="@+id/mnu_barra"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
