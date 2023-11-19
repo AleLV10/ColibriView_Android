@@ -1,9 +1,9 @@
 package com.ale.colibriview
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityInicioBinding
 
 class Inicio : AppCompatActivity() {
@@ -60,6 +60,12 @@ class Inicio : AppCompatActivity() {
         binding.mnuBarra.menuResultados.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Ussuarios::class.java)
+            startActivity(intent)
+            finish()
+        }
+        binding.mnuBarra.usuario.setOnClickListener {
+            // Do something in response to button click
+            val intent = Intent(this,perfil_usuario::class.java)
             startActivity(intent)
             finish()
         }
