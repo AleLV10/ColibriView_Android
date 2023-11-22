@@ -13,13 +13,6 @@ class DatosTest : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datos_test)
 
-        val spinner = findViewById<Spinner>(R.id.spinner1)
-        val items = 8.rangeTo(80)
-        /*val adapter = ArrayAdapter<>(
-            this,
-            android.R.layout.simple_spinner_dropdown_item,
-            items
-        )*/
-        spinner.setAdapter(adapter)
+
     }
 }
