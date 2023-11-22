@@ -36,7 +36,6 @@ class restablecer : AppCompatActivity() {
                     }
             }
 
-            // Do something in response to button click
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
