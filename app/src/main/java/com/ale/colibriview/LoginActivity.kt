@@ -38,6 +38,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        updateUI(null)
+
         binding.ingresar.setOnClickListener{
            // val UsuarioNuevo = UsuarioNuevo(name =binding.name,mail = binding.correo.text.toString().trim())
             email=binding.correo.text.toString().trim()
@@ -114,11 +116,10 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
+        updateUI(currentUser)
         if (currentUser != null) {
             reload()
-            updateUI(currentUser)
         }
-
     }
     // [END on_start_check_user]
 
@@ -147,9 +148,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    private fun updateUI(user: FirebaseUser?) {
-        val user=auth.currentUser;
-        if(user!=null)
+    private fun updateUI(users: FirebaseUser?) {
+        if(users!=null)
         {
             val intent = Intent(this, Inicio::class.java)
             startActivity(intent)
