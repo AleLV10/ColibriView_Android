@@ -18,15 +18,6 @@ class test_completado : AppCompatActivity() {
         val preferences = getSharedPreferences("Respuestas", Activity.MODE_PRIVATE)
         Toast.makeText(this,"${preferences.getInt("IR1",0)}", Toast.LENGTH_SHORT).show()
 
-/*
-        binding.boton12.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, tipos::class.java)
-            startActivity(intent)
-            finish()
-        }
-
- */
         binding.boton22.setOnClickListener {
             // Do something in response to button click
             if(bandera){
@@ -57,6 +48,7 @@ class test_completado : AppCompatActivity() {
 
 
         }
+
 /*
         binding.mnuBarraCompleto.home.setOnClickListener {
             // Do something in response to button click
