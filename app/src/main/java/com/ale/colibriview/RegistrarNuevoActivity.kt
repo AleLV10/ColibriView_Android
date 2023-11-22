@@ -1,6 +1,7 @@
 package com.ale.colibriview
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -9,6 +10,7 @@ import com.ale.colibriview.databinding.ActivityRegistrarNuevoBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
 
 class RegistrarNuevoActivity : AppCompatActivity() {
@@ -54,7 +56,11 @@ class RegistrarNuevoActivity : AppCompatActivity() {
             Log.i("US Mail","${email}")
             Log.i("US Password","${password}")
             if(email!=""&&name!=""&&password!="")
+            {
                 createAccount(email,password)
+
+            }
+
             else
                 Toast.makeText(
                     baseContext,
@@ -75,6 +81,28 @@ class RegistrarNuevoActivity : AppCompatActivity() {
     }
     // [END on_start_check_user]
 
+    private fun updateProfile() {
+        // [START update_profile]
+        val user = Firebase.auth.currentUser
+
+        val profileUpdates = userProfileChangeRequest {
+            displayName = name
+            photoUri = Uri.parse("@drawable/usuario")
+        }
+
+        user!!.updateProfile(profileUpdates)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "User profile updated.")
+                    Toast.makeText(
+                        baseContext,
+                        "Nombre Agregado",
+                        Toast.LENGTH_SHORT,
+                    ).show()
+                }
+            }
+        // [END update_profile]
+    }
     private fun createAccount(email: String, password: String) {
         // [START create_user_with_email]
         auth.createUserWithEmailAndPassword(email, password)
@@ -84,9 +112,11 @@ class RegistrarNuevoActivity : AppCompatActivity() {
                     Log.d(TAG, "createUserWithEmail:success")
                     val user = auth.currentUser
                     updateUI(user)
+                    updateProfile()
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
+
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -113,6 +143,12 @@ class RegistrarNuevoActivity : AppCompatActivity() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
+        if(user!=null)
+        {
+            val intent = Intent(this, Inicio::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun reload() {

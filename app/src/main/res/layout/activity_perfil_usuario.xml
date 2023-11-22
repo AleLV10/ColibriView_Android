@@ -16,6 +16,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="20dp"
             >
             <ImageView
                 android:id="@+id/img_Ojo"
@@ -32,11 +33,12 @@
                 android:id="@+id/txt_name_User"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="William Afton"
+                android:text="@string/User_Profile"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textStyle="bold"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_Ojo"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -49,17 +51,29 @@
                 android:hint="@string/User_Profile"
                 app:layout_constraintTop_toBottomOf="@id/txt_name_User"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="20sp"
+                app:layout_constraintEnd_toStartOf="@id/editar_nombre"
+                android:layout_marginTop="20dp"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/perfil_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     />
             </com.google.android.material.textfield.TextInputLayout>
-
+            <ImageView
+                android:id="@+id/editar_nombre"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/edit"
+                app:layout_constraintTop_toBottomOf="@id/txt_name_User"
+                app:layout_constraintStart_toEndOf="@id/Name_User"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/Name_User"
+                android:clickable="true"
+                 />
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Email_User_app"
                 android:layout_width="0dp"
@@ -67,37 +81,30 @@
                 android:hint="@string/User_Email_app"
                 app:layout_constraintTop_toBottomOf="@id/Name_User"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="20sp"
+                app:layout_constraintEnd_toStartOf="@id/editar_correo"
+                android:layout_marginTop="10dp"
+
+
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/perfil_correo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     />
             </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Password_User_app"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/User_Password_app"
-                app:layout_constraintTop_toBottomOf="@id/Email_User_app"
-                app:layout_constraintStart_toStartOf="parent"
+            <ImageView
+                android:id="@+id/editar_correo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/edit"
+                app:layout_constraintTop_toBottomOf="@id/Name_User"
+                app:layout_constraintStart_toEndOf="@id/Email_User_app"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="20sp"
-                app:endIconMode="clear_text"
-                android:enabled="false"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:clickable="true"
+                />
 
             <Button
                 android:id="@+id/guardarCambios"
@@ -106,12 +113,13 @@
                 android:text="Guardar"
                 android:textStyle="bold"
                 android:textSize="30dp"
-                app:layout_constraintTop_toBottomOf="@id/Password_User_app"
-                app:layout_constraintStart_toStartOf="@id/Password_User_app"
-                app:layout_constraintEnd_toEndOf="@id/Password_User_app"
+                app:layout_constraintTop_toBottomOf="@id/Email_User_app"
+                app:layout_constraintStart_toStartOf="@id/Email_User_app"
+                app:layout_constraintEnd_toEndOf="@id/editar_nombre"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#7858F2"
                 android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+                android:layout_marginRight="10sp"
                 />
             <Button
                 android:id="@+id/cerrarSesion"
@@ -121,8 +129,8 @@
                 android:textStyle="bold"
                 android:textSize="30dp"
                 app:layout_constraintTop_toBottomOf="@id/guardarCambios"
-                app:layout_constraintStart_toStartOf="@id/Password_User_app"
-                app:layout_constraintEnd_toEndOf="@id/Password_User_app"
+                app:layout_constraintStart_toStartOf="@id/Email_User_app"
+                app:layout_constraintEnd_toEndOf="@id/guardarCambios"
                 android:layout_marginTop="10dp"
                 android:textColor="#7858F2"
                 android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
@@ -136,10 +144,11 @@
                 android:textSize="30dp"
                 app:layout_constraintTop_toBottomOf="@id/cerrarSesion"
                 app:layout_constraintStart_toStartOf="@id/cerrarSesion"
-                app:layout_constraintEnd_toEndOf="@id/cerrarSesion"
+                app:layout_constraintEnd_toEndOf="@id/guardarCambios"
                 android:layout_marginTop="10dp"
                 android:textColor="#7858F2"
                 android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

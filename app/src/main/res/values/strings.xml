@@ -111,7 +111,9 @@
     <string name="personas_riesgo">¿Quienes estan\n
         en riesgo?</string>
     <string name="User_Profile">Nombre</string>
-    <string name="User_Email_app">Correo Electronico:</string>
+    <string name="User_Email_app">Correo Electronico</string>
     <string name="User_Password_app">Contraseña</string>
     <string name="form_name">name</string>
+    <string name="datos_test">Datos del test</string>
+    <string name="Radica">Donde radicas?</string>
 </resources>
