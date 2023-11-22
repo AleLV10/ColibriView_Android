@@ -1,6 +1,7 @@
 package com.ale.colibriview
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -25,10 +26,32 @@ class perfil_usuario : AppCompatActivity() {
         uri->
         if(uri!=null)
         {
+            binding.imgOjo.setImageURI(uri)
             //Imagen seleccionada
+            Log.i("aris","seleccionado")
+            val user = Firebase.auth.currentUser
+
+            val profileUpdates = userProfileChangeRequest {
+                photoUri = Uri.parse(uri.toString())
+            }
+
+            user!!.updateProfile(profileUpdates)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Log.d(TAG, "Imagen Actualizada")
+                        Toast.makeText(
+                            baseContext,
+                            "Imagen Actualizada",
+                            Toast.LENGTH_SHORT,
+                        ).show()
+
+                    }
+                }
+            // [END update_profile]
         }
         else
         {
+            Log.i("aris","No seleccionado")
             //Imagen no seleccionada
         }
     }
@@ -97,6 +120,9 @@ class perfil_usuario : AppCompatActivity() {
         }
         binding.imgOjo.setOnClickListener{
             pickmedia.launch(PickVisualMediaRequest(PickVisualMedia.ImageOnly))
+            if(PickVisualMedia.isPhotoPickerAvailable()) {
+                pickmedia.launch(PickVisualMediaRequest(PickVisualMedia.ImageOnly))
+            }
         }
 
         binding.guardarCambios.setOnClickListener {
