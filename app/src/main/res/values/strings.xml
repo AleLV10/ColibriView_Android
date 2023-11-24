@@ -117,4 +117,10 @@
     <string name="datos_test">Datos del test</string>
     <string name="Radica">Donde radicas?</string>
     <string name="Edad">Ingresa tu edad</string>
+    <string name="texto_lantern">El test consiste en mostrar 9 pares de luces orientadas verticalmente, en cualquiera de las combinaciones de rojo, verde o amarillo.\n
+        Identifica los colores de arriba y abajo (algunos son iguales). Los colores solo se mostraran por unos segundos.\n\n 
+        Ejemplo 1: Arriba-rojo, abajo-verde.\n
+        Ejemplo 2: Arriba-amarillo, abajo-rojo.\n\n
+        Si no puedes identificar los colores, haz click en el botón siguiente.
+    </string>
 </resources>

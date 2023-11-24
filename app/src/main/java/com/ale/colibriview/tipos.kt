@@ -26,6 +26,12 @@ class tipos : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        binding.carrd4.setOnClickListener {
+            // Do something in response to button click
+            val intent = Intent(this, test_Lantern::class.java)
+            startActivity(intent)
+            finish()
+        }
         binding.mnBarraTest.home.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Inicio::class.java)
