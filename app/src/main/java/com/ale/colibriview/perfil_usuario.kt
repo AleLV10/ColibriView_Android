@@ -3,8 +3,10 @@ package com.ale.colibriview
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.ComponentActivity
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia
 import androidx.appcompat.app.AppCompatActivity
@@ -22,8 +24,7 @@ class perfil_usuario : AppCompatActivity() {
     private lateinit var email: String
     private lateinit var photoUrl: String
 
-    val pickmedia=registerForActivityResult(PickVisualMedia()){
-        uri->
+    val pickmedia=registerForActivityResult(PickVisualMedia()){ uri->
         if(uri!=null)
         {
             binding.imgOjo.setImageURI(uri)
@@ -51,8 +52,7 @@ class perfil_usuario : AppCompatActivity() {
         }
         else
         {
-            Log.i("aris","No seleccionado")
-            //Imagen no seleccionada
+            Log.i("aris","NO seleccionado")
         }
     }
 
@@ -60,6 +60,7 @@ class perfil_usuario : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPerfilUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         auth = Firebase.auth
         binding.mnuBarraUsuario.home.setOnClickListener {
@@ -92,20 +93,28 @@ class perfil_usuario : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        //return intent
+        createIntent()
+        //parseResult(Activity.,createIntent())
         getUserProfile()
 
         if(name==null||name=="")
         {
             binding.perfilName.setText(email)
             binding.txtNameUser.text=email
+            binding.imgOjo.setImageURI(Uri.parse("@drawable/usuario"))
         }
         else {
             binding.perfilName.setText(name)
             binding.txtNameUser.text=name
+         //   binding.imgOjo.setImageURI(photoUrl.toUri())
         }
+
         binding.perfilName.isEnabled = false
         binding.perfilCorreo.setText(email+"")
         binding.perfilCorreo.isEnabled=false
+
         binding.guardarCambios.isEnabled=false
 
         binding.editarNombre.setOnClickListener{
@@ -120,9 +129,7 @@ class perfil_usuario : AppCompatActivity() {
         }
         binding.imgOjo.setOnClickListener{
             pickmedia.launch(PickVisualMediaRequest(PickVisualMedia.ImageOnly))
-            if(PickVisualMedia.isPhotoPickerAvailable()) {
-                pickmedia.launch(PickVisualMediaRequest(PickVisualMedia.ImageOnly))
-            }
+
         }
 
         binding.guardarCambios.setOnClickListener {
@@ -149,6 +156,18 @@ class perfil_usuario : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+    fun createIntent(): Intent {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        return intent
+    }
+    fun parseResult(resultCode: Int, intent: Intent?): Uri? {
+        if (resultCode == ComponentActivity.RESULT_OK) {
+            val data = intent?.data
+            return data
+        }
+
+        return null
     }
     private fun getUserProfile() {
         // [START get_user_profile]
