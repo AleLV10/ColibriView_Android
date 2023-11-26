@@ -1,4 +1,4 @@
-package com.ale.colibriview
+package com.ale.colibriview.ishihara
 
 import android.app.Activity
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.ale.colibriview.databinding.ActivityIshijara11Binding
+import com.ale.colibriview.test_completado
 
 class ishijara11 : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class ishijara11 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR10",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,test_completado::class.java ))
+            startActivity(Intent(this, test_completado::class.java ))
         }
 
         binding.boton2.setOnClickListener {
@@ -31,7 +32,7 @@ class ishijara11 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR10",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,test_completado::class.java ))
+            startActivity(Intent(this, test_completado::class.java ))
         }
 
         binding.boton3.setOnClickListener {
@@ -40,7 +41,7 @@ class ishijara11 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR10",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,test_completado::class.java ))
+            startActivity(Intent(this, test_completado::class.java ))
         }
     }
 }

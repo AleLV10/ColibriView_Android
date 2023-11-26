@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ColibriView"
         tools:targetApi="31">
         <activity
+            android:name=".navbar"
+            android:exported="false" />
+        <activity
             android:name=".test_lantern1"
             android:exported="false" />
         <activity
@@ -25,40 +28,40 @@
             android:name=".perfil_usuario"
             android:exported="false" />
         <activity
-            android:name=".ishijara11"
+            android:name=".ishihara.ishijara11"
             android:exported="false" />
         <activity
-            android:name=".ishijara10"
+            android:name=".ishihara.ishijara10"
             android:exported="false" />
         <activity
-            android:name=".ishijara9"
+            android:name=".ishihara.ishijara9"
             android:exported="false" />
         <activity
-            android:name=".ishijara8"
+            android:name=".ishihara.ishijara8"
             android:exported="false" />
         <activity
-            android:name=".ishijara7"
+            android:name=".ishihara.ishijara7"
             android:exported="false" />
         <activity
-            android:name=".ishijara6"
+            android:name=".ishihara.ishijara6"
             android:exported="false" />
         <activity
-            android:name=".ishijara5"
+            android:name=".ishihara.ishijara5"
             android:exported="false" />
         <activity
-            android:name=".ishijara4"
+            android:name=".ishihara.ishijara4"
             android:exported="false" />
         <activity
-            android:name=".ishijara3"
+            android:name=".ishihara.ishijara3"
             android:exported="false" />
         <activity
-            android:name=".daltonismo_en_riesgo"
+            android:name=".home.daltonismo_en_riesgo"
             android:exported="false" />
         <activity
-            android:name=".daltonismo_causas"
+            android:name=".home.daltonismo_causas"
             android:exported="false" />
         <activity
-            android:name=".daltonismo_tipos"
+            android:name=".home.daltonismo_tipos"
             android:exported="false" />
         <activity
             android:name=".DefinicionActivity"
@@ -79,7 +82,7 @@
             android:name=".ishijara"
             android:exported="false" />
         <activity
-            android:name=".ishijara2"
+            android:name=".ishihara.ishijara2"
             android:exported="false" />
         <activity
             android:name=".test_completado"

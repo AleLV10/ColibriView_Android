@@ -1,15 +1,19 @@
-package com.ale.colibriview
+package com.ale.colibriview.home
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.ale.colibriview.databinding.ActivityDaltonismoEnRiesgoBinding
+import com.ale.colibriview.Inicio
+import com.ale.colibriview.Ussuarios
+import com.ale.colibriview.databinding.ActivityDaltonismoTiposBinding
+import com.ale.colibriview.perfil_usuario
+import com.ale.colibriview.tipos
 
-class daltonismo_en_riesgo : AppCompatActivity() {
-    private lateinit var binding: ActivityDaltonismoEnRiesgoBinding
+class daltonismo_tipos : AppCompatActivity() {
+    private lateinit var binding: ActivityDaltonismoTiposBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDaltonismoEnRiesgoBinding.inflate(layoutInflater)
+        binding = ActivityDaltonismoTiposBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.regresar.setOnClickListener {
@@ -38,7 +42,7 @@ class daltonismo_en_riesgo : AppCompatActivity() {
         }
         binding.mnuBarraDefinicion.usuario.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this,perfil_usuario::class.java)
+            val intent = Intent(this, perfil_usuario::class.java)
             startActivity(intent)
             finish()
         }

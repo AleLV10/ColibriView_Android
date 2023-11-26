@@ -1,4 +1,4 @@
-package com.ale.colibriview
+package com.ale.colibriview.ishihara
 
 import android.app.Activity
 import android.content.Intent
@@ -21,7 +21,7 @@ class ishijara5 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR4",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara6::class.java ))
+            startActivity(Intent(this, ishijara6::class.java ))
         }
 
         binding.boton2.setOnClickListener {
@@ -30,7 +30,7 @@ class ishijara5 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR4",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara6::class.java ))
+            startActivity(Intent(this, ishijara6::class.java ))
         }
 
         binding.boton3.setOnClickListener {
@@ -39,7 +39,7 @@ class ishijara5 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR4",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara6::class.java ))
+            startActivity(Intent(this, ishijara6::class.java ))
         }
     }
 }

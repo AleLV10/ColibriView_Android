@@ -1,11 +1,15 @@
-package com.ale.colibriview
+package com.ale.colibriview.ishihara
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.ale.colibriview.Inicio
+import com.ale.colibriview.Ussuarios
 import com.ale.colibriview.databinding.ActivityIshijara2Binding
+import com.ale.colibriview.perfil_usuario
+import com.ale.colibriview.tipos
 
 class ishijara2 : AppCompatActivity() {
     private lateinit var binding: ActivityIshijara2Binding
@@ -21,7 +25,7 @@ class ishijara2 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR1",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara3::class.java ))
+            startActivity(Intent(this, ishijara3::class.java ))
         }
 
         binding.boton2.setOnClickListener {
@@ -30,7 +34,7 @@ class ishijara2 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR1",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara3::class.java ))
+            startActivity(Intent(this, ishijara3::class.java ))
         }
 
         binding.boton3.setOnClickListener {
@@ -39,7 +43,7 @@ class ishijara2 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR1",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara3::class.java ))
+            startActivity(Intent(this, ishijara3::class.java ))
         }
 
 
@@ -81,7 +85,7 @@ class ishijara2 : AppCompatActivity() {
         }
         binding.mnuBarraIshihara2.usuario.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this,perfil_usuario::class.java)
+            val intent = Intent(this, perfil_usuario::class.java)
             startActivity(intent)
             finish()
         }
