@@ -2,9 +2,9 @@ package com.ale.colibriview
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityIshijara3Binding
 
 class ishijara3 : AppCompatActivity() {
@@ -21,7 +21,7 @@ class ishijara3 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR2",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara4::class.java ))
+            startActivity(Intent(this, ishijara4::class.java ))
         }
 
         binding.boton2.setOnClickListener {
@@ -30,7 +30,7 @@ class ishijara3 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR2",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara4::class.java ))
+            startActivity(Intent(this, ishijara4::class.java ))
         }
 
         binding.boton3.setOnClickListener {
@@ -39,7 +39,7 @@ class ishijara3 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR2",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara4::class.java ))
+            startActivity(Intent(this, ishijara4::class.java ))
         }
 
     }

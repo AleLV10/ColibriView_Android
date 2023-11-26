@@ -21,7 +21,7 @@ class ishijara4 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR3",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara5::class.java ))
+            startActivity(Intent(this, ishijara5::class.java ))
         }
 
         binding.boton2.setOnClickListener {
@@ -30,7 +30,7 @@ class ishijara4 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR3",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara5::class.java ))
+            startActivity(Intent(this, ishijara5::class.java ))
         }
 
         binding.boton3.setOnClickListener {
@@ -39,7 +39,7 @@ class ishijara4 : AppCompatActivity() {
             }
             Toast.makeText(this,"${preferences.getInt("IR3",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this,ishijara5::class.java ))
+            startActivity(Intent(this, ishijara5::class.java ))
         }
     }
 }

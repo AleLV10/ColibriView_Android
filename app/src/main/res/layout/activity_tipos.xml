@@ -66,7 +66,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:layout_marginTop="10dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,7 +75,6 @@
                     android:paddingTop="@dimen/common_padding_default"
                     android:paddingEnd="@dimen/common_padding_default"
                     android:paddingBottom="@dimen/common_padding_default"
-                    android:background="#EDF2FA"
                     >
 
                     <ImageView
@@ -94,7 +94,6 @@
                         android:text="@string/nomtest"
                         android:textSize="@dimen/tamaño_letra_sub_subtitulo"
                         android:textStyle="bold"
-                        android:textColor="@color/color"
                         app:layout_constraintStart_toEndOf="@id/imgCard2"
                         app:layout_constraintTop_toTopOf="@id/imgCard2" />
 
@@ -126,7 +125,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/carrd_test"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:layout_marginTop="10dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,7 +134,6 @@
                     android:paddingTop="@dimen/common_padding_default"
                     android:paddingEnd="@dimen/common_padding_default"
                     android:paddingBottom="@dimen/common_padding_default"
-                    android:background="#EDF2FA"
                     >
 
                     <ImageView
@@ -154,7 +153,6 @@
                         android:text="@string/nomtest_PD"
                         android:textSize="@dimen/tamaño_letra_sub_subtitulo"
                         android:textStyle="bold"
-                        android:textColor="@color/color"
                         app:layout_constraintStart_toEndOf="@id/imgCard"
                         app:layout_constraintTop_toTopOf="@id/imgCard" />
 
@@ -185,7 +183,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/carrd2"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:layout_marginTop="10dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -193,7 +192,6 @@
                     android:paddingTop="@dimen/common_padding_default"
                     android:paddingEnd="@dimen/common_padding_default"
                     android:paddingBottom="@dimen/common_padding_default"
-                    android:background="#EDF2FA"
                     >
 
                     <ImageView
@@ -213,7 +211,6 @@
                         android:text="@string/nomtest_Tr"
                         android:textSize="@dimen/tamaño_letra_sub_subtitulo"
                         android:textStyle="bold"
-                        android:textColor="@color/color"
                         app:layout_constraintStart_toEndOf="@id/imgCard_2"
                         app:layout_constraintTop_toTopOf="@id/imgCard_2" />
 
@@ -234,9 +231,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-
-
-
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/carrd4"
                 android:layout_width="match_parent"
@@ -245,7 +239,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/carrd3"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:layout_marginTop="10dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -253,7 +248,6 @@
                     android:paddingTop="@dimen/common_padding_default"
                     android:paddingEnd="@dimen/common_padding_default"
                     android:paddingBottom="@dimen/common_padding_default"
-                    android:background="#EDF2FA"
                     >
 
                     <ImageView
@@ -273,7 +267,6 @@
                         android:text="@string/nomtest_Tl"
                         android:textSize="@dimen/tamaño_letra_sub_subtitulo"
                         android:textStyle="bold"
-                        android:textColor="@color/color"
                         app:layout_constraintStart_toEndOf="@id/imgCard_3"
                         app:layout_constraintTop_toTopOf="@id/imgCard_3" />
 

@@ -78,7 +78,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:layout_marginTop="10dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -86,7 +87,6 @@
                     android:paddingTop="@dimen/common_padding_default"
                     android:paddingEnd="@dimen/common_padding_default"
                     android:paddingBottom="@dimen/common_padding_default"
-                    android:background="#EDF2FA"
                     >
 
                     <ImageView
@@ -137,7 +137,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/carrdque"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:layout_marginTop="10dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -145,7 +146,6 @@
                     android:paddingTop="@dimen/common_padding_default"
                     android:paddingEnd="@dimen/common_padding_default"
                     android:paddingBottom="@dimen/common_padding_default"
-                    android:background="#EDF2FA"
                     >
 
                     <ImageView
@@ -195,7 +195,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/carrdtipos"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:layout_marginTop="10dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -204,7 +205,6 @@
                     android:paddingTop="@dimen/common_padding_default"
                     android:paddingEnd="@dimen/common_padding_default"
                     android:paddingBottom="@dimen/common_padding_default"
-                    android:background="#EDF2FA"
                     >
 
                     <ImageView
@@ -254,7 +254,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/carrd3"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:layout_marginTop="10dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -263,7 +264,6 @@
                     android:paddingTop="@dimen/common_padding_default"
                     android:paddingEnd="@dimen/common_padding_default"
                     android:paddingBottom="@dimen/common_padding_default"
-                    android:background="#EDF2FA"
                     >
 
                     <ImageView
