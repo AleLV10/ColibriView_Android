@@ -58,7 +58,7 @@
                     android:id="@+id/name1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="text|textAutoComplete|textAutoCorrect|textPersonName"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -80,7 +80,7 @@
                     android:id="@+id/radicas"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text|textAutoComplete|textAutoCorrect"
+                    android:inputType="text|textAutoComplete|textAutoCorrect|textPostalAddress"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -104,7 +104,7 @@
                     android:id="@+id/edad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text|textAutoComplete|textAutoCorrect"
+                    android:inputType="number|textAutoComplete|textAutoCorrect"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
