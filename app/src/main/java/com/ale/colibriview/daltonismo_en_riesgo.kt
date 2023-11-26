@@ -38,7 +38,7 @@ class daltonismo_en_riesgo : AppCompatActivity() {
         }
         binding.mnuBarraDefinicion.usuario.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this,perfil_usuario::class.java)
+            val intent = Intent(this, perfil_usuario::class.java)
             startActivity(intent)
             finish()
         }

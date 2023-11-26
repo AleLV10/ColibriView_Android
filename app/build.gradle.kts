@@ -47,6 +47,7 @@ dependencies {
     implementation("androidx.activity:activity:1.8.1")
     implementation("androidx.activity:activity-ktx:1.8.1")
 
+    implementation("nl.joery.animatedbottombar:library:1.1.0")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -56,6 +57,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx:22.2.0")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-functions-ktx:20.4.0")
+    implementation("com.google.firebase:firebase-firestore:24.9.1")
 
 
     testImplementation("junit:junit:4.13.2")
