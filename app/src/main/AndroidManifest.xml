@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ColibriView"
         tools:targetApi="31">
         <activity
+            android:name=".navbar"
+            android:exported="false" />
+        <activity
             android:name=".test_lantern1"
             android:exported="false" />
         <activity

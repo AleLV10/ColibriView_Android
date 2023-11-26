@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ishijara">
-    <!-- android:style="@style/prueba"-->
-    <!--hola-->
 
     <include layout="@layout/activity_base"
         android:id="@+id/mnu_barra_ishihara"/>
@@ -19,7 +17,6 @@
         android:layout_marginTop="@dimen/margin_top"
         android:text="Test de Ishihara"
         android:textSize="@dimen/tamaño_letra_titulo"
-        android:textColor="@color/color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,7 +39,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/texto1"
-        android:textColor="@color/color"
         android:textAlignment="center"
         android:textSize="@dimen/tamaño_letra_subtitulo"
         app:layout_constraintStart_toStartOf="@id/titulo1"
