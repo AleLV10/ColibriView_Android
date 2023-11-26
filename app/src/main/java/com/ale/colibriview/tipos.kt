@@ -22,7 +22,7 @@ class tipos : AppCompatActivity() {
 
         binding.carrdTest.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this, ishijara::class.java)
+            val intent = Intent(this, DatosTest::class.java)
             startActivity(intent)
             finish()
         }
