@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Test_Ishihara"
+    tools:context=".Cards_Test"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@id/arriba"
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="80dp"
         />
 
     <include layout="@layout/activity_base" android:id="@+id/mn_barra_test"/>

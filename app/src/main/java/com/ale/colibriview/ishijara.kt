@@ -28,7 +28,7 @@ class ishijara : AppCompatActivity() {
         }
         binding.mnuBarraIshihara.menutest.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this, tipos::class.java)
+            val intent = Intent(this, Cards_Test::class.java)
             startActivity(intent)
             finish()
         }

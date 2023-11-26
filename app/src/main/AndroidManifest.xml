@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ColibriView"
         tools:targetApi="31">
         <activity
-            android:name=".Test_Ishihara"
+            android:name=".Cards_Test"
             android:exported="false" />
         <activity
             android:name=".navbar"
