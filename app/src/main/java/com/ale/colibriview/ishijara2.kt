@@ -1,15 +1,11 @@
-package com.ale.colibriview.ishihara
+package com.ale.colibriview
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.ale.colibriview.Inicio
-import com.ale.colibriview.Ussuarios
 import com.ale.colibriview.databinding.ActivityIshijara2Binding
-import com.ale.colibriview.perfil_usuario
-import com.ale.colibriview.tipos
 
 class ishijara2 : AppCompatActivity() {
     private lateinit var binding: ActivityIshijara2Binding

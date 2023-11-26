@@ -1,4 +1,4 @@
-package com.ale.colibriview.ishihara
+package com.ale.colibriview
 
 import android.app.Activity
 import android.content.Intent

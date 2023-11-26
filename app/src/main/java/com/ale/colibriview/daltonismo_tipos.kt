@@ -1,19 +1,15 @@
-package com.ale.colibriview.home
+package com.ale.colibriview
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.ale.colibriview.Inicio
-import com.ale.colibriview.Ussuarios
-import com.ale.colibriview.databinding.ActivityDaltonismoEnRiesgoBinding
-import com.ale.colibriview.perfil_usuario
-import com.ale.colibriview.tipos
+import com.ale.colibriview.databinding.ActivityDaltonismoTiposBinding
 
-class daltonismo_en_riesgo : AppCompatActivity() {
-    private lateinit var binding: ActivityDaltonismoEnRiesgoBinding
+class daltonismo_tipos : AppCompatActivity() {
+    private lateinit var binding: ActivityDaltonismoTiposBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDaltonismoEnRiesgoBinding.inflate(layoutInflater)
+        binding = ActivityDaltonismoTiposBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.regresar.setOnClickListener {

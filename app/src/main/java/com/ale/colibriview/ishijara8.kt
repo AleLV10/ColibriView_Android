@@ -1,47 +1,47 @@
-package com.ale.colibriview.ishihara
+package com.ale.colibriview
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.ale.colibriview.databinding.ActivityIshijara7Binding
+import com.ale.colibriview.databinding.ActivityIshijara8Binding
 
-class ishijara7 : AppCompatActivity() {
+class ishijara8 : AppCompatActivity() {
 
-    private lateinit var binding: ActivityIshijara7Binding
+    private lateinit var binding: ActivityIshijara8Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityIshijara7Binding.inflate(layoutInflater)
+        binding = ActivityIshijara8Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val preferences = getSharedPreferences("Respuestas", Activity.MODE_PRIVATE)
 
 
         binding.boton1.setOnClickListener {
             with(preferences.edit()){
-                putInt("IR6", 7).apply()
+                putInt("IR7", 7).apply()
             }
-            Toast.makeText(this,"${preferences.getInt("IR6",0)}",
+            Toast.makeText(this,"${preferences.getInt("IR7",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, ishijara8::class.java ))
+            startActivity(Intent(this, ishijara9::class.java ))
         }
 
         binding.boton2.setOnClickListener {
             with(preferences.edit()){
-                putInt("IR6", 5).apply()
+                putInt("IR7", 5).apply()
             }
-            Toast.makeText(this,"${preferences.getInt("IR6",0)}",
+            Toast.makeText(this,"${preferences.getInt("IR7",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, ishijara8::class.java ))
+            startActivity(Intent(this, ishijara9::class.java ))
         }
 
         binding.boton3.setOnClickListener {
             with(preferences.edit()){
-                putInt("IR6", 0).apply()
+                putInt("IR7", 0).apply()
             }
-            Toast.makeText(this,"${preferences.getInt("IR6",0)}",
+            Toast.makeText(this,"${preferences.getInt("IR7",0)}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, ishijara8::class.java ))
+            startActivity(Intent(this, ishijara9::class.java ))
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.ale.colibriview.ishihara
+package com.ale.colibriview
 
 import android.app.Activity
 import android.content.Intent
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.ale.colibriview.databinding.ActivityIshijara11Binding
-import com.ale.colibriview.test_completado
 
 class ishijara11 : AppCompatActivity() {
 

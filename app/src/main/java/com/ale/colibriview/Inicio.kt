@@ -5,9 +5,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityInicioBinding
-import com.ale.colibriview.home.daltonismo_causas
-import com.ale.colibriview.home.daltonismo_en_riesgo
-import com.ale.colibriview.home.daltonismo_tipos
 
 class Inicio : AppCompatActivity() {
     private lateinit var binding: ActivityInicioBinding

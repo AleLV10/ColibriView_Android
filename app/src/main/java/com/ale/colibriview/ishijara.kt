@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityIshijaraBinding
-import com.ale.colibriview.ishihara.ishijara2
 
 class ishijara : AppCompatActivity() {
 

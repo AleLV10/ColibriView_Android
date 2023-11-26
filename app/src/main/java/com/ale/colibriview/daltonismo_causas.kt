@@ -1,13 +1,9 @@
-package com.ale.colibriview.home
+package com.ale.colibriview
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.ale.colibriview.Inicio
-import com.ale.colibriview.Ussuarios
 import com.ale.colibriview.databinding.ActivityDaltonismoCausasBinding
-import com.ale.colibriview.perfil_usuario
-import com.ale.colibriview.tipos
 
 class daltonismo_causas : AppCompatActivity() {
     private lateinit var binding: ActivityDaltonismoCausasBinding
