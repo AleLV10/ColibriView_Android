@@ -53,7 +53,7 @@ class Inicio : AppCompatActivity() {
         }
         binding.mnuBarra.menutest.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this, tipos::class.java)
+            val intent = Intent(this, Test_Ishihara::class.java)
             startActivity(intent)
             finish()
         }
