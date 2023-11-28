@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardContainer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginTop="10dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/common_padding_default"
+        android:paddingTop="@dimen/common_padding_default"
+        android:paddingEnd="@dimen/common_padding_default"
+        android:paddingBottom="@dimen/common_padding_default"
+        >
+
+        <ImageView
+            android:id="@+id/imagenInicio"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:contentDescription="imagenInicio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tituloinicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="Que es?"
+            android:textSize="@dimen/tamaño_letra_sub_subtitulo"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imagenInicio"
+            app:layout_constraintTop_toTopOf="@id/imagenInicio" />
+
+        <TextView
+            android:id="@+id/describeInicio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:text="descripcion"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:maxLines="2"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/tituloinicio"
+            app:layout_constraintTop_toBottomOf="@id/tituloinicio"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="10dp"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
