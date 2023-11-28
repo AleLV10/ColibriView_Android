@@ -1,8 +1,10 @@
 package com.ale.colibriview.Adapter
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.ale.colibriview.R
 import com.ale.colibriview.databinding.ItemQuestionBinding
@@ -42,14 +44,17 @@ class OptionAdapter(private var context: Context, private val question: Question
             optionView.text=options[position]
             itemView.setOnClickListener{
                 ///Toast.makeText(context,options[position],Toast.LENGTH_SHORT).show()
-                holder.optionView.text=options[position]
+                optionView.text=options[position]
                 question.UserAnswer=options[position]
                 notifyDataSetChanged()
                 if(question.UserAnswer==options[position]){
-                    itemView.setBackgroundResource(R.drawable.option_item_selected_bg)
+                    Toast.makeText(context,options[position]+question.UserAnswer,Toast.LENGTH_SHORT).show()
+                    binding.botonRespuesta.setBackgroundColor(Color.RED)
                 }
-                else
-                    itemView.setBackgroundResource(R.drawable.option_item_bg)
+                else {
+                    binding.botonRespuesta.setBackgroundColor(Color.GREEN)
+                    Toast.makeText(context,options[position]+question.UserAnswer,Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
