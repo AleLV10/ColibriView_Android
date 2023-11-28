@@ -25,10 +25,11 @@ class DatosTest : AppCompatActivity() {
             Log.i("Datos para cuestionario","${binding.name1.text.toString()}")
             Log.i("Datos para cuestionario","${binding.radicas.text.toString()}")
             Log.i("Datos para cuestionario","${binding.edad.text.toString()}")
-
-            val intent = Intent(this,ishijara ::class.java)
-            startActivity(intent)
-            finish()
+            if(binding.name1.text.toString()!=""||binding.radicas.text.toString()!=""||binding.edad.text.toString()!="") {
+                val intent = Intent(this, PlantillaPreguntaActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
 
     }

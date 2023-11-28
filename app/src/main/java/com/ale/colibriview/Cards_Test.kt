@@ -2,19 +2,22 @@ package com.ale.colibriview
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ale.colibriview.Adapter.TestsAdapter
 import com.ale.colibriview.databinding.ActivityCardsTestsBinding
 import com.ale.colibriview.models.Test
-import com.ale.colibriview.models.TestsAdapter
 import com.ale.colibriview.models.onClickkListener
+import com.google.firebase.firestore.FirebaseFirestore
 
 class Cards_Test : AppCompatActivity(),onClickkListener {
     private lateinit var binding: ActivityCardsTestsBinding
     private lateinit var TestAdapter: TestsAdapter
     private lateinit var linearLayoutManager: RecyclerView.LayoutManager
-    private var quizList= mutableListOf<Test>()
+    private lateinit var firestore: FirebaseFirestore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityCardsTestsBinding.inflate(layoutInflater)
@@ -60,6 +63,7 @@ class Cards_Test : AppCompatActivity(),onClickkListener {
             finish()
         }
 
+        setUpFireStore()
     }
     private fun getTests(): MutableList<Test>{
         val tests= mutableListOf<Test>()
@@ -101,17 +105,20 @@ class Cards_Test : AppCompatActivity(),onClickkListener {
         }
 
     }
-  /*  private fun setUpFireStore(){
-        val firestore = FirebaseFirestore.getInstance()
-        val collectionReference : CollectionReference=firestore.collection("quizzes")
+    private fun setUpFireStore() {
+        val tests = mutableListOf<Test>()
+        firestore = FirebaseFirestore.getInstance()
+        val collectionReference = firestore.collection("quizzes")
         collectionReference.addSnapshotListener { value, error ->
-            if (value==null||error !=null)
-            {
-                Toast.makeText(this,"Error fetching data",Toast.LENGTH_SHORT).show()
-                return true
+            if (value == null || error != null) {
+                Toast.makeText(this, "Error fetching data", Toast.LENGTH_SHORT).show()
+                return@addSnapshotListener
             }
-            return@addSnapshotListener
-            Log.d("DATA",value.toObjects(Tests::java).toString())
+            Log.d("DATA", value.toObjects(Test::class.java).toString())
+            tests.clear()
+            tests.addAll(value.toObjects(Test::class.java))
+            //TestsAdapterr.notifyDataSetChanged()
         }
-    }*/
+
+    }
 }
