@@ -42,7 +42,7 @@ class InicioAdapter(private val Inicio:MutableList<Inicio>, private val listener
             setListener(inicio,(position+1))
             binding.tituloinicio.text = inicio.title
       /*      binding.describeInicio.text = inicio.description
-      
+
        */
             binding.imagenInicio.setImageResource(IconPicker.getIcon())
 
