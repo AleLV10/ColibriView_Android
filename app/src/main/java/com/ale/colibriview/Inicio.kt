@@ -19,6 +19,7 @@ class Inicio : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+       /*
         binding.carrdque.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, DefinicionActivity::class.java)
@@ -43,6 +44,8 @@ class Inicio : AppCompatActivity() {
             startActivity(intent4)
             finish()
         }
+
+        */
 
 
         binding.mnuBarra.home.setOnClickListener {
