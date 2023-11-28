@@ -11,7 +11,7 @@ object IconPicker{
     )
     var currentIcon=0
     fun getIcon():Int{
-        currentIcon =(currentIcon +1)% icons.size
+        currentIcon %= icons.size
         return icons[currentIcon]
     }
 }
