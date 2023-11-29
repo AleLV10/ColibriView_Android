@@ -8,10 +8,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ale.colibriview.Adapter.InicioAdapter
-import com.ale.colibriview.databinding.ActivityCardsTestsBinding
 import com.ale.colibriview.databinding.ActivityInicioBinding
 import com.ale.colibriview.models.Initio
-import com.ale.colibriview.models.Test
 import com.ale.colibriview.models.onClickListenerInicio
 import com.google.firebase.firestore.FirebaseFirestore
 
