@@ -47,7 +47,6 @@ class Inicio : AppCompatActivity() {
 
         */
 
-
         binding.mnuBarraInicio.home.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Inicio::class.java)
