@@ -48,25 +48,25 @@ class Inicio : AppCompatActivity() {
         */
 
 
-        binding.mnuBarra.home.setOnClickListener {
+        binding.mnuBarraInicio.home.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Inicio::class.java)
             startActivity(intent)
             finish()
         }
-        binding.mnuBarra.menutest.setOnClickListener {
+        binding.mnuBarraInicio.menutest.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Cards_Test::class.java)
             startActivity(intent)
             finish()
         }
-        binding.mnuBarra.menuResultados.setOnClickListener {
+        binding.mnuBarraInicio.menuResultados.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Ussuarios::class.java)
             startActivity(intent)
             finish()
         }
-        binding.mnuBarra.usuario.setOnClickListener {
+        binding.mnuBarraInicio.usuario.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this,perfil_usuario::class.java)
             startActivity(intent)
