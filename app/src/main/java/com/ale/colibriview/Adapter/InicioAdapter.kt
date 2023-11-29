@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ale.colibriview.Inicio
+import com.ale.colibriview.models.Initio
 import com.ale.colibriview.R
 import com.ale.colibriview.databinding.ActivityItemInicioBinding
 import com.ale.colibriview.item_inicio
-import com.ale.colibriview.models.IconPicker
+import com.ale.colibriview.models.IconInicio
 
-class InicioAdapter(private val Inicio:MutableList<Inicio>, private val listener: item_inicio):
+class InicioAdapter(private val Inicio:MutableList<Initio>, private val listener: item_inicio):
     RecyclerView.Adapter<InicioAdapter.ViewHolder>() {
 
     private lateinit var context: Context
@@ -20,9 +20,9 @@ class InicioAdapter(private val Inicio:MutableList<Inicio>, private val listener
     {
         val binding = ActivityItemInicioBinding.bind(view)
 
-        fun setListener(inicio: Inicio, valor:Int){
+        fun setListener(initio: Initio, valor:Int){
             binding.root.setOnClickListener {
-                listener.onClick(inicio,valor)
+                listener.onClick(initio,valor)
             }
         }
     }
@@ -40,14 +40,9 @@ class InicioAdapter(private val Inicio:MutableList<Inicio>, private val listener
         with(holder)
         {
             setListener(inicio,(position+1))
-            binding.tituloinicio.text = inicio.title
-      /*      binding.describeInicio.text = inicio.description
-
-       */
-            binding.imagenInicio.setImageResource(IconPicker.getIcon())
-
+            binding.tituloinicio.text = inicio.titleI
+            binding.describeInicio.text = inicio.descriptionI
+            binding.imagenInicio.setImageResource(IconInicio.getIcon2())
         }
     }
-
-
 }
