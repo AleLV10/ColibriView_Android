@@ -43,17 +43,16 @@ class OptionAdapter(private var context: Context, private val question: Question
            // binding.op.text=question.title
             optionView.text=options[position]
             itemView.setOnClickListener{
-                ///Toast.makeText(context,options[position],Toast.LENGTH_SHORT).show()
                 optionView.text=options[position]
                 question.UserAnswer=options[position]
                 notifyDataSetChanged()
-                if(question.UserAnswer==options[position]){
-                    Toast.makeText(context,options[position]+question.UserAnswer,Toast.LENGTH_SHORT).show()
-                    binding.botonRespuesta.setBackgroundColor(Color.RED)
+                if(question.Answer==options[position]){
+                    Toast.makeText(context,options[position]+question.Answer,Toast.LENGTH_SHORT).show()
+                    binding.botonRespuesta.setBackgroundColor(Color.GREEN)
                 }
                 else {
-                    binding.botonRespuesta.setBackgroundColor(Color.GREEN)
-                    Toast.makeText(context,options[position]+question.UserAnswer,Toast.LENGTH_SHORT).show()
+                    binding.botonRespuesta.setBackgroundColor(Color.RED)
+                    Toast.makeText(context,options[position]+question.Answer,Toast.LENGTH_SHORT).show()
                 }
             }
         }
