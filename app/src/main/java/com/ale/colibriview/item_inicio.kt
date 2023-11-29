@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ale.colibriview.Adapter.InicioAdapter
 import com.ale.colibriview.databinding.ActivityCardsTestsBinding
 import com.ale.colibriview.databinding.ActivityInicioBinding
+import com.ale.colibriview.models.Initio
 import com.ale.colibriview.models.Test
 import com.ale.colibriview.models.onClickListenerInicio
 import com.google.firebase.firestore.FirebaseFirestore
@@ -24,9 +25,9 @@ class item_inicio : AppCompatActivity() , onClickListenerInicio {
         binding= ActivityInicioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-      /*  InicioAdapter= InicioAdapter(getInicio(),this)
+      InicioAdapter= InicioAdapter(getInicio(),this)
 
-       */
+
         linearLayoutManager= LinearLayoutManager(this)
 
         binding.InicioRecyclerView.apply {
@@ -61,17 +62,16 @@ class item_inicio : AppCompatActivity() , onClickListenerInicio {
 
         setUpFireStore()
     }
+    private fun getInicio(): MutableList<Initio>{
+       val Inicios= mutableListOf<Initio>()
 
- /*   private fun getInicio(): MutableList<Inicio>{
-       val Inicios= mutableListOf<Inicio>()
-
-        val Que_es= Inicio("¿Que es?",
+        val Que_es= Initio("¿Que es?",
             "El daltonismo es una afeccion en la cual no se pueden ver los colores...")
-        val Tipos= Inicio("Tipos",
+        val Tipos= Initio("Tipos",
             "El daltonismo puede presentarse en diferentes modalidades...")
-        val Causas= Inicio("Causas",
+        val Causas= Initio("Causas",
             "La mayoria de las personas que tienen daltonismo nacen con la condicion...")
-        val Riesgo= Inicio("¿Quienes estan en riesgo?",
+        val Riesgo= Initio("¿Quienes estan en riesgo?",
             "Los hombres tienen un riesgo mucho mayor de nacer con esta condicion...")
 
         Inicios.add(Que_es)
@@ -81,31 +81,28 @@ class item_inicio : AppCompatActivity() , onClickListenerInicio {
 
 
         return Inicios
-
-
     }
 
-  */
-    override fun onClick(inicio: Inicio,valor:Int) {
-        if(inicio.title=="¿Que es?")
+    override fun onClick(initio: Initio,valor:Int) {
+        if(initio.titleI=="¿Que es?")
         {
             intent = Intent(this, DefinicionActivity::class.java)
             startActivity(intent)
             finish()
         }
-        if(inicio.title=="Tipos")
+        if(initio.titleI=="Tipos")
         {
             intent = Intent(this, daltonismo_tipos::class.java)
             startActivity(intent)
             finish()
         }
-        if(inicio.title=="Causas")
+        if(initio.titleI=="Causas")
         {
             intent = Intent(this, daltonismo_causas::class.java)
             startActivity(intent)
             finish()
         }
-        if(inicio.title=="¿Quienes estan en riesgo?")
+        if(initio.titleI=="¿Quienes estan en riesgo?")
         {
             intent = Intent(this, daltonismo_en_riesgo::class.java)
             startActivity(intent)
