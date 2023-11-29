@@ -118,7 +118,8 @@ class Cards_Test : AppCompatActivity(),onClickkListener {
             Log.d("DATA", value.toObjects(Test::class.java).toString())
             tests.clear()
             tests.addAll(value.toObjects(Test::class.java))
-            //TestsAdapterr.notifyDataSetChanged()
+            TestAdapter.notifyDataSetChanged()
+
         }
 
     }
