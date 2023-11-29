@@ -18,6 +18,7 @@ class Cards_Test : AppCompatActivity(),onClickkListener {
     private lateinit var TestAdapter: TestsAdapter
     private lateinit var linearLayoutManager: RecyclerView.LayoutManager
     private lateinit var firestore: FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityCardsTestsBinding.inflate(layoutInflater)
@@ -62,7 +63,6 @@ class Cards_Test : AppCompatActivity(),onClickkListener {
             startActivity(intent)
             finish()
         }
-
         setUpFireStore()
     }
     private fun getTests(): MutableList<Test>{
@@ -86,6 +86,7 @@ class Cards_Test : AppCompatActivity(),onClickkListener {
         if(test.title=="Test de Ishihara")
         {
             intent = Intent(this, DatosTest::class.java)
+
             startActivity(intent)
             finish()
         }
@@ -121,4 +122,5 @@ class Cards_Test : AppCompatActivity(),onClickkListener {
         }
 
     }
+
 }
