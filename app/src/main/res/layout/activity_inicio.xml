@@ -73,7 +73,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/InicioRecyclerView"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 tools:listitem="@layout/activity_item_inicio"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
