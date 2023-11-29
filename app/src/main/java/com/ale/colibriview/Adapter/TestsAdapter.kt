@@ -10,7 +10,8 @@ import com.ale.colibriview.databinding.ItemTestBinding
 import com.ale.colibriview.models.IconPicker
 import com.ale.colibriview.models.Test
 
-class TestsAdapter(private val Tests:MutableList<Test>, private val listener: Cards_Test):RecyclerView.Adapter<TestsAdapter.ViewHolder>() {
+class TestsAdapter(private val Tests:MutableList<Test>, private val listener: Cards_Test)
+    :RecyclerView.Adapter<TestsAdapter.ViewHolder>() {
 
     private lateinit var context:Context
 
