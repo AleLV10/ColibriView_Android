@@ -13,25 +13,23 @@ class PlantillaPreguntaActivity : AppCompatActivity(), OnClickListenerQuestion {
     private lateinit var mBinding:ActivityPlantillaPreguntaBinding
     private var tests :MutableList<Test>? = null
     private var questions:MutableMap<String,Question>?= null
-    private var index = 1
+    private var index: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding= ActivityPlantillaPreguntaBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        mBinding.Siguiente.setOnClickListener {
+            index+=1
+            bindViews()
+        }
         setUpFireStore()
+
     }
 
     private fun bindViews() {
-
         val question=questions!!["question$index"]
         question?.let {
-
-           // val img:Int =  ("R."+question.Imagen).toInt()
-           mBinding.Imagen.setImageResource(selImage(question.Imagen))
-           //mBinding.Imagen.setImageURI(Uri.parse(question.Imagen))
-
-
-
+            mBinding.Imagen.setImageResource(selImage(question.Imagen))
             val optionAdapter = OptionAdapter(this,question)
             mBinding.optionList.layoutManager = LinearLayoutManager(this)
             mBinding.optionList.adapter= optionAdapter
@@ -45,23 +43,22 @@ class PlantillaPreguntaActivity : AppCompatActivity(), OnClickListenerQuestion {
 
     }
     private fun setUpFireStore() {
+        index=1
         val firestore: FirebaseFirestore=FirebaseFirestore.getInstance()
-        //var date:String?=intent.getStringExtra("DATE")
-        //Log.i("DATE",date+"")
-       // if(date!=null)
-       // {
-            firestore.collection("quizzes").whereEqualTo("title","Test de Ishihara")
-                .get()
-                .addOnSuccessListener {
-                    if(it != null && !it.isEmpty)
-                    {
-                        tests= it.toObjects(Test::class.java)
-                        questions=tests!![0].questions
-                        bindViews()
-                    }
+        firestore.collection("quizzes").whereEqualTo("title","Test de Ishihara")
+            .get()
+            .addOnSuccessListener {
+                if(it != null && !it.isEmpty)
+                {
+                    tests= it.toObjects(Test::class.java)
+                    questions=tests!![0].questions
+                    bindViews()
+                }
+                else
+                {
 
                 }
-        //}
+            }
     }
 
     fun selImage(img:String):Int{
@@ -69,7 +66,16 @@ class PlantillaPreguntaActivity : AppCompatActivity(), OnClickListenerQuestion {
         when(img){
             "is1" -> return  R.drawable.is1
             "is2" -> return  R.drawable.is2
-
+            "is3" -> return  R.drawable.is3
+            "is4" -> return  R.drawable.is4
+            "is5" -> return  R.drawable.is5
+            "is6" -> return  R.drawable.is6
+            "is7" -> return  R.drawable.is7
+            "is8" -> return  R.drawable.is8
+            "is9" -> return  R.drawable.is9
+            "is10" -> return  R.drawable.is10
+           // "is11" -> return  R.drawable.is11
+           // "is12" -> return  R.drawable.is12
             else -> return 0
         }
     }
