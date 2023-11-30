@@ -13,39 +13,12 @@ class Inicio : AppCompatActivity() {
         binding = ActivityInicioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.testDaltonismo.setOnClickListener {
+        binding.btntestD.setOnClickListener {
             // Do something in response to button click
             val intent = Intent(this, Cards_Test::class.java)
             startActivity(intent)
             finish()
         }
-       /*
-        binding.carrdque.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, DefinicionActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        binding.carrdtipos.setOnClickListener {
-            // Do something in response to button click
-            val intent= Intent(this, daltonismo_tipos::class.java)
-            startActivity(intent)
-            finish()
-        }
-        binding.carrd3.setOnClickListener {
-            // Do something in response to button click
-            val intent3 = Intent(this, daltonismo_causas::class.java)
-            startActivity(intent3)
-            finish()
-        }
-        binding.carrd4.setOnClickListener {
-            // Do something in response to button click
-            val intent4 = Intent(this, daltonismo_en_riesgo::class.java)
-            startActivity(intent4)
-            finish()
-        }
-
-        */
 
         binding.mnuBarraInicio.home.setOnClickListener {
             // Do something in response to button click
