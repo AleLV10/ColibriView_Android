@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginTop="10dp"
     android:id="@+id/botonRespuesta"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="wrap_content"
     tools:text="Respuesta"
-    android:textSize="@dimen/tamaño_letra_titulo"
+    android:textStyle="bold"
+    android:textSize="30dp"
     android:backgroundTint="@color/moradoo"
-    android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"    >
+    android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+    >
 
 </Button>

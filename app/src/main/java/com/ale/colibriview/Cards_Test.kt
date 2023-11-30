@@ -86,7 +86,6 @@ class Cards_Test : AppCompatActivity(),onClickkListener {
         if(test.title=="Test de Ishihara")
         {
             intent = Intent(this, DatosTest::class.java)
-
             startActivity(intent)
             finish()
         }
