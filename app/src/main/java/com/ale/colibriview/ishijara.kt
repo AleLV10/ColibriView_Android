@@ -15,7 +15,7 @@ class ishijara : AppCompatActivity() {
 
         binding.titulo3.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this, ishijara2::class.java)
+            val intent = Intent(this, PlantillaPreguntaActivity::class.java)
             startActivity(intent)
             finish()
         }
