@@ -35,7 +35,7 @@ class item_inicio : AppCompatActivity() , onClickListenerInicio {
 
         binding.mnuBarraInicio.home.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this, Inicio::class.java)
+            val intent = Intent(this, item_inicio::class.java)
             startActivity(intent)
             finish()
         }
@@ -60,7 +60,9 @@ class item_inicio : AppCompatActivity() , onClickListenerInicio {
 
         setUpFireStore()
     }
-    private fun getInicio(): MutableList<Initio>{
+
+
+    /*private fun getInicio(): MutableList<Initio>{
        val Inicios= mutableListOf<Initio>()
 
         val Que_es= Initio("¿Que es?",
@@ -81,7 +83,19 @@ class item_inicio : AppCompatActivity() , onClickListenerInicio {
         return Inicios
     }
 
-    override fun onClick(initio: Initio,valor:Int) {
+     */
+
+    private fun getInicio(): MutableList<Initio> {
+        return listOf(
+            Initio("¿Que es?", "El daltonismo es una afeccion en la cual no se pueden ver los colores..."),
+            Initio("Tipos", "El daltonismo puede presentarse en diferentes modalidades..."),
+            Initio("Causas", "La mayoría de las personas que tienen daltonismo nacen con la condición..."),
+            Initio("¿Quienes estan en riesgo?", "Los hombres tienen un riesgo mucho mayor de nacer con esta condición...")
+        ).toMutableList()
+    }
+
+
+    /* override fun onClick(initio: Initio,valor:Int) {
         if(initio.titleI=="¿Que es?")
         {
             intent = Intent(this, DefinicionActivity::class.java)
@@ -108,19 +122,38 @@ class item_inicio : AppCompatActivity() , onClickListenerInicio {
         }
 
     }
+
+    */
+
+    override fun onClick(initio: Initio, valor: Int) {
+        val intent = when (initio.titleI) {
+            "¿Que es?" -> Intent(this, DefinicionActivity::class.java)
+            "Tipos" -> Intent(this, daltonismo_tipos::class.java)
+            "Causas" -> Intent(this, daltonismo_causas::class.java)
+            "¿Quienes estan en riesgo?" -> Intent(this, daltonismo_en_riesgo::class.java)
+            else -> null
+        }
+
+        intent?.let {
+            startActivity(it)
+            finish()
+        }
+    }
+
     private fun setUpFireStore() {
-        val inicios = mutableListOf<Inicio>()
+        val inicios = mutableListOf<Initio>()
         firestore = FirebaseFirestore.getInstance()
         val collectionReference = firestore.collection("quizzes")
         collectionReference.addSnapshotListener { value, error ->
             if (value == null || error != null) {
-                Toast.makeText(this, "Error fetching data", Toast.LENGTH_SHORT).show()
+                val errorMessage = error?.message ?: "Unknown error"
+                Toast.makeText(this, "Error fetching data: $errorMessage", Toast.LENGTH_SHORT).show()
                 return@addSnapshotListener
             }
-            Log.d("DATA", value.toObjects(Inicio::class.java).toString())
+            Log.d("DATA", value.toObjects(Initio::class.java).toString())
             inicios.clear()
-            inicios.addAll(value.toObjects(Inicio::class.java))
-            //TestsAdapterr.notifyDataSetChanged()
+            inicios.addAll(value.toObjects(Initio::class.java))
+            InicioAdapter.notifyDataSetChanged()
         }
 
     }

@@ -1,5 +1,4 @@
 package com.ale.colibriview.Adapter
-
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +13,7 @@ import com.ale.colibriview.models.IconInicio
 class InicioAdapter(private val Inicio:MutableList<Initio>, private val listener: item_inicio):
     RecyclerView.Adapter<InicioAdapter.ViewHolder>() {
 
-    private lateinit var context: Context
+    private var context: Context? = null
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view)
     {
@@ -27,15 +26,23 @@ class InicioAdapter(private val Inicio:MutableList<Initio>, private val listener
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    /*override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context=parent.context
         val view= LayoutInflater.from(context).inflate(R.layout.activity_item_inicio,parent,false)
         return ViewHolder(view)
     }
 
+     */
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val context = parent.context
+        val view = LayoutInflater.from(context).inflate(R.layout.activity_item_inicio, parent, false)
+        return ViewHolder(view)
+    }
+
     override fun getItemCount(): Int =Inicio.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+  /*  override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val inicio=Inicio[position]
         with(holder)
         {
@@ -45,4 +52,18 @@ class InicioAdapter(private val Inicio:MutableList<Initio>, private val listener
             binding.imagenInicio.setImageResource(IconInicio.getIcon2())
         }
     }
+
+   */
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val inicio = Inicio[position]
+
+        holder.setListener(inicio, (position + 1))
+        holder.binding.tituloinicio.text = inicio.titleI
+        holder.binding.describeInicio.text = inicio.descriptionI
+        // Si `getIcon2()` devuelve un recurso de imagen en forma de Int (ID del recurso)
+        holder.binding.imagenInicio.setImageResource(IconInicio.getIcon2())
+
+    }
+
 }
