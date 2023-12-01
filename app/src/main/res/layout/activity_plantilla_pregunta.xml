@@ -9,9 +9,9 @@
     <ImageView
         android:id="@+id/Imagen"
         android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:contentDescription="Pregunta"
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,12 +23,28 @@
         android:id="@+id/optionList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         tools:listitem="@layout/item_question"
         app:layout_constraintStart_toStartOf="@id/Imagen"
         app:layout_constraintTop_toBottomOf="@id/Imagen"
         app:layout_constraintEnd_toEndOf="@id/Imagen"
+        app:layout_constraintBottom_toBottomOf="@id/Siguiente"
+        />
+    <Button
+        android:id="@+id/Siguiente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@id/optionList"
+        app:layout_constraintStart_toStartOf="@id/optionList"
+        app:layout_constraintEnd_toEndOf="@id/optionList"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:textColor="#7858F2"
+        android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+
         />
     <!--<Button
         android:id="@+id/boton1"
