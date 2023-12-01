@@ -123,4 +123,7 @@
         Ejemplo 2: Arriba-amarillo, abajo-rojo.\n\n
         Si no puedes identificar los colores, haz click en el botón siguiente.
     </string>
+    <string name="TituloD2">Test daltonismo</string>
+    <string name="sabias_que">Sabias qué</string>
+    <string name="Titulo_D">Daltonismo</string>
 </resources>
