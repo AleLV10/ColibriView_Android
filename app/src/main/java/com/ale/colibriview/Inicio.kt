@@ -41,7 +41,7 @@ class Inicio : AppCompatActivity(), onClickListenerInicio {
         }
 
         binding.mnuBarraInicio.menuResultados.setOnClickListener {
-            startNewActivity(Ussuarios::class.java)
+            startNewActivity(ResultadosActivity::class.java)
         }
 
         binding.mnuBarraInicio.usuario.setOnClickListener {
@@ -61,40 +61,44 @@ class Inicio : AppCompatActivity(), onClickListenerInicio {
     }
     private fun getInitio(): MutableList<Initio>{
         val cards= mutableListOf<Initio>()
-        val Ishihara= Initio("Test de Ishihara",
-            "El daltonismo es una alteración genética que afecta la capacidad de percibir colores.")
-        val Protan= Initio("Test de Protan y Deutan",
-            "Las personas con este problema pueden tener distintos grados de dificultad en su detección.")
-        val Tritan= Initio("Test de Tritan",
-            "El daltonismo es una alteración genética que afecta la capacidad de percibir colores.")
-        val Latern= Initio("Test de Lantern",
-            "Las personas con este problema pueden tener distintos grados de dificultad en su detección.")
+        val Que_es= Initio("¿Que es?",
+            "El daltonismo es una afección en la cual no se pueden ver algunos colores...")
+        val Tipos= Initio("Tipos",
+            "El daltonismo puede presentarse en diferentes modalidades, en funcion al tipo...")
+        val Causas= Initio("Causas",
+            "la mayoria de las personas que tienen daltonismo nacen con esta condicion...")
+        val Riesgo= Initio("Riesgo",
+            "Los hombres tienen un riesgo mucho mayor de nacer con un tipo de daltonismo...")
 
-        cards.add(Ishihara)
-        cards.add(Protan)
-        cards.add(Tritan)
-        cards.add(Latern)
+        cards.add(Que_es)
+        cards.add(Tipos)
+        cards.add(Causas)
+        cards.add(Riesgo)
         return cards
     }
 
     override fun onClick(initio: Initio, valor: Int) {
-        if(initio.title=="Test de Ishihara")
+        if(initio.title=="¿Que es?")
         {
-            intent = Intent(this, DatosTest::class.java)
+            intent = Intent(this, DefinicionActivity::class.java)
             startActivity(intent)
             finish()
         }
-        if(initio.title=="Test de Protan y Deutan")
+        if(initio.title=="Tipos")
         {
-
+            intent = Intent(this, daltonismo_tipos::class.java)
+            startActivity(intent)
+            finish()
         }
-        if(initio.title=="Test de Tritan")
+        if(initio.title=="Causas")
         {
-
+            intent = Intent(this, daltonismo_causas::class.java)
+            startActivity(intent)
+            finish()
         }
-        if(initio.title=="Test de Lantern")
+        if(initio.title=="Riesgo")
         {
-            intent = Intent(this, test_Lantern::class.java)
+            intent = Intent(this, daltonismo_en_riesgo::class.java)
             startActivity(intent)
             finish()
         }

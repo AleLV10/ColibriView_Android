@@ -1,5 +1,7 @@
 package com.ale.colibriview
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -15,45 +17,61 @@ class PlantillaPreguntaActivity : AppCompatActivity(), OnClickListenerQuestion {
     private var tests :MutableList<Test>? = null
     private var questions:MutableMap<String,Question>?= null
     private var index: Int = 0
+    private var bandera=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding= ActivityPlantillaPreguntaBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        mBinding.Siguiente.setOnClickListener {
-            index+=1
-            bindViews()
+
+        val valor: String? = intent.getStringExtra("Respuesta")
+        val correcto: Int? = intent.getIntExtra("Correcta",0)
+        val preferences = getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
+        index= intent.getIntExtra("Index",index)
+        Toast.makeText(this,""+index + " llegada", Toast.LENGTH_SHORT).show()
+        with(preferences.edit()) {
+            putString("Respuesta$index", valor).apply()
+            putString("Correcta$index", correcto.toString()).apply()
         }
 
-        setUpFireStore()
+        if(valor!=null) {
+
+            index += 1
+            if(index==38)
+            {
+                val intent = Intent(this, test_completado::class.java)
+                startActivity(intent)
+                finish()
+            }
+            else
+                setUpFireStore()
+        }
+        else
+        {
+            index=1
+            setUpFireStore()
+        }
 
 
     }
 
     private fun bindViews() {
         val question=questions!!["question$index"]
-        //Toast.makeText(this,"Answer"+question?.Answer, Toast.LENGTH_SHORT).show()
         question?.let {
             mBinding.Imagen.setImageResource(selImage(question.Imagen))
-            val optionAdapter = OptionAdapter(this,question,this)
+            val optionAdapter = OptionAdapter(this,question,this,index)
             mBinding.optionList.layoutManager = LinearLayoutManager(this)
             mBinding.optionList.adapter= optionAdapter
             mBinding.optionList.setHasFixedSize(true)
-
         }
-
     }
 
     override fun onClick(question: Question, valor: Int) {
-        question.UserAnswer
-        Toast.makeText(this,"UserAnswer "+question.UserAnswer, Toast.LENGTH_SHORT).show()
-        val answer=OptionAdapter(this,question,this)
-        answer.getAnswerQ()
-        Toast.makeText(this,"Answer "+ answer.getAnswerQ(), Toast.LENGTH_SHORT).show()
+
 
     }
     private fun setUpFireStore() {
-        index=1
+
         val firestore: FirebaseFirestore=FirebaseFirestore.getInstance()
         firestore.collection("quizzes").whereEqualTo("title","Test de Ishihara")
             .get()
@@ -112,8 +130,6 @@ class PlantillaPreguntaActivity : AppCompatActivity(), OnClickListenerQuestion {
             "is36" -> return  R.drawable.lamina_num36
             "is37" -> return  R.drawable.lamina_num37
             "is38" -> return  R.drawable.lamina_num38
-           // "is11" -> return  R.drawable.is11
-           // "is12" -> return  R.drawable.is12
             else -> return 0
         }
     }
