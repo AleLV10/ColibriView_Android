@@ -1,15 +1,9 @@
 package com.ale.colibriview.models
 
-/*data class Initio(
-    var titleI: String="",
-    var descriptionI:String="",
-
-
+data class Initio(
+    var title: String="",
+    var description:String="",
+    var questions: MutableMap<String,Question> = mutableMapOf()
 )
 
- */
 
-data class Initio(val titleI: String?, val descriptionI: String?) {
-    // Constructor predeterminado o sin argumentos
-    constructor() : this(null, null)
-}
