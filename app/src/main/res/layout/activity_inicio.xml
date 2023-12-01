@@ -67,7 +67,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title"
-                tools:listitem="@layout/activity_item_inicio" />
+                tools:listitem="@layout/item_inicio" />
 
     <include layout="@layout/activity_base"
         android:id="@+id/mnu_barraInicio"/>
