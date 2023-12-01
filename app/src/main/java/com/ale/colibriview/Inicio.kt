@@ -41,7 +41,7 @@ class Inicio : AppCompatActivity(), onClickListenerInicio {
         }
 
         binding.mnuBarraInicio.menuResultados.setOnClickListener {
-            startNewActivity(Ussuarios::class.java)
+            startNewActivity(ResultadosActivity::class.java)
         }
 
         binding.mnuBarraInicio.usuario.setOnClickListener {

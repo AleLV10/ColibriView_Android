@@ -1,22 +1,21 @@
 package com.ale.colibriview.Adapter
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.ale.colibriview.PlantillaPreguntaActivity
 import com.ale.colibriview.R
 import com.ale.colibriview.databinding.ItemQuestionBinding
 import com.ale.colibriview.models.Question
 
-class OptionAdapter(private var context: Context, private val question: Question,private val listener: PlantillaPreguntaActivity):
+class OptionAdapter(private var context: Context, private val question: Question,private val listener: PlantillaPreguntaActivity, private val index:Int):
     RecyclerView.Adapter<OptionAdapter.ViewHolder>() {
 
     private var options : List<String> = listOf(question.Option1,question.Option2,question.Option3)
     private var boolean=false
-    lateinit var AnswerQuestion:String
     inner class ViewHolder(view:View):RecyclerView.ViewHolder(view)
     {
         val binding=ItemQuestionBinding.bind(view)
@@ -50,45 +49,28 @@ class OptionAdapter(private var context: Context, private val question: Question
 
                 optionView.text=options[position]
                 question.UserAnswer=options[position]
-                Toast.makeText(context,"Respuesta en Holder"+question.UserAnswer, Toast.LENGTH_SHORT).show()
-                setAnswerQuestion(question.UserAnswer)
-
                 notifyDataSetChanged()
-                boolean = if (boolean) {
-                    false
-                }else{
-                    itemView.setBackgroundColor(Color.MAGENTA)
-                    true
-                }
+                val intent = Intent(context,
+                    PlantillaPreguntaActivity::class.java
+                )
+                intent.putExtra("Respuesta", question.UserAnswer);
+                intent.putExtra("Index", index);
 
-
-               // itemView.setBackgroundResource(R.color.morado)
-                //binding.botonRespuesta.setBackgroundResource(R.color.morado)
-/*
-                if(question.UserAnswer==options[position]){
-                    Toast.makeText(context,options[position]+question.Answer,Toast.LENGTH_SHORT).show()
+                if(question.Answer==options[position]){
                     binding.botonRespuesta.setBackgroundColor(Color.GREEN)
-
+                    intent.putExtra("Correcta", "Correcto");
                 }
                 else {
                     binding.botonRespuesta.setBackgroundColor(Color.RED)
-                    Toast.makeText(context,options[position]+question.Answer,Toast.LENGTH_SHORT).show()
+                    intent.putExtra("Correcta", "Incorrecto $position");
+                }
+                context.startActivity(intent)
 
-                }*/
+
+
 
             }
-           // itemView.setBackgroundResource(R.color.morado)
         }
-    }
-    fun setAnswerQuestion(respuesta:String): String {
-        AnswerQuestion=respuesta
-        Toast.makeText(context,"Respuesta en Set"+question.UserAnswer, Toast.LENGTH_SHORT).show()
-        Toast.makeText(context,"Respuesta en Set2"+AnswerQuestion, Toast.LENGTH_SHORT).show()
-        return AnswerQuestion
-    }
-
-    fun getAnswerQ() : String {
-        return AnswerQuestion
     }
 
 }
