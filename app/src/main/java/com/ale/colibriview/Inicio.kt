@@ -2,55 +2,49 @@ package com.ale.colibriview
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View.OnClickListener
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityInicioBinding
+import com.ale.colibriview.models.onClickListenerInicio
 
 class Inicio : AppCompatActivity() {
     private lateinit var binding: ActivityInicioBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInicioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btntestD.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, Cards_Test::class.java)
-            startActivity(intent)
-            finish()
+            startNewActivity(Cards_Test::class.java)
         }
 
         binding.mnuBarraInicio.home.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, Inicio::class.java)
-            startActivity(intent)
-            finish()
+            startNewActivity(Inicio::class.java)
         }
+
         binding.mnuBarraInicio.menutest.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, Cards_Test::class.java)
-            startActivity(intent)
-            finish()
+            startNewActivity(Cards_Test::class.java)
         }
+
         binding.mnuBarraInicio.menuResultados.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, Ussuarios::class.java)
-            startActivity(intent)
-            finish()
+            startNewActivity(Ussuarios::class.java)
         }
+
         binding.mnuBarraInicio.usuario.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this,perfil_usuario::class.java)
-            startActivity(intent)
-            finish()
+            startNewActivity(perfil_usuario::class.java)
         }
+
         val login: ImageView = findViewById(R.id.home)
         login.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, Inicio::class.java)
-            startActivity(intent)
-            finish()
+            startNewActivity(Inicio::class.java)
         }
     }
 
+    private fun startNewActivity(activityClass: Class<*>) {
+        val intent = Intent(this, activityClass)
+        startActivity(intent)
+        finish()
+    }
 }

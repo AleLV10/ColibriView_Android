@@ -4,56 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Inicio">
+    tools:context=".item_inicio">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="70dp"
-        >
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="290dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="45dp"
-                >
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:contentDescription="@string/sabias_que"
                     android:src="@drawable/colibri"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:contentDescription="@string/sabias_que">
+                    app:layout_constraintTop_toTopOf="parent">
 
                 </ImageView>
+
                 <Button
                     android:id="@+id/btntestD"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
+                    android:layout_marginBottom="45dp"
                     android:backgroundTint="#7858F2"
                     android:text="@string/TituloD2"
-                    android:textStyle="bold"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginBottom="45dp"
+                    android:textStyle="bold"
                     android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
 
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -62,30 +49,26 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintTop_toBottomOf="@id/image"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/Titulo_D"
+                android:textAlignment="center"
                 android:textSize="@dimen/tamaño_letra_titulo"
                 android:textStyle="bold"
-                android:textAlignment="center"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/InicioRecyclerView"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                tools:listitem="@layout/activity_item_inicio"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/title"
-                android:layout_marginTop="10dp"
+                android:layout_height="0dp"
                 android:layout_marginHorizontal="10dp"
-                />
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:listitem="@layout/activity_item_inicio" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
     <include layout="@layout/activity_base"
         android:id="@+id/mnu_barraInicio"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
