@@ -1,6 +1,7 @@
 package com.ale.colibriview
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ale.colibriview.Adapter.OptionAdapter
@@ -18,28 +19,40 @@ class PlantillaPreguntaActivity : AppCompatActivity(), OnClickListenerQuestion {
         super.onCreate(savedInstanceState)
         mBinding= ActivityPlantillaPreguntaBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+
         mBinding.Siguiente.setOnClickListener {
             index+=1
             bindViews()
         }
+
         setUpFireStore()
+
 
     }
 
     private fun bindViews() {
         val question=questions!!["question$index"]
+        //Toast.makeText(this,"Answer"+question?.Answer, Toast.LENGTH_SHORT).show()
         question?.let {
             mBinding.Imagen.setImageResource(selImage(question.Imagen))
-            val optionAdapter = OptionAdapter(this,question)
+            val optionAdapter = OptionAdapter(this,question,this)
             mBinding.optionList.layoutManager = LinearLayoutManager(this)
             mBinding.optionList.adapter= optionAdapter
             mBinding.optionList.setHasFixedSize(true)
+
         }
+
+
 
 
     }
 
     override fun onClick(question: Question, valor: Int) {
+        question.UserAnswer
+        Toast.makeText(this,"UserAnswer "+question.UserAnswer, Toast.LENGTH_SHORT).show()
+        val answer=OptionAdapter(this,question,this)
+        answer.getAnswerQ()
+        Toast.makeText(this,"Answer "+ answer.getAnswerQ(), Toast.LENGTH_SHORT).show()
 
     }
     private fun setUpFireStore() {

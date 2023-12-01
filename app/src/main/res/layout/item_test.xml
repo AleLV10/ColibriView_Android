@@ -26,11 +26,13 @@
                 android:layout_margin="@dimen/common_padding_min"
                 android:contentDescription="imagenTest"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
 
             <TextView
                 android:id="@+id/TituloTest"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="@dimen/common_padding_default"
@@ -38,7 +40,10 @@
                 android:textSize="@dimen/tamaño_letra_sub_subtitulo"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/imagenTest"
-                app:layout_constraintTop_toTopOf="@id/imagenTest" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/DescripcionTest"
+                />
 
             <TextView
                 android:id="@+id/DescripcionTest"

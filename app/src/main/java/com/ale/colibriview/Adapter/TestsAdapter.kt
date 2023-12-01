@@ -40,8 +40,8 @@ class TestsAdapter(private val Tests:MutableList<Test>, private val listener: Ca
         {
             setListener(test,(position+1))
             binding.TituloTest.text=test.title
-           // binding.DescripcionTest.text=test.description
-            binding.imagenTest.setImageResource(IconPicker.getIcon())
+            binding.DescripcionTest.text=test.description
+            binding.imagenTest.setImageResource(IconPicker.getIcon(position))
         }
     }
 
