@@ -38,7 +38,7 @@ class DatosTest : AppCompatActivity() {
 
             }
             if(binding.name1.text.toString()!=""||binding.radicas.text.toString()!=""||binding.edad.text.toString()!="") {
-                val intent = Intent(this, PlantillaPreguntaActivity::class.java)
+                val intent = Intent(this, ishijara::class.java)
                 startActivity(intent)
                 finish()
             }
