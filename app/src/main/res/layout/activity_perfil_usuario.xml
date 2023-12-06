@@ -56,7 +56,7 @@
                 app:endIconMode="clear_text"
                 app:counterMaxLength="@integer/counter_max_name"
                 app:counterEnabled="true"
-                app:startIconDrawable="@drawable/baseline_person_pin_24"
+                app:startIconDrawable="@drawable/baseline_person_24"
 
 
                 >
@@ -92,6 +92,7 @@
                 android:layout_marginTop="10dp"
                 app:helperText="@string/card_required"
                 app:startIconDrawable="@drawable/baseline_email_24"
+                android:maxLength="@integer/counter_max_name"
 
 
                 >

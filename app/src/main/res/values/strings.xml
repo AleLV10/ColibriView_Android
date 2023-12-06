@@ -128,5 +128,4 @@
     <string name="Titulo_D">Daltonismo</string>
     <string name="dialog_title">Detalle del Test de:</string>
     <string name="dialog_confirm">Aceptar</string>
-    <string name="card_required">Requerido</string>
 </resources>

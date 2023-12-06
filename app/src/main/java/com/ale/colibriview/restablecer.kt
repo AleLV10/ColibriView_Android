@@ -18,7 +18,11 @@ class restablecer : AppCompatActivity() {
         binding = ActivityRestablecerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        binding.iniciar.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         binding.enviar.setOnClickListener {
             email=binding.CorreoRestablecer.text.toString().trim()
             if(email!="")

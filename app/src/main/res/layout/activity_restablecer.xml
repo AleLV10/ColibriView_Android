@@ -41,6 +41,8 @@
         app:helperText="@string/card_required"
         app:endIconMode="clear_text"
         android:enabled="true"
+        app:startIconDrawable="@drawable/baseline_email_24"
+
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -81,13 +83,29 @@
         android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
 
         />
+    <Button
+        android:id="@+id/iniciar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@id/enviar"
+        app:layout_constraintStart_toStartOf="@id/enviar"
+        app:layout_constraintEnd_toEndOf="@id/enviar"
+        android:layout_marginTop="10dp"
+        android:textColor="#7858F2"
+        android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+
+        />
+
     <TextView
         android:id="@+id/o"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/o"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/enviar"
+        app:layout_constraintTop_toBottomOf="@id/iniciar"
         app:layout_constraintEnd_toEndOf="@id/email"
         app:layout_constraintStart_toStartOf="@id/email"
         android:layout_marginTop="10dp"
