@@ -34,7 +34,7 @@ class ishijara : AppCompatActivity() {
         }
         binding.mnuBarraIshihara.menuResultados.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this, Ussuarios::class.java)
+            val intent = Intent(this, ResultadosActivity::class.java)
             startActivity(intent)
             finish()
         }

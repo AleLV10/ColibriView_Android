@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityTestCompletadoBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -13,7 +15,10 @@ class test_completado : AppCompatActivity() {
     private lateinit var binding: ActivityTestCompletadoBinding
     private var bandera:Boolean=false
     private val TAG = "test_completado"
+    private lateinit var auth: FirebaseAuth
     private var contador =0
+    private  var string:String =""
+    private lateinit var uid: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTestCompletadoBinding.inflate(layoutInflater)
@@ -27,35 +32,26 @@ class test_completado : AppCompatActivity() {
             if(bandera){
                 binding.prueba.setText("")
                 bandera=false
+                contador =0
             }
             else
             {
                 for(i in 1..38){
-                    binding.prueba.append("Respuesta $i: ${preferences.getString("Respuesta$i", "Default")}\n")
-                }/*
-                binding.prueba.append("Respuesta 1: ${preferences.getInt("IR1", 0)}\n")
-                binding.prueba.append("Respuesta 2: ${preferences.getInt("IR2", 0)}\n")
-                binding.prueba.append("Respuesta 3: ${preferences.getInt("IR3", 0)}\n")
-                binding.prueba.append("Respuesta 4: ${preferences.getInt("IR4", 0)}\n")
-                binding.prueba.append("Respuesta 5: ${preferences.getInt("IR5", 0)}\n")
-                binding.prueba.append("Respuesta 6: ${preferences.getInt("IR6", 0)}\n")
-                binding.prueba.append("Respuesta 7: ${preferences.getInt("IR7", 0)}\n")
-                binding.prueba.append("Respuesta 8: ${preferences.getInt("IR8", 0)}\n")
-                binding.prueba.append("Respuesta 9: ${preferences.getInt("IR9", 0)}\n")
-                binding.prueba.append("Respuesta 10: ${preferences.getInt("IR10", 0)}\n")
-                bandera=true*/
-            }
-            for(i in 1..38){
-                if(preferences.getString("Correcta$i", "Default")=="Correcto")
-                    contador+=1
+                    string += "Respuesta $i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
+                     if(preferences.getString("Validacion$i", "Default")=="Correcto")
+                        contador+=1
+                }
+                binding.prueba.setText(string)
+
+                bandera=true
             }
 
             with(preferences.edit()) {
-                putString("Resultados correctos","$contador/48").apply()
+                putString("Resultados_correctos","$contador/38 Respuestas Correctas").apply()
                 if(contador<20)
-                    putString("Resultados","Daltonico").apply()
+                    putString("Resultados","Persona daltónica").apply()
                 else
-                    putString("Resultados","NO Daltonico").apply()
+                    putString("Resultados","Persona no daltónica").apply()
             }
             binding.continuar.setOnClickListener {
                 // Do something in response to button click
@@ -68,52 +64,37 @@ class test_completado : AppCompatActivity() {
 
         }
 
-/*
-        binding.mnuBarraCompleto.home.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, Inicio::class.java)
-            startActivity(intent)
-            finish()
+    }
+    private fun getIDUser() {
+        val user = Firebase.auth.currentUser
+        user?.let {
+            // The user's ID, unique to the Firebase project. Do NOT use this value to
+            // authenticate with your backend server, if you have one. Use
+            // FirebaseUser.getIdToken() instead.
+            uid = it.uid
         }
-
-        binding.mnuBarraCompleto.menutest.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, tipos::class.java)
-            startActivity(intent)
-            finish()
-        }
-        binding.mnuBarraCompleto.menuResultados.setOnClickListener {
-            // Do something in response to button click
-            val intent = Intent(this, Ussuarios::class.java)
-            startActivity(intent)
-            finish()
-        }*/
-
-
     }
     private fun addAdaLovelace() {
         // [START add_ada_lovelace]
         // Create a new user with a first and last name
-
-
+        getIDUser()
+        auth = Firebase.auth
         val preferences = getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
-        for(i in 1..38)
+        for(i in 1..39)
             preferences.getString("Correcta$i", "Default")
         val db = Firebase.firestore
         val user = hashMapOf(
             "Test" to preferences.getString("Test", "Test de Ishihara"),
+            "ID_usuario" to uid,
             "Nombre" to preferences.getString("Nombre", "Default"),
             "Edad" to preferences.getString("Edad", "Default"),
             "Lugar" to preferences.getString("Lugar", "Default"),
             "Fecha" to preferences.getString("Fecha", "Default"),
-            "Resultados correctos" to preferences.getString("Resultados correctos", "Default"),
+            "Resultados_correctos" to preferences.getString("Resultados_correctos", "Default"),
             "Resultados" to preferences.getString("Resultados", "Default"),
+            "Completos" to string,
         )
-        val r2use = hashMapOf(
-            "Resultados correctos" to "Ada",
-            "last" to user,
-            "born" to 1815,
-        )
+
 
         // Add a new document with a generated ID
         db.collection("users")

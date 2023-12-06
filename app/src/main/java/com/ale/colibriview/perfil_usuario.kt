@@ -1,5 +1,6 @@
 package com.ale.colibriview
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -29,7 +30,7 @@ class perfil_usuario : AppCompatActivity() {
         {
             binding.imgOjo.setImageURI(uri)
             //Imagen seleccionada
-            Log.i("aris","seleccionado")
+           // Log.i("aris","seleccionado")
             val user = Firebase.auth.currentUser
 
             val profileUpdates = userProfileChangeRequest {
@@ -77,7 +78,7 @@ class perfil_usuario : AppCompatActivity() {
         }
         binding.mnuBarraUsuario.menuResultados.setOnClickListener {
             // Do something in response to button click
-            val intent = Intent(this, Ussuarios::class.java)
+            val intent = Intent(this, ResultadosActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -96,21 +97,24 @@ class perfil_usuario : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         //return intent
         createIntent()
-        //parseResult(Activity.,createIntent())
+        parseResult(Activity.RESULT_OK,createIntent())
         getUserProfile()
 
         if(name==null||name=="")
         {
             binding.perfilName.setText(email)
             binding.txtNameUser.text=email
-            binding.imgOjo.setImageURI(Uri.parse("@drawable/usuario"))
+
         }
         else {
             binding.perfilName.setText(name)
             binding.txtNameUser.text=name
-         //   binding.imgOjo.setImageURI(photoUrl.toUri())
-        }
 
+        }
+       // if(photoUrl==null||photoUrl=="")
+        binding.imgOjo.setImageResource(R.drawable.usuario)
+     //   else
+     //       binding.imgOjo.setImageURI(Uri.parse(photoUrl))
         binding.perfilName.isEnabled = false
         binding.perfilCorreo.setText(email+"")
         binding.perfilCorreo.isEnabled=false
@@ -138,7 +142,7 @@ class perfil_usuario : AppCompatActivity() {
             if(binding.perfilCorreo.isEnabled==true)
                 updateEmail()
             if(binding.imgOjo.isEnabled==true)
-                null
+                updateProfile()
             binding.perfilName.isEnabled = false
             binding.perfilCorreo.isEnabled=false
             binding.guardarCambios.isEnabled=false
@@ -156,6 +160,7 @@ class perfil_usuario : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
     }
     fun createIntent(): Intent {
         val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -177,7 +182,6 @@ class perfil_usuario : AppCompatActivity() {
             name = it.displayName.toString()
             email = it.email.toString()
             photoUrl = it.photoUrl.toString()
-
             // Check if user's email is verified
             val emailVerified = it.isEmailVerified
 
@@ -185,6 +189,7 @@ class perfil_usuario : AppCompatActivity() {
             // authenticate with your backend server, if you have one. Use
             // FirebaseUser.getIdToken() instead.
             val uid = it.uid
+            //Toast.makeText(this,"$uid", Toast.LENGTH_SHORT).show()
         }
         // [END get_user_profile]
     }
@@ -207,6 +212,7 @@ class perfil_usuario : AppCompatActivity() {
                         Toast.LENGTH_SHORT,
                     ).show()
 
+
                 }
             }
         // [END update_profile]
@@ -228,6 +234,7 @@ class perfil_usuario : AppCompatActivity() {
                 }
 
             }
+
         // [END update_email]
     }
 

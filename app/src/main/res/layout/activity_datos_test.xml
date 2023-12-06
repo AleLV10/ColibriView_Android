@@ -94,6 +94,7 @@
                 app:counterMaxLength="@integer/counter_max_name"
                 app:counterEnabled="true"
                 app:startIconDrawable="@drawable/baseline_place_24"
+
                 >
 
                 <com.google.android.material.textfield.TextInputEditText

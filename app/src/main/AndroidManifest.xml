@@ -13,10 +13,13 @@
         android:theme="@style/Theme.ColibriView"
         tools:targetApi="31">
         <activity
+            android:name=".RespuestaUsuarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResultadosActivity"
             android:exported="false" />
         <activity
-            android:name=".item_inicio"
+            android:name=".Inicio"
             android:exported="false" />
         <activity
             android:name=".PlantillaPreguntaActivity"
@@ -39,33 +42,7 @@
         <activity
             android:name=".perfil_usuario"
             android:exported="false" />
-        <activity
-            android:name=".ishijara11"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara10"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara9"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara8"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara7"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara6"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara5"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara4"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara3"
-            android:exported="false" />
+
         <activity
             android:name=".daltonismo_en_riesgo"
             android:exported="false" />
@@ -78,9 +55,7 @@
         <activity
             android:name=".DefinicionActivity"
             android:exported="false" />
-        <activity
-            android:name=".Inicio"
-            android:exported="false" />
+
         <activity
             android:name=".restablecer"
             android:exported="false" />
@@ -106,7 +81,7 @@
             android:name=".Splash"
             android:exported="false" />
         <activity
-            android:name=".Ussuarios"
+            android:name=".UsuariosActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

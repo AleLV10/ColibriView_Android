@@ -45,7 +45,6 @@ class InicioAdapter(private val Inicio:MutableList<Initio>, private val listener
         holder.binding.describeInicio.text = inicio.description
         // Si `getIcon2()` devuelve un recurso de imagen en forma de Int (ID del recurso)
         holder.binding.imagenInicio.setImageResource(IconInicio.getIcon2())
-
     }
 
 }

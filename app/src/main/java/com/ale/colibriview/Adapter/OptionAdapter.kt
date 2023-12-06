@@ -49,7 +49,7 @@ class OptionAdapter(private var context: Context, private val question: Question
 
                 optionView.text=options[position]
                 question.UserAnswer=options[position]
-                notifyDataSetChanged()
+
                 val intent = Intent(context,
                     PlantillaPreguntaActivity::class.java
                 )
@@ -58,18 +58,21 @@ class OptionAdapter(private var context: Context, private val question: Question
 
                 if(question.Answer==options[position]){
                     binding.botonRespuesta.setBackgroundColor(Color.GREEN)
-                    intent.putExtra("Correcta", "Correcto");
+                    intent.putExtra("Validacion", "Correcto");
                 }
                 else {
                     binding.botonRespuesta.setBackgroundColor(Color.RED)
-                    intent.putExtra("Correcta", "Incorrecto $position");
+                    intent.putExtra("Validacion", "Incorrecto");
                 }
+                notifyDataSetChanged()
                 context.startActivity(intent)
 
 
 
 
             }
+
+
         }
     }
 

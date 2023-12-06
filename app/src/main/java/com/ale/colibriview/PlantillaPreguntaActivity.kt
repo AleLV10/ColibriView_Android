@@ -3,7 +3,6 @@ package com.ale.colibriview
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ale.colibriview.Adapter.OptionAdapter
@@ -17,41 +16,37 @@ class PlantillaPreguntaActivity : AppCompatActivity(), OnClickListenerQuestion {
     private var tests :MutableList<Test>? = null
     private var questions:MutableMap<String,Question>?= null
     private var index: Int = 0
-    private var bandera=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding= ActivityPlantillaPreguntaBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-
-        val valor: String? = intent.getStringExtra("Respuesta")
-        val correcto: Int? = intent.getIntExtra("Correcta",0)
+        val valor: String? = intent.getStringExtra("Validacion")
+        val valor2: String? = intent.getStringExtra("Respuesta")
         val preferences = getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
         index= intent.getIntExtra("Index",index)
-        Toast.makeText(this,""+index + " llegada", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this,""+index + "$valor", Toast.LENGTH_SHORT).show()
         with(preferences.edit()) {
-            putString("Respuesta$index", valor).apply()
-            putString("Correcta$index", correcto.toString()).apply()
+            putString("Respuesta$index", valor2).apply()
+            putString("Validacion$index", valor).apply()
         }
 
         if(valor!=null) {
-
             index += 1
-            if(index==38)
+            if(index==39)
             {
                 val intent = Intent(this, test_completado::class.java)
                 startActivity(intent)
                 finish()
             }
-            else
-                setUpFireStore()
+
         }
         else
         {
             index=1
-            setUpFireStore()
-        }
 
+        }
+        setUpFireStore()
 
     }
 
@@ -67,7 +62,7 @@ class PlantillaPreguntaActivity : AppCompatActivity(), OnClickListenerQuestion {
     }
 
     override fun onClick(question: Question, valor: Int) {
-
+        //putextras;/
 
     }
     private fun setUpFireStore() {

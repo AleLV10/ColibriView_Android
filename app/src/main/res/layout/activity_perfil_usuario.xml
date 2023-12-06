@@ -52,13 +52,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/editar_nombre"
                 android:layout_marginTop="20dp"
+                app:helperText="@string/card_required"
+                app:endIconMode="clear_text"
+                app:counterMaxLength="@integer/counter_max_name"
+                app:counterEnabled="true"
+                app:startIconDrawable="@drawable/baseline_person_pin_24"
+
+
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/perfil_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="textPersonName|textAutoCorrect|textAutoComplete"
+                    android:maxLength="@integer/counter_max_name"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <ImageView
@@ -82,6 +90,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/editar_correo"
                 android:layout_marginTop="10dp"
+                app:helperText="@string/card_required"
+                app:startIconDrawable="@drawable/baseline_email_24"
 
 
                 >
@@ -90,7 +100,9 @@
                     android:id="@+id/perfil_correo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textEmailAddress|textAutoCorrect|textAutoComplete"
+                    android:maxLength="@integer/counter_max_name"
+
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <ImageView
