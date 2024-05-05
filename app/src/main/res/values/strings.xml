@@ -1,131 +1,118 @@
 <resources>
-    <string name="app_name">ColibriView</string>
-    <string name="texto1">Selecciona el numero que veas en la pantalla!</string>
+    <string name="app_name">ColibríView</string>
+    <string name="texto1">
+        El test de Ishihara es una de las pruebas de daltonismo más utilizadas a través del mundo, detecta principalmente el daltonismo rojo-verde. \n\n
+        Instrucciones: \n
+        ¡Selecciona el número que veas en la pantalla!
+    </string>
     <string name="texto2">Presiona para continuar</string>
     <string name="titLogin">Iniciar Sesión</string>
-    <string name="form_username">e-mail</string>
+    <string name="form_username">Correo electrónico</string>
     <string name="card_required">Requerido</string>
     <string name="form_passw">Contraseña</string>
     <string name="olvida">¿Olvidaste tu contraseña?</string>
     <string name="o">Iniciar sesión con</string>
     <string name="titRest">Restablecer contraseña</string>
-    <string name="restablece">"Se enviara un correo electrónico para poder restablecer la contraseña."</string>
-    <string name="completado">Test Completo!!</string>
+    <string name="restablece">Se enviará un correo electrónico para poder restablecer la contraseña.</string>
+    <string name="completado">¡Test Completo!</string>
     <string name="continuar">CONTINUAR</string>
-    <string name="resultados">RESPUESTAS</string>
+    <string name="resultados">VER RESULTADOS</string>
     <string name="pablo">PABLO</string>
-    <string name="nomtest">Test de Isihara</string>
+    <string name="nomtest">Test de Ishihara</string>
     <string name="nomtest_PD">Test de Protan y Deutan</string>
     <string name="nomtest_Tr">Test de Tritan</string>
     <string name="nomtest_Tl">Test de Lantern</string>
     <string name="correctas">15/24 Respuestas correctas</string>
-    <string name="diagnostico">Daltónico con una ceguera leve al color de verde (deuteranomalía).</string>
+    <string name="diagnostico">Daltónico con una ceguera leve al color verde (deuteranomalía).</string>
     <string name="des_ishihara">El daltonismo es una alteración genética que afecta la capacidad de percibir colores.</string>
     <string name="des_PD">Las personas con este problema pueden tener distintos grados de dificultad en su detección.</string>
     <string name="des_TR">El daltonismo es una alteración genética que afecta la capacidad de percibir colores.</string>
     <string name="des_Tl">Las personas con este problema pueden tener distintos grados de dificultad en su detección.</string>
-    <string name="quees">¿Què es?</string>
-    <string name="descripcion">El daltonismo es una afección en la cual no se pueden ver los colores de manera normal.
-        También se conoce como deficiencia de color. En el daltonismo generalmente la persona no puede distinguir entre ciertos colores.
-        Con frecuencia no distinguen los verdes de los rojos y, a veces, los azules.\n\n
-        En la retina hay dos tipos de células que detectan la luz. Esas células se llaman bastoncillos y conos.
-        Los bastoncillos solo detectan la luz y la oscuridad y son muy sensibles a los niveles bajos de luz.
-        Los conos detectan los colores y están concentrados cerca del centro de la visión.
-        Hay tres tipos de conos: unos detectan el rojo, otros el verde y otros el azul.
-        El cerebro usa la información que envían los conos para determinar el color que percibimos.\n\n
-        El daltonismo puede ocurrir cuando un tipo o más de conos están ausentes, no funcionan o detectan un color diferente de lo normal.
-        El daltonismo grave ocurre cuando los tres tipos de conos están ausentes. El daltonismo leve ocurre cuando los tres tipos de conos
-        están presentes, pero uno de ellos no funciona bien. Detecta un color diferente de lo normal.\n\n
-        Hay distintos grados de daltonismo. Algunas personas con deficiencias leves para ver los colores detectan los colores normalmente
-        cuando hay buena luz pero tienen dificultad en la luz tenue. Otras no pueden distinguir ciertos colores en ningún tipo de luz.
-        La forma más grave de daltonismo, en la cual todo se ve en distintos tonos de gris, es poco común.
-        El daltonismo suele afectar ambos ojos por igual y se mantiene estable a lo largo de toda la vida.\n\n
-        Por lo general se nace con daltonismo, pero en algunos casos puede adquirirse más tarde en la vida.
-        Un cambio en la manera de ver los colores puede indicar la presencia de un problema más serio. Toda persona que note un cambio
-        en la manera en que percibe los colores debe consultar a un oftalmólogo.\n\n\n\n
+    <string name="quees">¿Qué es?</string>
+    <string name="descripcion">
+        El daltonismo, también conocido como deficiencia de color, es una condición en la cual la percepción de los colores no es normal. En el daltonismo, las personas suelen tener dificultad para distinguir entre ciertos colores, especialmente entre verdes y rojos, y en ocasiones, entre azules.\n\n
+        En la retina, existen dos tipos de células sensibles a la luz: los bastones y los conos. Los bastones son responsables de detectar la luz y la oscuridad, siendo muy sensibles a niveles bajos de luz. Por otro lado, los conos detectan los colores y se concentran cerca del centro de la visión. Existen tres tipos de conos: los sensibles al rojo, al verde y al azul. El cerebro utiliza la información enviada por los conos para determinar el color que percibimos.\n\n
+        El daltonismo puede ser causado por la ausencia, mal funcionamiento o percepción anormal de uno o más tipos de conos. En los casos graves, donde los tres tipos de conos están ausentes, el daltonismo se manifiesta de manera más severa. Por otro lado, en los casos leves, los tres tipos de conos están presentes, pero uno de ellos no funciona correctamente, lo que resulta en la percepción de colores distintos a lo normal.\n\n
+        Existen diferentes grados de daltonismo. Algunas personas con deficiencias leves pueden percibir los colores normalmente en condiciones de buena iluminación, pero tienen dificultades en condiciones de luz tenue. En cambio, otras personas pueden tener dificultades para distinguir ciertos colores en cualquier tipo de iluminación. La forma más extrema de daltonismo, donde todo se ve en tonos de gris, es poco común. El daltonismo suele afectar a ambos ojos por igual y tiende a permanecer estable a lo largo de la vida. \n\n
+        Si bien el daltonismo suele ser una condición congénita, es decir, se nace con ella, en algunos casos puede adquirirse más tarde en la vida. Cualquier cambio en la percepción de los colores debe ser evaluado por un oftalmólogo, ya que podría ser indicativo de un problema más serio.
     </string>
     <string name="tipos_daltonismo">Tipos</string>
-    <string name="descripcion_Tipos">El daltonismo puede presentarse en diferentes modalidades, en función del tipo de pigmentos de los que no se dispongan o que se encuentren alterados.
-        Concretamente existen tres tipos principales de daltonismo, que se exponen a continuación.\n\n
-        1. Acromatismo\n\n
-        Se trata de una condición muy poco habitual. El acromatismo o monocromatismo aparece cuando el sujeto no posee ningún pigmento o los conos en cuestión no son en ningún caso funcionales.
-        La visión en este caso se basa en la información extraída de las células que captan la luminosidad, los bastones, ciendo sólo en escala de grises, blanco y negro.\n\n
-        2. Dicromatismo\n\n
-        Generalmente, cuando pensamos en alguien con daltonismo tendemos a identificarlo con alguien que padece dicromatismo.
-        Se entiende como tal el tipo de daltonismo causado por la ausencia de uno de los tipos de pigmentos,
-        con lo que no es posible percibir ni el color en cuestión ni los colores asociados a él
-        (por ejemplo, si alguien no puede ver el color rojo también tendrá alterada la percepción del naranja).
-        En este caso la frecuencia de onda que permite la percepción del color no puede ser captada, de manera que el pigmento que capte la frecuencia de onda más cercana realizará su función,
-        haciendo que se confundan los colores.\n\n
-        Dentro del dicromatismo podemos identificar tres tipologías básicas.\n\n
-        2.1. Protanopia\n\n
-        El sujeto no puede captar las frecuencias de onda que permiten ver el color rojo, que posee una frecuencia de onda larga. El color rojo tiende a verse a percibirse como beis o gris,
-        a veces con tonos verdosos. Si la frecuencia de honda es muy elevada se percibe amarillo.\n\n
-        2.2. Tritanopia\n\n
-        El menos común de los tipos de dicromatismo, afectando a la percepción de frecuencias de onda corta. La persona que padece tritanopia no dispone del pigmento correspondiente al color azul,
-        el cual suele confundirse con el verde. Asimismo los amarillos tienden a verse como rojo, violeta o blanco.\n\n
-        2.3. Deuteranopia\n\n
-        Se trata del tipo de daltonismo más habitual junto con la protanopia. En este caso el carece del pigmento verde, no pudiendo captar frecuencias de onda propias de ese color (que serían frecuencias de onda medias).
-        El verde no se capta, viéndose generalmente de un color beis. La percepción del rojo también tiende a verse afectada, teniendo tonos amarronados.\n\n
-        3. Tricromatismo anómalo\n\n
-        El tricromatismo anómalo se da cuando la persona en cuestión posee los mismos tres tipos de pigmentos que la mayor parte de la población, pero sin embargo al menos uno está alterado y no es funcional.
-        Aunque es posible que si tengan una leve percepción del color no funcional, necesitan que la estimulación sea muy intensa para poder captarlo, siendo más probable que su visión sea similar a la de un dicromático.\n\n
-        Dentro de este tipo de daltonismo podemos encontrar tres subtipos en función de cual de los pigmentos no es funcional.\n\n
-        3.1. Protanomalía\n\n
+    <string name="descripcion_Tipos">El daltonismo puede presentarse en diferentes modalidades, en función del tipo de pigmentos de los que no se dispongan o que se encuentren alterados. Concretamente existen tres tipos principales de daltonismo, que se exponen a continuación.\n\n
+        <b>1. Acromatismo</b><br />\n\n
+        Se trata de una condición muy poco habitual. El acromatismo o monocromatismo aparece cuando el sujeto no posee ningún pigmento o los conos en cuestión no son en ningún caso funcionales. La visión en este caso se basa en la información extraída de las células que captan la luminosidad, los bastones, siendo sólo en escala de grises, blanco y negro.\n\n
+        <b>2. Dicromatismo</b><br />\n\n
+        Generalmente, cuando pensamos en alguien con daltonismo tendemos a identificarlo con alguien que padece dicromatismo. Se entiende como tal el tipo de daltonismo causado por la ausencia de uno de los tipos de pigmentos, con lo que no es posible percibir ni el color en cuestión ni los colores asociados a él (por ejemplo, si alguien no puede ver el color rojo también tendrá alterada la percepción del naranja). En este caso la frecuencia de onda que permite la percepción del color no puede ser captada, de manera que el pigmento que capte la frecuencia de onda más cercana realizará su función, haciendo que se confundan los colores.\n
+        Dentro del dicromatismo podemos identificar tres tipologías básicas:\n\n
+        <i>2.1. Protanopia</i><br />\n
+        El sujeto no puede captar las frecuencias de onda que permiten ver el color rojo, que posee una frecuencia de onda larga. El color rojo tiende a verse a percibirse como beige o gris, a veces con tonos verdosos. Si la frecuencia de onda es muy elevada se percibe amarillo.\n\n
+        <i>2.2. Tritanopia</i><br />\n
+        El menos común de los tipos de dicromatismo, afectando a la percepción de frecuencias de onda corta. La persona que padece tritanopia no dispone del pigmento correspondiente al color azul, el cual suele confundirse con el verde. Asimismo los amarillos tienden a verse como rojo, violeta o blanco.\n\n
+        <i>2.3. Deuteranopia</i><br />\n
+        Se trata del tipo de daltonismo más habitual junto con la protanopia. En este caso el carece del pigmento verde, no pudiendo captar frecuencias de onda propias de ese color (que serían frecuencias de onda medias). El verde no se capta, viéndose generalmente de un color beige. La percepción del rojo también tiende a verse afectada, teniendo tonos marronáceos.\n\n
+        <b>3. Tricromatismo anómalo</b><br />\n\n
+        El tricromatismo anómalo se da cuando la persona en cuestión posee los mismos tres tipos de pigmentos que la mayor parte de la población, pero sin embargo al menos uno está alterado y no es funcional. Aunque es posible que si tengan una leve percepción del color no funcional, necesitan que la estimulación sea muy intensa para poder captarlo, siendo más probable que su visión sea similar a la de un dicromático.\n\n
+        Dentro de este tipo de daltonismo podemos encontrar tres subtipos en función de cual de los pigmentos no es funcional:\n\n
+        <i>3.1. Protanomalía</i><br />\n
         En este caso, el sujeto es capaz de percibir los colores verde y azul con normalidad, pero el rojo no es asimilado y captado con normalidad.\n\n
-        3.2. Tritanomalía\n\n
+        <i>3.2. Tritanomalía</i><br />\n
         El azul no es captado correctamente, siendo fácil que se confunda con otros en función de la frecuencia de onda que se capte. El rojo y el verde son captados normalmente.\n\n
-        3.3. Deuteranomalía\n\n
-        La anomalía se encuentra en este caso en el pigmento verde, que no puede percibirse por completo.\n\n\n\n
-
+        <b>3.3. Deuteranomalía</b><br />\n
+        La anomalía se encuentra en este caso en el pigmento verde, que no puede percibirse por completo.
     </string>
-    <string name="numero">12</string>
-    <string name="registrar">Registrar usuario</string>
+    <string name="causas">Causas</string>
     <string name="causas_daltonismo">La mayoría de las personas que tienen daltonismo nacen con la afección. (Esto es lo que se llama una afección congénita). Los defectos congénitos de la visión de color suelen pasar de la madre al hijo varón.\n
         Estos defectos se deben a una ausencia parcial o total de los conos en la retina. Los conos ayudan a distinguir los colores rojo, verde y azul.\n
         La mayoría de los problemas de la visión de color que aparecen más adelante en la vida son resultado de:\n\n
-        *Una enfermedad\n\n
-        *Un traumatismo\n\n
-        *Los efectos tóxicos de algunos medicamentos\n\n
-        *Una enfermedad metabólica o una enfermedad vascular\n\n
-        Los defectos de la visión de color causados por una enfermedad no se entienden tan bien como los defectos congénitos. El daltonismo debido a una enfermedad específica a menudo afecta cada ojo de manera diferente,
-        y suele empeorar con el tiempo. La pérdida de la visión de color adquirida puede ser el resultado de daño a la retina o al nervio óptico.\n\n\n
-
+        • Una enfermedad\n
+        • Un traumatismo\n
+        • Los efectos tóxicos de algunos medicamentos\n
+        • Una enfermedad metabólica o una enfermedad vascular\n\n
+        Los defectos de la visión de color causados por una enfermedad no se entienden tan bien como los defectos congénitos. El daltonismo debido a una enfermedad específica a menudo afecta cada ojo de manera diferente, y suele empeorar con el tiempo. La pérdida de la visión de color adquirida puede ser el resultado de daño a la retina o al nervio óptico.
     </string>
+    <string name="personas_riesgo">Personas en riesgo</string>
     <string name="riesgo_daltonismo">Los hombres tienen un riesgo mucho mayor de nacer con daltonismo que las mujeres, quienes rara vez tienen este problema. Se calcula que uno de cada diez hombres tiene alguna forma de deficiencia de color.
         El daltonismo es más común entre los hombres que tienen ascendencia del norte de Europa.\n\n
         Ciertas enfermedades pueden aumentar el riesgo de tener deficiencia de color adquirida, entre ellas:\n\n
-        El glaucoma\n
-        La diabetes\n
-        La degeneración macular\n
-        La enfermedad de Alzheimer\n
-        La enfermedad de Parkinson\n
-        El alcoholismo crónico\n
-        Leucemia\n
-        La anemia falciforme\n
+        • El glaucoma\n
+        • La diabetes\n
+        • La degeneración macular\n
+        • La enfermedad de Alzheimer\n
+        • La enfermedad de Parkinson\n
+        • El alcoholismo crónico\n
+        • Leucemia\n
+        • La anemia falciforme\n\n
         Ciertos medicamentos también pueden aumentar su riesgo de contraer daltonismo. La hidroxicloroquina (Plaquenil) puede causar daltonismo.
-        Se usa para tratar la artritis reumatoide, entre otras afecciones.\n\n\n
-
+        Se usa para tratar la artritis reumatoide, entre otras afecciones.
     </string>
-    <string name="causas">Causas</string>
-    <string name="personas_riesgo">¿Quienes estan\n
-        en riesgo?</string>
+    <string name="numero">12</string>
+    <string name="registrar">Registrar usuario</string>
     <string name="User_Profile">Nombre</string>
-    <string name="User_Email_app">Correo Electronico:</string>
+    <string name="User_Email_app">Correo Electrónico:</string>
     <string name="User_Password_app">Contraseña</string>
     <string name="form_name">Nombre</string>
     <string name="datos_test">Test de Ishihara</string>
     <string name="Radica">Lugar de nacimiento</string>
     <string name="Edad">Edad</string>
-    <string name="texto_lantern">El test consiste en mostrar 9 pares de luces orientadas verticalmente, en cualquiera de las combinaciones de rojo, verde o amarillo.\n
-        Identifica los colores de arriba y abajo (algunos son iguales). Los colores solo se mostraran por unos segundos.\n\n 
-        Ejemplo 1: Arriba-rojo, abajo-verde.\n
-        Ejemplo 2: Arriba-amarillo, abajo-rojo.\n\n
-        Si no puedes identificar los colores, haz click en el botón siguiente.
+    <string name="texto_lantern">
+        Muestra un par de luces (amarillo, rojo y verde). Se pide identificar los colores y verificar si son idénticos o no.\n\n
+        Instrucciones: \n
+        Identifica los colores de arriba y abajo (algunos son iguales). Los colores solo se muestran por unos segundos.\n
+        Ejemplo 1: Arriba-rojo, Abajo-verde.\n
+        Ejemplo 2: Arriba-amarillo, Abajo-amarillo.\n\n
+        Si no puedes identificar los colores, haz clic en "siguiente".
     </string>
-    <string name="TituloD2">Test daltonismo</string>
-    <string name="sabias_que">Sabias qué</string>
+    <string name="TituloD2">Realizar Test</string>
+    <string name="sabias_que">¿Sabías qué?</string>
     <string name="Titulo_D">Daltonismo</string>
     <string name="dialog_title">Detalle del Test de:</string>
     <string name="dialog_confirm">Aceptar</string>
+    <string name="default_web_client_id">tu_id_de_cliente_web_predeterminado</string>
+    <string name="verde">Verde</string>
+    <string name="Amarillo">Amarillo</string>
+    <string name="rojo">Rojo</string>
+    <string name="siguiente">siguiente</string>
+    <string name="Fecha">Fecha: </string>
+    <string name="fecha_text">Date</string>
+    <string name="Identificador">Identificador</string>
+    <string name="Nombre_del_test">Nombre del test</string>
 </resources>

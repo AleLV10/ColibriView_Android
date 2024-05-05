@@ -13,75 +13,46 @@
         android:theme="@style/Theme.ColibriView"
         tools:targetApi="31">
         <activity
-            android:name=".RespuestaUsuarioActivity"
+            android:name=".TestLantern"
             android:exported="false" />
         <activity
             android:name=".ResultadosActivity"
             android:exported="false" />
         <activity
-            android:name=".Inicio"
+            android:name=".PagingInitio"
             android:exported="false" />
         <activity
-            android:name=".PlantillaPreguntaActivity"
+            android:name=".PlantQuestionActivity"
             android:exported="false" />
         <activity
-            android:name=".Test_IshiharaActivity"
+            android:name=".CardsTest"
             android:exported="false" />
         <activity
-            android:name=".Cards_Test"
+            android:name=".DatTest"
             android:exported="false" />
         <activity
-            android:name=".test_lantern1"
+            android:name=".PerilUser"
             android:exported="false" />
         <activity
-            android:name=".test_Lantern"
+            android:name=".DefinitionActivity"
             android:exported="false" />
         <activity
-            android:name=".DatosTest"
+            android:name=".Respectable"
             android:exported="false" />
         <activity
-            android:name=".perfil_usuario"
-            android:exported="false" />
-
-        <activity
-            android:name=".daltonismo_en_riesgo"
+            android:name=".Base"
             android:exported="false" />
         <activity
-            android:name=".daltonismo_causas"
+            android:name=".Instructions"
             android:exported="false" />
         <activity
-            android:name=".daltonismo_tipos"
-            android:exported="false" />
-        <activity
-            android:name=".DefinicionActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".restablecer"
-            android:exported="false" />
-        <activity
-            android:name=".base"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara"
-            android:exported="false" />
-        <activity
-            android:name=".ishijara2"
-            android:exported="false" />
-        <activity
-            android:name=".test_completado"
+            android:name=".TestCompleted"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".RegistrarNuevoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Splash"
-            android:exported="false" />
-        <activity
-            android:name=".UsuariosActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

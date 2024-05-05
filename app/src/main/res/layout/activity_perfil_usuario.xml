@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".perfil_usuario">
+    tools:context=".PerilUser">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,12 +16,12 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="20dp"
+            android:padding="15dp"
             >
             <ImageView
                 android:id="@+id/img_Ojo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/User_Profile"
-                android:textSize="18sp"
+                android:textSize="@dimen/tamaño_letra_titulo"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
@@ -71,10 +71,11 @@
             </com.google.android.material.textfield.TextInputLayout>
             <ImageView
                 android:id="@+id/editar_nombre"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/edit"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="iconoEditarNombre"
                 app:layout_constraintTop_toBottomOf="@id/txt_name_User"
                 app:layout_constraintStart_toEndOf="@id/Name_User"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -108,13 +109,15 @@
             </com.google.android.material.textfield.TextInputLayout>
             <ImageView
                 android:id="@+id/editar_correo"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/edit"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="iconoEditarCorreo"
                 app:layout_constraintTop_toBottomOf="@id/Name_User"
                 app:layout_constraintStart_toEndOf="@id/Email_User_app"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/Email_User_app"
                 android:clickable="true"
                 />
 
@@ -124,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:text="Guardar"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="@dimen/tamaño_letra_subtitulo"
                 app:layout_constraintTop_toBottomOf="@id/Email_User_app"
                 app:layout_constraintStart_toStartOf="@id/Email_User_app"
                 app:layout_constraintEnd_toEndOf="@id/editar_nombre"
@@ -139,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cerrar Sesión"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="@dimen/tamaño_letra_subtitulo"
                 app:layout_constraintTop_toBottomOf="@id/guardarCambios"
                 app:layout_constraintStart_toStartOf="@id/Email_User_app"
                 app:layout_constraintEnd_toEndOf="@id/guardarCambios"
@@ -153,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:text="Eliminar Cuenta"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="@dimen/tamaño_letra_subtitulo"
                 app:layout_constraintTop_toBottomOf="@id/cerrarSesion"
                 app:layout_constraintStart_toStartOf="@id/cerrarSesion"
                 app:layout_constraintEnd_toEndOf="@id/guardarCambios"

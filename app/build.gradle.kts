@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.ale.colibriview"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -44,26 +44,34 @@ android {
 
 dependencies {
 
-    implementation("androidx.activity:activity:1.8.1")
-    implementation("androidx.activity:activity-ktx:1.8.1")
+    //implementation("androidx.activity:activity:1.9.0")
+    implementation("androidx.activity:activity-ktx:1.9.0")
 
     implementation("nl.joery.animatedbottombar:library:1.1.0")
-    implementation("androidx.core:core-ktx:1.12.0")
+
+    implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.10.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
-    implementation("com.google.firebase:firebase-functions-ktx:20.4.0")
-    implementation("com.google.firebase:firebase-firestore:24.9.1")
+    implementation("com.google.firebase:firebase-auth-ktx:23.0.0")
+    implementation("com.google.android.gms:play-services-auth:21.1.1")
+    implementation("com.google.firebase:firebase-functions-ktx:21.0.0")
+    implementation("com.google.firebase:firebase-firestore:25.0.0")
     implementation("com.google.firebase:firebase-database-ktx")
     implementation("com.google.firebase:firebase-functions-ktx")
-    implementation("com.google.firebase:firebase-database:20.3.0")
+    implementation("com.google.firebase:firebase-database:21.0.0")
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("com.google.firebase:firebase-storage-ktx:21.0.0") // Para Firebase Storage
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+
+
+    implementation("androidx.test:monitor:1.6.1")
+    implementation("androidx.test.ext:junit-ktx:1.1.5")
+    testImplementation("org.testng:testng:6.9.6")
+    androidTestImplementation("junit:junit:4.13.2") // Para Glide
+    implementation("com.uncopt:android.justified:1.0")
 }

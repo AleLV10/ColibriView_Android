@@ -9,7 +9,6 @@ import com.google.firebase.ktx.Firebase
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
-    private val TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val user = Firebase.auth.currentUser
         Handler().postDelayed({
             if (user != null) {
-                val intent = Intent(this, Inicio::class.java)
+                val intent = Intent(this, PagingInitio::class.java)
                 startActivity(intent)
                 finish()
             } else {

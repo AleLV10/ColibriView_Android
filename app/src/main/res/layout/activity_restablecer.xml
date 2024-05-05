@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".restablecer">
+    tools:context=".Respectable">
 
     <ImageView
         android:id="@+id/image"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titRest"
-        android:textSize="35sp"
+        android:textSize="@dimen/tamaño_letra_titulo"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/image"
         app:layout_constraintTop_toBottomOf="@id/image"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="@string/restablece"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
         app:layout_constraintTop_toBottomOf="@id/email"
         app:layout_constraintEnd_toEndOf="@id/email"
         app:layout_constraintStart_toStartOf="@id/email"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:text="Enviar"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
         app:layout_constraintTop_toBottomOf="@id/olvida"
         app:layout_constraintStart_toStartOf="@id/email"
         app:layout_constraintEnd_toEndOf="@id/email"
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:text="Iniciar sesión"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
         app:layout_constraintTop_toBottomOf="@id/enviar"
         app:layout_constraintStart_toStartOf="@id/enviar"
         app:layout_constraintEnd_toEndOf="@id/enviar"

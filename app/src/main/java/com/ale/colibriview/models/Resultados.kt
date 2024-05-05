@@ -7,7 +7,7 @@ data class Resultados(
     var Lugar : String="",
     var Nombre : String="",
     var Resultados : String="",
-    var Resultados_correctos : String="",
+    var ResultadosCorrects : String="",
     var Test: String="",
     var Completos: String="",
 )

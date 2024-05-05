@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     tools:text="Respuesta"
     android:textStyle="bold"
-    android:textSize="30dp"
+    android:textSize="@dimen/tamaño_letra_subtitulo"
     android:backgroundTint="@color/moradoo"
     android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
     >
