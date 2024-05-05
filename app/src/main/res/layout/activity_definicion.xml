@@ -4,36 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DefinicionActivity">
+    tools:context=".DefinitionActivity">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_height="match_parent"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"
             >
+
             <ImageView
-                android:id="@+id/regresar"
-                android:layout_width="80dp"
+                android:id="@+id/dalto"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:padding="8dp"
+                android:contentDescription="imagenDescripcion"
+                android:src="@drawable/colibri"
+                app:layout_constraintBottom_toTopOf="@id/quees_daltonismo"
+                app:layout_constraintDimensionRatio="5:5"
+                app:layout_constraintEnd_toEndOf="@id/regresar"
+                app:layout_constraintHorizontal_bias="0.123"
+                app:layout_constraintStart_toStartOf="@id/regresar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/quees_daltonismo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_padding_default"
+                android:layout_marginBottom="@dimen/margin_top3"
+                android:text="@string/descripcion"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                android:textSize="@dimen/tamaño_descripcion"
+                app:layout_constraintTop_toBottomOf="@id/queesss"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/regresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin3"
-                android:src="@drawable/flecha"
                 android:layout_marginTop="@dimen/margin_top3"
                 android:layout_marginRight="@dimen/margin3"
-                android:background="@color/moradoo"
+                app:cardCornerRadius="@dimen/cornerRadius"
+                app:cardBackgroundColor="@color/moradoo"
+                app:cardElevation="0dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                />
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:src="@drawable/flecha"
+                    android:scaleType="centerInside"/>
+
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/queesss"
@@ -42,52 +72,13 @@
                 android:text="@string/quees"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:textSize="@dimen/tamaño_letra_subtitulo"
-                app:layout_constraintStart_toEndOf="@id/regresar"
-                app:layout_constraintTop_toTopOf="@id/regresar"
+                android:textSize="@dimen/tamaño_letra_titulo"
+                android:layout_marginVertical="@dimen/common_padding_default"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dalto"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginLeft="20dp"
+
                 />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/queesss">
-
-                <ImageView
-                    android:id="@+id/dalto"
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    android:layout_marginLeft="@dimen/margin3"
-                    android:layout_marginTop="@dimen/tamaño_letra_sub_subtitulo"
-                    android:layout_marginRight="@dimen/margin3"
-                    android:padding="8dp"
-                    android:src="@drawable/que_es"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-
-                    />
-
-                <TextView
-                    android:id="@+id/quees_daltonismo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin3"
-                    android:layout_marginLeft="20dp"
-                    android:padding="8dp"
-                    android:text="@string/descripcion"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textAlignment="textStart"
-                    android:textSize="@dimen/tamaño_letra_sub_subtitulo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.997"
-                    app:layout_constraintStart_toEndOf="@id/dalto"
-                    app:layout_constraintTop_toBottomOf="@id/dalto" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

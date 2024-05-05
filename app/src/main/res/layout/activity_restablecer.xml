@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".restablecer">
+    tools:context=".Respectable">
 
     <ImageView
         android:id="@+id/image"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titRest"
-        android:textSize="35sp"
+        android:textSize="@dimen/tamaño_letra_titulo"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/image"
         app:layout_constraintTop_toBottomOf="@id/image"
@@ -41,13 +41,17 @@
         app:helperText="@string/card_required"
         app:endIconMode="clear_text"
         android:enabled="true"
+        app:startIconDrawable="@drawable/baseline_email_24"
+
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/CorreoRestablecer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="textEmailAddress|textAutoComplete|textEmailSubject|textAutoCorrect"
+            android:maxLength="@integer/counter_max_name"
+
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -58,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="@string/restablece"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
         app:layout_constraintTop_toBottomOf="@id/email"
         app:layout_constraintEnd_toEndOf="@id/email"
         app:layout_constraintStart_toStartOf="@id/email"
@@ -70,7 +74,7 @@
         android:layout_height="wrap_content"
         android:text="Enviar"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
         app:layout_constraintTop_toBottomOf="@id/olvida"
         app:layout_constraintStart_toStartOf="@id/email"
         app:layout_constraintEnd_toEndOf="@id/email"
@@ -79,13 +83,29 @@
         android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
 
         />
+    <Button
+        android:id="@+id/iniciar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión"
+        android:textStyle="bold"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        app:layout_constraintTop_toBottomOf="@id/enviar"
+        app:layout_constraintStart_toStartOf="@id/enviar"
+        app:layout_constraintEnd_toEndOf="@id/enviar"
+        android:layout_marginTop="10dp"
+        android:textColor="#7858F2"
+        android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+
+        />
+
     <TextView
         android:id="@+id/o"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/o"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/enviar"
+        app:layout_constraintTop_toBottomOf="@id/iniciar"
         app:layout_constraintEnd_toEndOf="@id/email"
         app:layout_constraintStart_toStartOf="@id/email"
         android:layout_marginTop="10dp"

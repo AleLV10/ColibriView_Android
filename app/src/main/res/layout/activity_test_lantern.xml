@@ -4,74 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".test_Lantern">
+    tools:context=".TestLantern">
+    <ImageView
+        android:id="@+id/imagenArriba"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="imagenInicio"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagenAbajo"
+        />
 
-    <ScrollView
+    <ImageView
+        android:id="@+id/imagenAbajo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="imagenInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagenArriba"
+        app:layout_constraintBottom_toTopOf="@id/arriba"
+        />
+    <TextView
+        android:id="@+id/arriba"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arriba"
+        android:textStyle="bold"
+        android:textSize="@dimen/tamaño_letra_titulo"
+        android:layout_marginHorizontal="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/radioGroupArriba"
+        app:layout_constraintTop_toBottomOf="@id/imagenAbajo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupArriba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/abajo"
+        app:layout_constraintTop_toBottomOf="@id/arriba"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <RadioButton
+            android:id="@+id/radio_verde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verde"
+            android:layout_marginHorizontal="@dimen/common_padding_min"
+            android:textSize="@dimen/tamaño_letra_subtitulo"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_amarillo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amarillo"
+            android:layout_marginHorizontal="@dimen/common_padding_min"
+            android:textSize="@dimen/tamaño_letra_subtitulo"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_rojo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rojo"
+            android:layout_marginHorizontal="@dimen/common_padding_min"
+            android:textSize="@dimen/tamaño_letra_subtitulo"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/abajo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abajo"
+        android:textStyle="bold"
+        android:textSize="@dimen/tamaño_letra_titulo"
+        android:layout_marginHorizontal="@dimen/common_padding_default"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupArriba"
+        app:layout_constraintBottom_toTopOf="@id/radioGroupAbajo"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroupAbajo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/common_padding_default"
+        app:layout_constraintTop_toBottomOf="@id/abajo"
+        app:layout_constraintBottom_toBottomOf="@id/siguiente"
+        >
+
+        <RadioButton
+            android:id="@+id/Aradio_verde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verde"
+            android:layout_marginHorizontal="@dimen/common_padding_min"
+            android:textSize="@dimen/tamaño_letra_subtitulo"
+            />
+
+        <RadioButton
+            android:id="@+id/Aradio_amarillo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amarillo"
+            android:layout_marginHorizontal="@dimen/common_padding_min"
+            android:textSize="@dimen/tamaño_letra_subtitulo"
+            />
+
+        <RadioButton
+            android:id="@+id/Aradio_rojo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rojo"
+            android:layout_marginHorizontal="@dimen/common_padding_min"
+            android:textSize="@dimen/tamaño_letra_subtitulo"
+            />
+    </RadioGroup>
+    <Button
+        android:id="@+id/siguiente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/siguiente"
+        android:textStyle="bold"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        android:layout_marginTop="@dimen/margin4"
+        android:layout_marginHorizontal="@dimen/margin3"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/moradoo"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupAbajo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="70dp"
-        >
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-            <TextView
-                android:id="@+id/titulo_lantern"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_top"
-                android:text="Test de Lantern"
-                android:textSize="@dimen/tamaño_letra_titulo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+        android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
 
-            <ImageView
-                android:id="@+id/img_semaforo"
-                android:layout_width="300dp"
-                android:layout_height="330dp"
-                android:src="@drawable/semaforo"
-                android:contentDescription="test"
-                app:layout_constraintStart_toStartOf="@id/titulo_lantern"
-                app:layout_constraintEnd_toEndOf="@id/titulo_lantern"
-                app:layout_constraintTop_toBottomOf="@id/titulo_lantern"
-                />
-
-            <TextView
-                android:id="@+id/txt_descripcion_lantern"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/texto_lantern"
-                android:padding="@dimen/common_padding_default"
-                android:textAppearance="?attr/textAppearanceBody2"
-                android:textAlignment="textStart"
-                android:textSize="@dimen/tamaño_letra_sub_subtitulo"
-                app:layout_constraintStart_toStartOf="@id/titulo_lantern"
-                app:layout_constraintEnd_toEndOf="@id/titulo_lantern"
-                app:layout_constraintTop_toBottomOf="@id/img_semaforo"
-                />
-
-            <TextView
-                android:id="@+id/txt_start_lantern"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin3"
-                android:text="@string/texto2"
-                android:textColor="@color/morado"
-                android:textAlignment="center"
-                app:layout_constraintStart_toStartOf="@id/txt_descripcion_lantern"
-                app:layout_constraintEnd_toEndOf="@id/txt_descripcion_lantern"
-                app:layout_constraintTop_toBottomOf="@id/txt_descripcion_lantern"
-                android:textSize="@dimen/tamaño_letra_sub_subtitulo"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
-    <include layout="@layout/activity_base" android:id="@+id/mn_barra_test"/>
-
+        />
+    <include
+        android:id="@+id/mnu_barra_lantern"
+        layout="@layout/activity_base" />
 </androidx.constraintlayout.widget.ConstraintLayout>

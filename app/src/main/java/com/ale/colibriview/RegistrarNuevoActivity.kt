@@ -50,17 +50,11 @@ class RegistrarNuevoActivity : AppCompatActivity() {
             name=binding.name1.text.toString().trim()
             password=binding.password1.text.toString().trim()
 
-
-                val UsuarioNuevo = UsuarioNuevo(name =name,mail = email, contrasena = password)
-            Log.i("US Name","${name}")
-            Log.i("US Mail","${email}")
-            Log.i("US Password","${password}")
+            Log.i("US Name", name)
+            Log.i("US Mail", email)
+            Log.i("US Password", password)
             if(email!=""&&name!=""&&password!="")
-            {
                 createAccount(email,password)
-
-            }
-
             else
                 Toast.makeText(
                     baseContext,
@@ -145,7 +139,7 @@ class RegistrarNuevoActivity : AppCompatActivity() {
     private fun updateUI(user: FirebaseUser?) {
         if(user!=null)
         {
-            val intent = Intent(this, Inicio::class.java)
+            val intent = Intent(this, PagingInitio::class.java)
             startActivity(intent)
             finish()
         }
