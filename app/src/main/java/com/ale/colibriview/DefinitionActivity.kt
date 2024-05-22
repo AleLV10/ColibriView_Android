@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityDefinicionBinding
+import com.ale.colibriview.models.IconInitio
 
 class DefinitionActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDefinicionBinding
@@ -18,20 +19,21 @@ class DefinitionActivity : AppCompatActivity() {
 
         when (valorInitio) {
             resources.getString(R.string.quees) -> {
-                binding.dalto.setImageResource(R.drawable.card_quees)
+                //binding.dalto.setImageResource(R.drawable.card_quees)
+                binding.dalto.setImageResource(IconInitio.getIcon(0))
                 binding.queesDaltonismo.text = resources.getString(R.string.descripcion)
             }
             resources.getString(R.string.tipos_daltonismo) -> {
-                binding.dalto.setImageResource(R.drawable.card_tipos)
+                binding.dalto.setImageResource(IconInitio.getIcon(1))
                 binding.queesDaltonismo.text = resources.getString(R.string.descripcion_Tipos)
 
             }
             resources.getString(R.string.causas) -> {
-                binding.dalto.setImageResource(R.drawable.card_causas)
+                binding.dalto.setImageResource(IconInitio.getIcon(2))
                 binding.queesDaltonismo.text = resources.getString(R.string.causas_daltonismo)
             }
             resources.getString(R.string.personas_riesgo) -> {
-                binding.dalto.setImageResource(R.drawable.card_riesgo)
+                binding.dalto.setImageResource(IconInitio.getIcon(3))
                 binding.queesDaltonismo.text = resources.getString(R.string.riesgo_daltonismo)
             }
         }
@@ -54,6 +56,7 @@ class DefinitionActivity : AppCompatActivity() {
         binding.mnuBarraDefinicion.usuario.setOnClickListener {
             startNewActivity(PerilUser::class.java)
         }
+        binding.mnuBarraDefinicion.home.setImageResource(R.drawable.ic_home_morado)
     }
     private fun startNewActivity(activityClass: Class<*>) {
         binding.mnuBarraDefinicion.root.animate().alpha(0f).withEndAction {

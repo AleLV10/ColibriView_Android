@@ -2,7 +2,6 @@ package com.ale.colibriview
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +12,7 @@ import com.ale.colibriview.models.onClickListenerInicio
 
 class PagingInitio : AppCompatActivity(), onClickListenerInicio {
     private lateinit var binding: ActivityInicioBinding
-   private lateinit var initioAdapter: InitioAdapter
+    private lateinit var initioAdapter: InitioAdapter
     private lateinit var linearLayoutManager: RecyclerView.LayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +20,19 @@ class PagingInitio : AppCompatActivity(), onClickListenerInicio {
         binding = ActivityInicioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-       initioAdapter = InitioAdapter(getInitio(), this)
+        initioAdapter = InitioAdapter(getInitio(), this)
         linearLayoutManager = LinearLayoutManager(this)
 
         binding.InicioRecyclerView.apply {
             layoutManager = linearLayoutManager
-           adapter = initioAdapter
+            adapter = initioAdapter
         }
 
+        setupMenuNavigation()
+        binding.mnuBarraInicio.home.setImageResource(R.drawable.ic_home_morado)
+    }
+
+    private fun setupMenuNavigation() {
         binding.btntestD.setOnClickListener {
             startNewActivity(CardsTest::class.java)
         }
@@ -48,32 +52,19 @@ class PagingInitio : AppCompatActivity(), onClickListenerInicio {
         binding.mnuBarraInicio.usuario.setOnClickListener {
             startNewActivity(PerilUser::class.java)
         }
-
-        val login: ImageView = findViewById(R.id.home)
-        login.setOnClickListener {
-            startNewActivity(PagingInitio::class.java)
-        }
     }
 
     private fun startNewActivity(activityClass: Class<*>) {
-        binding.mnuBarraInicio.root.animate().alpha(0f).withEndAction {
-            val intent = Intent(this, activityClass)
-            startActivity(intent)
-            finish()
-            binding.mnuBarraInicio.root.animate().alpha(1f)
-        }
+        val intent = Intent(this, activityClass)
+        startActivity(intent)
     }
 
-    private fun getInitio(): MutableList<Initio>{
-        val cards= mutableListOf<Initio>()
-        val que= Initio(resources.getString(R.string.quees),
-            resources.getString(R.string.descripcion))
-        val tips= Initio(resources.getString(R.string.tipos_daltonismo),
-            resources.getString(R.string.descripcion_Tipos))
-        val causes= Initio(resources.getString(R.string.causas),
-            resources.getString(R.string.causas_daltonismo))
-        val rie= Initio(resources.getString(R.string.personas_riesgo),
-            resources.getString(R.string.riesgo_daltonismo))
+    private fun getInitio(): MutableList<Initio> {
+        val cards = mutableListOf<Initio>()
+        val que = Initio(getString(R.string.quees), getString(R.string.descripcion))
+        val tips = Initio(getString(R.string.tipos_daltonismo), getString(R.string.descripcion_Tipos))
+        val causes = Initio(getString(R.string.causas), getString(R.string.causas_daltonismo))
+        val rie = Initio(getString(R.string.personas_riesgo), getString(R.string.riesgo_daltonismo))
 
         cards.add(que)
         cards.add(tips)
@@ -84,12 +75,7 @@ class PagingInitio : AppCompatActivity(), onClickListenerInicio {
 
     override fun onClick(initio: Initio, valor: Int) {
         val title = initio.title ?: return
-        when (title) {
-            resources.getString(R.string.quees) -> launchDefActivity(resources.getString(R.string.quees))
-            resources.getString(R.string.tipos_daltonismo) -> launchDefActivity(resources.getString(R.string.tipos_daltonismo))
-            resources.getString(R.string.causas) -> launchDefActivity(resources.getString(R.string.causas))
-            resources.getString(R.string.personas_riesgo) -> launchDefActivity(resources.getString(R.string.personas_riesgo))
-        }
+        launchDefActivity(title)
     }
 
     private fun launchDefActivity(title: String) {
@@ -98,3 +84,4 @@ class PagingInitio : AppCompatActivity(), onClickListenerInicio {
         startActivity(intent)
     }
 }
+

@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/common_padding_default"
                 android:layout_marginBottom="@dimen/margin_top3"
-                android:text="@string/descripcion"
+                android:text="descripcion"
                 android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 android:textSize="@dimen/tamaño_descripcion"
                 app:layout_constraintTop_toBottomOf="@id/queesss"

@@ -25,8 +25,12 @@ class Instructions : AppCompatActivity() {
 
             }
             resources.getString(R.string.nomtest_PD) -> {
+                binding.ti1.setImageResource(R.drawable.protan1)
+                binding.titulo2.text = resources.getString(R.string.texto_protan)
             }
             resources.getString(R.string.nomtest_Tr) -> {
+                binding.ti1.setImageResource(R.drawable.tritan1)
+                binding.titulo2.text = resources.getString(R.string.texto_tritan)
             }
             resources.getString(R.string.nomtest_Tl) -> {
                 binding.ti1.setImageResource(R.drawable.semaforo)
@@ -40,11 +44,14 @@ class Instructions : AppCompatActivity() {
                     startNewActivity(PlantQuestionActivity::class.java)
                 }
                 resources.getString(R.string.nomtest_PD) -> {
+                    startNewActivity(PlantQuestProtan::class.java)
                 }
                 resources.getString(R.string.nomtest_Tr) -> {
+                    startNewActivity(PlantQuestTritan::class.java)
                 }
+
                 resources.getString(R.string.nomtest_Tl) -> {
-                    startNewActivity(TestLantern::class.java)
+                    startNewActivity(PlanQuestTestLantern::class.java)
                 }
             }
         }

@@ -26,7 +26,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="100sp"
-                android:src="@drawable/usuario"
+                android:src="@drawable/ic_profil_morado"
                 />
 
             <TextView

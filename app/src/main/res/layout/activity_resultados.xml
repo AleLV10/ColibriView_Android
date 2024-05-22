@@ -8,62 +8,79 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:layout_marginTop="45dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/result"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
                 android:id="@+id/Resultados"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="@string/resultados"
+                android:text="@string/titulo_resultados"
                 android:textAlignment="center"
                 android:textSize="@dimen/tamaño_letra_titulo"
                 android:textStyle="bold"
-                android:layout_marginTop="80dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/image" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Resultados" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/RecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Resultados"
-                tools:listitem="@layout/item_resultados"
                 android:layout_marginBottom="75dp"
-                />
-            <TextView
-                android:id="@+id/Resultados2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:text="@string/resultados"
-                android:textAlignment="center"
-                android:textSize="@dimen/tamaño_letra_titulo"
-                android:textStyle="bold"
-                android:layout_marginTop="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/spinner"
+                tools:listitem="@layout/item_resultados" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/RecyclerView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Resultados"
-                tools:listitem="@layout/item_resultados"
                 android:layout_marginBottom="75dp"
-                />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Resultados"
+                tools:listitem="@layout/item_resultados" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
     <include

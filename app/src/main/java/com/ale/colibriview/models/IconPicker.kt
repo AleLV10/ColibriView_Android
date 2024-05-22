@@ -4,9 +4,9 @@ import com.ale.colibriview.R
 
 object IconPicker{
     private val icons= arrayOf(
-        R.drawable.seis,
-        R.drawable.iconpd,
-        R.drawable.icontr,
+        R.drawable.lamina_num1,
+        R.drawable.protan1,
+        R.drawable.tritan1,
         R.drawable.icontl,
     )
 

@@ -66,6 +66,7 @@ dependencies {
 
     implementation("com.google.firebase:firebase-storage-ktx:21.0.0") // Para Firebase Storage
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("androidx.activity:activity:1.9.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
 

@@ -13,7 +13,6 @@ import com.ale.colibriview.models.QuestionIshihara
 
 class OptionAdapter(private var context: Context, private val question: QuestionIshihara, private val listener: PlantQuestionActivity, private val index:Int):
     RecyclerView.Adapter<OptionAdapter.ViewHolder>() {
-
     private var options : List<String> = listOf(question.Option1,question.Option2,question.Option3)
     inner class ViewHolder(view:View):RecyclerView.ViewHolder(view)
     {
@@ -56,11 +55,12 @@ class OptionAdapter(private var context: Context, private val question: Question
 
                 if(question.Answer==options[position]){
                     binding.botonRespuesta.setBackgroundColor(Color.GREEN)
-                    intent.putExtra("Validacion", "Correct")
+                    intent.putExtra("Validacion", "Correcto")
                 }
                 else {
                     binding.botonRespuesta.setBackgroundColor(Color.RED)
-                    intent.putExtra("Validacion", "Incorrect")
+                    intent.putExtra("Validacion", "Incorrecto")
+
                 }
                 //notifyDataSetChanged()
                 notifyItemChanged(position)

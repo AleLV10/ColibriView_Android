@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlantQuestProtan">
+
+    <ImageView
+        android:id="@+id/Imagen"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="Pregunta"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/noveonada"
+        android:layout_marginHorizontal="10dp"
+        />
+    <Button
+        android:id="@+id/noveonada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/noveo"
+        android:textStyle="bold"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        android:layout_marginHorizontal="@dimen/margin3"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/moradoo"
+        app:layout_constraintTop_toBottomOf="@id/Imagen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
+        />
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Boton 1"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="@id/Imagen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+         />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Boton 2"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="95dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        app:layout_constraintTop_toTopOf="@id/Imagen"
+        app:layout_constraintBottom_toBottomOf="@id/Imagen"
+        app:layout_constraintStart_toStartOf="@id/Imagen"
+
+        android:background="@android:color/transparent"
+        />
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Boton 3"
+        android:layout_marginStart="30dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        app:layout_constraintTop_toTopOf="@id/Imagen"
+        app:layout_constraintBottom_toBottomOf="@id/Imagen"
+        app:layout_constraintStart_toStartOf="@id/Imagen"
+        android:background="@android:color/transparent"
+        />
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Boton 4"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="95dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        app:layout_constraintTop_toTopOf="@id/Imagen"
+        app:layout_constraintBottom_toBottomOf="@id/Imagen"
+        app:layout_constraintStart_toStartOf="@id/Imagen"
+        android:background="@android:color/transparent"
+        />
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Boton 5"
+        android:layout_marginBottom="30dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        app:layout_constraintBottom_toBottomOf="@id/Imagen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+        />
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Boton 6"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="95dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        app:layout_constraintTop_toTopOf="@id/Imagen"
+        app:layout_constraintBottom_toBottomOf="@id/Imagen"
+        app:layout_constraintEnd_toEndOf="@id/Imagen"
+        android:background="@android:color/transparent"
+        />
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Boton 7"
+        android:layout_marginEnd="30dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        app:layout_constraintTop_toTopOf="@id/Imagen"
+        app:layout_constraintBottom_toBottomOf="@id/Imagen"
+        app:layout_constraintEnd_toEndOf="@id/Imagen"
+        android:background="@android:color/transparent"
+        />
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Boton 8"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="95dp"
+        android:textSize="@dimen/tamaño_letra_subtitulo"
+        app:layout_constraintTop_toTopOf="@id/Imagen"
+        app:layout_constraintBottom_toBottomOf="@id/Imagen"
+        app:layout_constraintEnd_toEndOf="@id/Imagen"
+        android:background="@android:color/transparent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

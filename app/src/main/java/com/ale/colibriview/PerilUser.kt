@@ -112,7 +112,7 @@ class PerilUser : AppCompatActivity() {
 
         }
         // if(photoUrl==null||photoUrl=="")
-        binding.imgOjo.setImageResource(R.drawable.usuario)
+        //binding.imgOjo.setImageResource(R.drawable.usuario)
         //   else
         //       binding.imgOjo.setImageURI(Uri.parse(photoUrl))
         binding.perfilName.isEnabled = false
@@ -160,7 +160,7 @@ class PerilUser : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
+        binding.mnuBarraUsuario.usuario.setImageResource(R.drawable.ic_profil_morado)
     }
     private fun createIntent(): Intent {
         return Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)

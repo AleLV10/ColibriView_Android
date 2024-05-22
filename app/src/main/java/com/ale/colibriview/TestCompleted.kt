@@ -20,13 +20,20 @@ class TestCompleted : AppCompatActivity() {
     private var cont=0
     private  var string:String =""
     private lateinit var uid: String
+    private var titulo:String =""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTestCompletadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
-        val preferences = getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
+        titulo = intent.getStringExtra("nom_variable").toString()
+        //Toast.makeText(this, intent.getStringExtra("nom_variable").toString(), Toast.LENGTH_SHORT).show()
+        val preferences = when (titulo) {
+            resources.getString(R.string.nomtest) -> getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_PD) -> getSharedPreferences("ProtanDeutan", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_Tr) -> getSharedPreferences("Titan", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_Tl) -> getSharedPreferences("Lantern", Activity.MODE_PRIVATE)
+            else -> throw IllegalArgumentException("Invalid test value: $titulo")
+        }
         binding.boton22.setOnClickListener {
             // Do something in response to button click
             if(bandera){
@@ -36,23 +43,31 @@ class TestCompleted : AppCompatActivity() {
             }
             else
             {
-                for(i in 1..38){
-                    string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
-                     if(preferences.getString("Validacion$i", "Default")=="Correct")
-                        contador+=1
-                }
+                if(titulo==resources.getString(R.string.nomtest))
+                    for(i in 1..38){
+                        string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
+                         if(preferences.getString("Validacion$i", "Default")=="Correcto")
+                            contador+=1
+                    }
+                if(titulo==resources.getString(R.string.nomtest_Tl))
+                    for(i in 1..9)
+                        string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
+                if(titulo==resources.getString(R.string.nomtest_PD))
+                    string=preferences.getString("Completos", "Default").toString()
+                    //for(i in 1..32)
+                        //string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
+                if(titulo==resources.getString(R.string.nomtest_Tr))
+                    string=preferences.getString("Completos", "Default").toString()
+
                 cont = contador
                 binding.prueba.setText(string)
 
                 bandera=true
             }
-
-            with(preferences.edit()) {
-                putString("Resultados_correct","$cont/38 Respuestas Correctas").apply()
-                if(cont<20)
-                    putString("Resultados","Persona daltónica").apply()
-                else
-                    putString("Resultados","Persona no daltónica").apply()
+            if(titulo==resources.getString(R.string.nomtest)) {
+                with(preferences.edit()) {
+                    putString("Resultados correctos","$cont/38 Respuestas Correctas").apply()
+                }
             }
             binding.continuar.setOnClickListener {
                 // Do something in response to button click
@@ -79,24 +94,45 @@ class TestCompleted : AppCompatActivity() {
     private fun addAdaLovelace() {
         // [START add_ada_lovelace]
         // Create a new user with a first and last name
-        getIDUser()
-        auth = Firebase.auth
-        val preferences = getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
-        for(i in 1..38)
-            preferences.getString("Correcta$i", "Default")
         val db = Firebase.firestore
         string=""
-        for(i in 1..38){
-            string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
+        getIDUser()
+        auth = Firebase.auth
+        val preferences = when (titulo) {
+            resources.getString(R.string.nomtest) -> getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_PD) -> getSharedPreferences("ProtanDeutan", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_Tr) -> getSharedPreferences("Titan", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_Tl) -> getSharedPreferences("Lantern", Activity.MODE_PRIVATE)
+            else -> throw IllegalArgumentException("Invalid test value: $titulo")
         }
+        if(titulo==resources.getString(R.string.nomtest))
+        {
+            for(i in 1..38)
+                preferences.getString("Correcta$i", "Default")
+
+            for(i in 1..38){
+                string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
+            }
+        }
+        if(titulo==resources.getString(R.string.nomtest_Tl))
+            for(i in 1..9)
+                string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
+
+        if(titulo==resources.getString(R.string.nomtest_PD))
+            string=preferences.getString("Completos", "Default").toString()
+            //for(i in 1..32)
+            //    string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
+        if(titulo==resources.getString(R.string.nomtest_Tr))
+            string=preferences.getString("Completos", "Default").toString()
+
         val user = hashMapOf(
-            "Test" to preferences.getString("Test", resources.getString(R.string.nomtest)),
+            "Test" to preferences.getString("Test", titulo),
             "ID_usuario" to uid,
             "Nombre" to preferences.getString("Nombre", "Default"),
             "Edad" to preferences.getString("Edad", "Default"),
             "Lugar" to preferences.getString("Lugar", "Default"),
             "Fecha" to preferences.getString("Fecha", "Default"),
-            "Resultados correctos" to preferences.getString("Resultados correctos", "Default"),
+            "Resultados_correctos" to preferences.getString("Resultados correctos", "Default"),
             "Resultados" to preferences.getString("Resultados", "Default"),
             "Completos" to string,
         )
