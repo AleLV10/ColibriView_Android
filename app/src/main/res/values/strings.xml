@@ -12,6 +12,7 @@
     <string name="completado">¡Test Completo!</string>
     <string name="continuar">CONTINUAR</string>
     <string name="resultados">VER RESULTADOS</string>
+    <string name="respuestas">MIS RESPUESTAS</string>
     <string name="pablo">PABLO</string>
     <string name="nomtest">Test de Ishihara</string>
     <string name="nomtest_PD">Test de Protan y Deutan</string>
@@ -29,10 +30,14 @@
         \n\n
         En la retina, hay dos tipos de células sensibles a la luz: los bastones, que detectan la luz y la oscuridad, y los conos, que detectan los colores y se concentran en el centro de la visión. Hay tres tipos de conos: sensibles al rojo, verde y azul. El cerebro utiliza esta información de los conos para determinar los colores que percibimos.
         \n\n
+        </string>
+    <string name="descripcion2">
         El daltonismo puede ser causado por la ausencia, mal funcionamiento o percepción anormal de uno o más tipos de conos. En casos graves, donde los tres tipos de conos están ausentes, el daltonismo es más severo. En casos leves, los tres tipos de conos están presentes pero uno no funciona correctamente, resultando en una percepción anormal de los colores.
         \n\n
         Existen diferentes grados de daltonismo. Algunas personas con deficiencias leves pueden ver los colores normalmente con buena iluminación, pero tienen dificultades con luz tenue. Otros pueden tener dificultades para distinguir ciertos colores en cualquier iluminación. La forma más extrema, donde todo se ve en tonos de gris, es poco común. El daltonismo tiende a ser estable a lo largo de la vida y generalmente afecta a ambos ojos por igual.
         \n\n
+        </string>
+    <string name="descripcion3">
         Aunque el daltonismo es generalmente congénito, en algunos casos puede adquirirse más tarde en la vida. Cualquier cambio en la percepción de los colores debe ser evaluado por un oftalmólogo, ya que podría indicar un problema más serio.
     </string>
     <string name="tipos_daltonismo">Tipos</string>
@@ -40,6 +45,8 @@
         <b>1. Acromatismo:</b><br />\n
         <i>Esta es una condición rara en la que el sujeto no posee ningún pigmento o los conos no son funcionales. La visión se limita a escala de grises, blanco y negro.</i><br /><br />
         \n\n
+        </string>
+    <string name="descripcion_Tipos2">
         <b>2. Dicromatismo:</b><br />\n
         <i>Este tipo de daltonismo es causado por la ausencia de uno de los tipos de pigmentos, lo que dificulta la percepción del color asociado a ese pigmento. Hay tres subtipos básicos:</i><br />
         <br />\n
@@ -52,7 +59,9 @@
            \t\t<b>•</b><b>Deuteranopia:</b><br />
             <i>Es el tipo de daltonismo más común junto con la protanopia. En este caso, el sujeto carece del pigmento verde, lo que afecta su percepción del color verde y del rojo.</i><br /><br />
             \n\n
-            <b>3. Tricromatismo anómalo:</b><br />\n
+        </string>
+    <string name="descripcion_Tipos3">
+        <b>3. Tricromatismo anómalo:</b><br />\n
             <i>En este tipo, la persona tiene los tres tipos de pigmentos presentes, pero al menos uno está alterado y no es funcional. Hay tres subtipos:</i><br />
             <br />\n
            \t\t<b>•</b><b>Protanomalía:</b><br />
@@ -124,7 +133,7 @@ Se utiliza para identificar la presencia de daltonismo protán y deutan, dos tip
         Da clic en el espacio que falta para completar el circulo.\n
     </string>
     <string name="texto_tritan">
-        El test de Tritan es una prueba que detecta deficiencias en la percepción del color azul y amarillo, conocida como tritanopía.
+        El test de Tritan es una prueba que detecta la tritanopia en la percepción del color.
         Las personas con tritanopía tienen dificultades para distinguir entre ciertos tonos de azul y amarillo.\n\n
 
         Instrucciones: \n
@@ -147,6 +156,8 @@ Se utiliza para identificar la presencia de daltonismo protán y deutan, dos tip
     <string name="Nombre_del_test">Nombre del test</string>
     <string name="titulo_resultados">Resultados</string>
     <string name="noveo">No veo la grieta</string>
+    <string name="Completo">¡TEST COMPLETADO!</string>
+    <string name="nose">NO LO SE</string>
     <string-array name="Tests">
         <item>Todos los resultados</item>
         <item>Test de Ishihara</item>

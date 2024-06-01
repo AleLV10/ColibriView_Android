@@ -136,7 +136,7 @@
         android:id="@+id/siguiente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/siguiente"
+        android:text="@string/nose"
         android:textStyle="bold"
         android:textSize="@dimen/tamaño_letra_subtitulo"
         android:layout_marginTop="@dimen/margin4"

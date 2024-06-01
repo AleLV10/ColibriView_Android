@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityTestCompletadoBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -25,6 +26,15 @@ class TestCompleted : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTestCompletadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Animación para el texto
+        val textoFestejoAnim = AnimationUtils.loadAnimation(this, R.anim.texto_festejo_anim)
+        binding.completo.startAnimation(textoFestejoAnim)
+
+        // Animación para la imagen
+        val imagenFestejoAnim = AnimationUtils.loadAnimation(this, R.anim.imagen_festejo_anim)
+        binding.imagen.startAnimation(imagenFestejoAnim)
+
         titulo = intent.getStringExtra("nom_variable").toString()
         //Toast.makeText(this, intent.getStringExtra("nom_variable").toString(), Toast.LENGTH_SHORT).show()
         val preferences = when (titulo) {
@@ -43,6 +53,7 @@ class TestCompleted : AppCompatActivity() {
             }
             else
             {
+                string=""
                 if(titulo==resources.getString(R.string.nomtest))
                     for(i in 1..38){
                         string += "Respuesta$i: ${preferences.getString("Respuesta$i", preferences.getString("Respuesta$i",""))}/${preferences.getString("Validacion$i", "Default")}\n"
@@ -69,17 +80,26 @@ class TestCompleted : AppCompatActivity() {
                     putString("Resultados correctos","$cont/38 Respuestas Correctas").apply()
                 }
             }
-            binding.continuar.setOnClickListener {
-                // Do something in response to button click
-                addAdaLovelace()
-                val intent = Intent(this, ResultadosActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-            binding.boton22.isEnabled =  false
-            binding.continuar.isEnabled = true
-        }
 
+            //binding.boton22.isEnabled =  false
+            //binding.continuar.isEnabled = true
+        }
+        binding.continuar.setOnClickListener {
+            // Do something in response to button click
+            addAdaLovelace()
+            val intent = Intent(this, resultadoTest::class.java)
+            intent.putExtra("Titulo_test", titulo)
+            val preferences = when (titulo) {
+                resources.getString(R.string.nomtest) -> getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
+                resources.getString(R.string.nomtest_PD) -> getSharedPreferences("ProtanDeutan", Activity.MODE_PRIVATE)
+                resources.getString(R.string.nomtest_Tr) -> getSharedPreferences("Titan", Activity.MODE_PRIVATE)
+                resources.getString(R.string.nomtest_Tl) -> getSharedPreferences("Lantern", Activity.MODE_PRIVATE)
+                else -> throw IllegalArgumentException("Invalid test value: $titulo")
+            }
+            intent.putExtra("Resultado_test", preferences.getString("Resultados", "Default"))
+            startActivity(intent)
+            finish()
+        }
 
     }
     private fun getIDUser() {
