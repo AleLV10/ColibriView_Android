@@ -14,7 +14,7 @@ class DatTest : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityDatosTestIshiharaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val preferences = getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
+
         val c = Calendar.getInstance()
         val year = c.get(Calendar.YEAR)
         val month = (c.get(Calendar.MONTH)+1)
@@ -22,6 +22,14 @@ class DatTest : AppCompatActivity() {
         val date = resources.getString(R.string.Fecha)
         val test = intent.getStringExtra("nom_variable")
         val calendar = "$day-$month-$year"
+        val preferences = when (test) {
+            resources.getString(R.string.nomtest) -> getSharedPreferences("Ishihara", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_PD) -> getSharedPreferences("ProtanDeutan", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_Tr) -> getSharedPreferences("Titan", Activity.MODE_PRIVATE)
+            resources.getString(R.string.nomtest_Tl) -> getSharedPreferences("Lantern", Activity.MODE_PRIVATE)
+            else -> throw IllegalArgumentException("Invalid test value: $test")
+        }
+
         binding.date.text = date.plus(" ").plus(calendar)
         binding.title.text = test
 

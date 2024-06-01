@@ -34,11 +34,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/common_padding_default"
-                android:layout_marginBottom="@dimen/margin_top3"
-                android:text="@string/descripcion"
+                android:text="descripcion"
                 android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 android:textSize="@dimen/tamaño_descripcion"
                 app:layout_constraintTop_toBottomOf="@id/queesss"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/quees_daltonismo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_padding_default"
+                android:text="descripcion"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                android:textSize="@dimen/tamaño_descripcion"
+                app:layout_constraintTop_toBottomOf="@id/quees_daltonismo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/quees_daltonismo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_padding_default"
+                android:layout_marginBottom="@dimen/margin_top3"
+                android:text="descripcion"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                android:textSize="@dimen/tamaño_descripcion"
+                app:layout_constraintTop_toBottomOf="@id/quees_daltonismo2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>

@@ -16,11 +16,37 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/completo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Completo"
+                android:textStyle="bold"
+                android:textSize="45dp"
+                android:layout_margin="@dimen/common_padding_min"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/moradoo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <ImageView
+                android:id="@+id/imagen"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:padding="@dimen/common_padding_min"
+                android:contentDescription="imagenDescripcion"
+                android:src="@drawable/completo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/completo"/>
+
             <Button
                 android:id="@+id/boton22"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/resultados"
+                android:text="@string/respuestas"
                 android:textStyle="bold"
                 android:textSize="@dimen/tamaño_letra_subtitulo"
                 android:layout_marginTop="@dimen/margin4"
@@ -28,7 +54,7 @@
                 android:textColor="@color/moradoo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imagen"
                 android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
                 />
             <EditText
@@ -55,6 +81,7 @@
                 android:textStyle="bold"
                 android:textSize="@dimen/tamaño_letra_subtitulo"
                 android:layout_marginTop="@dimen/margin4"
+                android:layout_marginBottom="@dimen/margin3"
                 android:layout_marginHorizontal="@dimen/margin3"
                 android:backgroundTint="@color/moradoo"
                 app:layout_constraintTop_toBottomOf="@id/prueba"
@@ -62,7 +89,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:theme="@style/Theme.MaterialComponents.DayNight.Dialog.Bridge"
-                android:enabled="false"
+
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

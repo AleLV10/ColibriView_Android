@@ -9,12 +9,12 @@ import com.ale.colibriview.CardsTest
 import com.ale.colibriview.R
 import com.ale.colibriview.databinding.ItemTestBinding
 import com.ale.colibriview.models.IconPicker
-import com.ale.colibriview.models.Test
+import com.ale.colibriview.models.TestIshihara
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 
 
-class TestsAdapter(private val tests:MutableList<Test>, private val listener: CardsTest)
+class TestsAdapter(private val testIshiharas:MutableList<TestIshihara>, private val listener: CardsTest)
     :RecyclerView.Adapter<TestsAdapter.ViewHolder>() {
 
     private lateinit var context:Context
@@ -23,9 +23,9 @@ class TestsAdapter(private val tests:MutableList<Test>, private val listener: Ca
     {
         val binding=ItemTestBinding.bind(view)
 
-        fun setListener(test: Test, valor:Int){
+        fun setListener(testIshihara: TestIshihara, valor:Int){
             binding.root.setOnClickListener {
-                listener.onClick(test,valor)
+                listener.onClick(testIshihara,valor)
             }
         }
     }
@@ -36,10 +36,10 @@ class TestsAdapter(private val tests:MutableList<Test>, private val listener: Ca
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int =tests.size
+    override fun getItemCount(): Int =testIshiharas.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val test=tests[position]
+        val test=testIshiharas[position]
         with(holder)
         {
             setListener(test,(position+1))

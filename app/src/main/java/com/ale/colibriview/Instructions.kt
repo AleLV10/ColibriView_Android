@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.ale.colibriview.databinding.ActivityInstruccionesBinding
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 
 class Instructions : AppCompatActivity() {
 
@@ -18,20 +20,23 @@ class Instructions : AppCompatActivity() {
 
         binding.titulo1.text = valorRec
 
-        when (valorRec) {
-            resources.getString(R.string.nomtest) -> {
-                binding.ti1.setImageResource(R.drawable.lamina_num1)
-                binding.titulo2.text = resources.getString(R.string.texto1)
+        val imageTextMap = mapOf(
+            resources.getString(R.string.nomtest) to Pair(R.drawable.ishihara, R.string.texto1),
+            resources.getString(R.string.nomtest_PD) to Pair(R.drawable.protan, R.string.texto_protan),
+            resources.getString(R.string.nomtest_Tr) to Pair(R.drawable.tritan, R.string.texto_tritan),
+            resources.getString(R.string.nomtest_Tl) to Pair(R.drawable.lantern, R.string.texto_lantern)
+        )
 
-            }
-            resources.getString(R.string.nomtest_PD) -> {
-            }
-            resources.getString(R.string.nomtest_Tr) -> {
-            }
-            resources.getString(R.string.nomtest_Tl) -> {
-                binding.ti1.setImageResource(R.drawable.semaforo)
-                binding.titulo2.text = resources.getString(R.string.texto_lantern)
-            }
+        val pair = imageTextMap[valorRec]
+        pair?.let {
+            Glide.with(this)
+                .load(it.first)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop()
+                .circleCrop()
+                .into(binding.ti1)
+
+            binding.titulo2.text = resources.getString(it.second)
         }
 
         binding.presionaContinuar.setOnClickListener {
@@ -40,11 +45,13 @@ class Instructions : AppCompatActivity() {
                     startNewActivity(PlantQuestionActivity::class.java)
                 }
                 resources.getString(R.string.nomtest_PD) -> {
+                    startNewActivity(PlantQuestProtan::class.java)
                 }
                 resources.getString(R.string.nomtest_Tr) -> {
+                    startNewActivity(PlantQuestTritan::class.java)
                 }
                 resources.getString(R.string.nomtest_Tl) -> {
-                    startNewActivity(TestLantern::class.java)
+                    startNewActivity(PlanQuestTestLantern::class.java)
                 }
             }
         }
@@ -65,6 +72,7 @@ class Instructions : AppCompatActivity() {
             startNewActivity(PerilUser::class.java)
         }
     }
+
     private fun startNewActivity(activityClass: Class<*>) {
         binding.mnuBarraIshihara.root.animate().alpha(0f).withEndAction {
             val intent = Intent(this, activityClass)

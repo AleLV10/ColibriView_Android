@@ -49,13 +49,17 @@
                 android:id="@+id/DescripcionTest"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/common_padding_default"
                 tools:text="Descripcion"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:maxLines="3"
+                android:ellipsize="end"
                 android:textSize="@dimen/tamaño_descripcion"
-                app:layout_constraintStart_toStartOf="@id/TituloTest"
-                app:layout_constraintTop_toBottomOf="@id/TituloTest"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@id/TituloTest"
+                app:layout_constraintStart_toStartOf="@id/TituloTest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/TituloTest"
 
                 />
 
