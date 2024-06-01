@@ -285,10 +285,10 @@ class PlantQuestionActivity : AppCompatActivity(), OnClickListenerQuestionIshiha
             else -> "Sin vision de color."
         }
 
-        result = if (incorrectAnswers < correctAnswers) {
+        result = if (incorrectAnswers > correctAnswers) {
             "Daltónico: $mostFrequentIncorrect"
         } else {
-            "No daltónico"
+            "Persona no daltónica. "
         }
 
         Toast.makeText(this, result, Toast.LENGTH_LONG).show()

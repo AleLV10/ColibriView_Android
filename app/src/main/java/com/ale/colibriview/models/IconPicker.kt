@@ -4,10 +4,10 @@ import com.ale.colibriview.R
 
 object IconPicker{
     private val icons= arrayOf(
-        R.drawable.lamina_num1,
-        R.drawable.protan1,
-        R.drawable.tritan1,
-        R.drawable.icontl,
+        R.drawable.ishihara,
+        R.drawable.protan,
+        R.drawable.tritan,
+        R.drawable.lantern,
     )
 
     fun getIcon(position:Int):Int{

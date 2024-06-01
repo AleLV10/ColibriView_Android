@@ -75,8 +75,6 @@ class PlantQuestTritan : AppCompatActivity() {
                 index++
             }
 
-
-
         }
         else
         {

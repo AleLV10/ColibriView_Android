@@ -22,19 +22,28 @@ class DefinitionActivity : AppCompatActivity() {
                 //binding.dalto.setImageResource(R.drawable.card_quees)
                 binding.dalto.setImageResource(IconInitio.getIcon(0))
                 binding.queesDaltonismo.text = resources.getString(R.string.descripcion)
+                binding.queesDaltonismo2.text = resources.getString(R.string.descripcion2)
+                binding.queesDaltonismo3.text = resources.getString(R.string.descripcion3)
+
             }
             resources.getString(R.string.tipos_daltonismo) -> {
                 binding.dalto.setImageResource(IconInitio.getIcon(1))
                 binding.queesDaltonismo.text = resources.getString(R.string.descripcion_Tipos)
+                binding.queesDaltonismo2.text = resources.getString(R.string.descripcion_Tipos2)
+                binding.queesDaltonismo3.text = resources.getString(R.string.descripcion_Tipos3)
 
             }
             resources.getString(R.string.causas) -> {
                 binding.dalto.setImageResource(IconInitio.getIcon(2))
                 binding.queesDaltonismo.text = resources.getString(R.string.causas_daltonismo)
+                binding.queesDaltonismo2.text = ""
+                binding.queesDaltonismo3.text = ""
             }
             resources.getString(R.string.personas_riesgo) -> {
                 binding.dalto.setImageResource(IconInitio.getIcon(3))
                 binding.queesDaltonismo.text = resources.getString(R.string.riesgo_daltonismo)
+                binding.queesDaltonismo2.text = ""
+                binding.queesDaltonismo3.text = ""
             }
         }
         
